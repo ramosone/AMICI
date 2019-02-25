@@ -45,7 +45,8 @@ functions = {
         'signature':
             '(realtype *J, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *dwdx)',
+            'const realtype *w, const realtype *dwdx, const realtype *xp,'
+            'const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -53,7 +54,8 @@ functions = {
         'signature':
             '(realtype *JB, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *xB, const realtype *w, const realtype *dwdx)',
+            'const realtype *xB, const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -61,7 +63,8 @@ functions = {
         'signature':
             '(realtype *JDiag, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *dwdx)',
+            'const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -69,7 +72,8 @@ functions = {
         'signature':
             '(SlsMat JSparse, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *dwdx)',
+            'const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'sparse':
             True,
         'assume_pow_positivity':
@@ -79,7 +83,8 @@ functions = {
         'signature':
             '(SlsMat JSparseB, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *xB, const realtype *w, const realtype *dwdx)',
+            'const realtype *xB, const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'sparse':
             True,
         'assume_pow_positivity':
@@ -89,7 +94,8 @@ functions = {
         'signature':
             '(realtype *Jv, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *v, const realtype *w, const realtype *dwdx)',
+            'const realtype *v, const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -98,7 +104,7 @@ functions = {
             '(realtype *JvB, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
             'const realtype *xB, const realtype *vB, const realtype *w, '
-            'const realtype *dwdx)',
+            'const realtype *dwdx, const realtype *xp, const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -124,7 +130,7 @@ functions = {
         'signature':
             '(realtype *dwdp, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *tcl, const realtype *dtcldp)',
+            'const realtype *w, const realtype *xp, const realtype *dxpdp)',
         'sparse':
             True,
         'assume_pow_positivity':
@@ -134,7 +140,7 @@ functions = {
         'signature':
             '(realtype *dwdx, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *tcl)',
+            'const realtype *w, const realtype *xp, const realtype *dxpdx)',
         'sparse':
             True,
         'assume_pow_positivity':
@@ -144,7 +150,8 @@ functions = {
         'signature':
             '(realtype *dxdotdp, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const int ip, const realtype *w, const realtype *dwdp)',
+            'const int ip, const realtype *w, const realtype *dwdp, '
+            'const realtype *xp, const realtype *dxpdp)',
         'assume_pow_positivity':
             True,
     },
@@ -152,13 +159,15 @@ functions = {
         'signature':
             '(realtype *dydx, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w, const realtype *dwdx)',
+            'const realtype *w, const realtype *dwdx, const realtype *xp, '
+            'const realtype *dxpdx)',
     },
     'dydp': {
         'signature':
             '(realtype *dydp, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const int ip, const realtype *w, const realtype *dwdp)',
+            'const int ip, const realtype *w, const realtype *dwdp, '
+            'const realtype *xp, const realtype *dxpdx)',
     },
     'dsigmaydp': {
         'signature':
@@ -169,8 +178,8 @@ functions = {
         'signature':
             '(realtype *qBdot, const int ip, const realtype t, '
             'const realtype *x, const realtype *p, const realtype *k, '
-            'const realtype *h, const realtype *xB, '
-            'const realtype *w, const realtype *dwdp)',
+            'const realtype *h, const realtype *xB, const realtype *w, '
+            'const realtype *dwdp, const realtype *xp, const realtype *dxpdp)',
         'assume_pow_positivity':
             True,
     },
@@ -183,8 +192,7 @@ functions = {
         'signature':
             '(realtype *sxdot, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const int ip, const realtype *sx, const realtype *w, '
-            'const realtype *dwdx, const realtype *JSparse, '
+            'const int ip, const realtype *sx, const realtype *JSparse, '
             'const realtype *dxdotdp)',
         'assume_pow_positivity':
             True,
@@ -193,7 +201,7 @@ functions = {
         'signature':
             '(realtype *w, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, '
-            'const realtype *h, const realtype *tcl)',
+            'const realtype *h, const realtype *xp)',
         'assume_pow_positivity':
             True,
     },
@@ -222,8 +230,8 @@ functions = {
         'signature':
             '(realtype *xBdot, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *xB, const realtype *w, '
-            'const realtype *dwdx)',
+            'const realtype *xB, const realtype *w, const realtype *dwdx, '
+            'const realtype *xp, const realtype *dxpdx)',
         'assume_pow_positivity':
             True,
     },
@@ -231,15 +239,15 @@ functions = {
         'signature':
             '(realtype *xdot, const realtype t, const realtype *x, '
             'const realtype *p, const realtype *k, const realtype *h, '
-            'const realtype *w)',
+            'const realtype *w, const realtyp *xp)',
         'assume_pow_positivity':
             True,
     },
     'y': {
         'signature':
             '(realtype *y, const realtype t, const realtype *x, '
-            'const realtype *p, const realtype *k, '
-            'const realtype *h, const realtype *w)',
+            'const realtype *p, const realtype *k, const realtype *h, '
+            'const realtype *w, const realtype *xp)',
     },
     'x_rdata': {
         'signature':
@@ -253,6 +261,19 @@ functions = {
         'signature':
             '(realtype *x_solver, const realtype *x_rdata)',
     },
+    'xp': {
+        'signature':
+            '(realtype *xp, const realtype *x, const realtype *tcl)',
+    },
+    'dxpdx': {
+        'signature':
+            '(realtype *xp, const realtype *x, const realtype *tcl)',
+    },
+    'dxpdp': {
+        'signature':
+            '(realtype *xp, const realtype *x, const realtype *tcl, '
+            'const realtype *dtcldp)',
+    }
 }
 
 ## list of sparse functions
@@ -590,6 +611,35 @@ class Expression(ModelQuantity):
         super(Expression, self).__init__(identifier, name, value)
 
 
+class StateProxy(ModelQuantity):
+    """A StateProxy is similar to an Expression, as it is a recurring
+    expression that results from a conservation law. Yet, due to its
+    dependence on tcl symbols, parametric derivatives of StateProxys do not
+    have the same sparsity properties as Expressions and a separate
+    implementation is necessary for large models.
+
+    """
+    def __init__(self, identifier, name, value):
+        """Create a new StateProxy instance.
+
+        Arguments:
+            identifier: unique identifier of the StateProxy @type sympy.Symbol
+
+            name: individual name of the StateProxy (does not need to be
+            unique) @type str
+
+            value: formula @type symengine.Basic
+
+        Returns:
+        ModelQuantity instance
+
+        Raises:
+        TypeError:
+            is thrown if input types do not match documented types
+        """
+        super(StateProxy, self).__init__(identifier, name, value)
+
+
 class Parameter(ModelQuantity):
     """A Parameter is a free variable in the model with respect to which
     sensitivites may be computed, abbreviated by `p`
@@ -707,6 +757,8 @@ class ODEModel:
 
         _conservationlaws: list of ConservationLaw instances @type list
 
+        _stateproxys: list of StateProxy instances @type list
+
         _symboldim_funs: define functions that compute model dimensions, these
         are functions as the underlying symbolic expressions have not been
         populated at compile time @type dict
@@ -780,6 +832,7 @@ class ODEModel:
         self._loglikelihoods = []
         self._expressions = []
         self._conservationlaws = []
+        self._stateproxys = []
         self._symboldim_funs = {
             'sx': self.nx_solver,
             'v': self.nx_solver,
@@ -802,6 +855,7 @@ class ODEModel:
             'y': '_observables',
             'Jy': '_loglikelihoods',
             'w': '_expressions',
+            'xp': '_stateproxys',
             'sigmay': '_sigmays',
         }
         self._variable_prototype = {
@@ -811,6 +865,7 @@ class ODEModel:
             'p': '_parameters',
             'k': '_constants',
             'w': '_expressions',
+            'xp': '_stateproxys',
             'sigmay': '_sigmays'
         }
         self._value_prototype = {
@@ -913,7 +968,7 @@ class ODEModel:
 
         """
         for comp_type in [Observable, Expression, Parameter, Constant, State,
-                          LogLikelihood, SigmaY, ConservationLaw]:
+                          LogLikelihood, SigmaY, ConservationLaw, StateProxy]:
             if isinstance(component, comp_type):
                 getattr(self, f'_{type(component).__name__.lower()}s').append(
                     component
@@ -952,7 +1007,7 @@ class ODEModel:
         state_id = self._states[ix].get_id()
 
         self.add_component(
-            Expression(state_id, f'cl_{state_id}', state_expr)
+            StateProxy(state_id, f'cl_{state_id}', state_expr)
         )
 
         self.add_component(

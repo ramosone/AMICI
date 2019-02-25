@@ -220,10 +220,11 @@ class AbstractModel {
      * @param k constant vector
      * @param h heavyside vector
      * @param w repeating elements vector
+     * @param w state proxy vector
      **/
     virtual void fy(realtype *y, const realtype t, const realtype *x,
                     const realtype *p, const realtype *k, const realtype *h,
-                    const realtype *w);
+                    const realtype *w, const realtype *xp);
 
     /**
      * Model specific implementation of fdydp
@@ -235,11 +236,14 @@ class AbstractModel {
      * @param h heavyside vector
      * @param ip parameter index w.r.t. which the derivative is requested
      * @param w repeating elements vector
-     * @param dwdp Recurring terms in xdot, parameter derivative
+     * @param dwdp recurring terms in xdot, parameter derivative
+     * @param xp state proxy vector
+     * @param dxpdp state proxy vector, parameter derivative
      **/
     virtual void fdydp(realtype *dydp, const realtype t, const realtype *x,
                        const realtype *p, const realtype *k, const realtype *h,
-                       const int ip, const realtype *w, const realtype *dwdp);
+                       const int ip, const realtype *w, const realtype *dwdp,
+                       const realtype *xp, const realtype *dxpdp);
 
     /**
      * Model specific implementation of fdydx
@@ -250,11 +254,14 @@ class AbstractModel {
      * @param k constant vector
      * @param h heavyside vector
      * @param w repeating elements vector
-     * @param dwdx Recurring terms in xdot, state derivative
+     * @param dwdx recurring terms in xdot, state derivative
+     * @param xp state proxy vector
+     * @param dxpdx state proxy vector, state derivative
      **/
     virtual void fdydx(realtype *dydx, const realtype t, const realtype *x,
                        const realtype *p, const realtype *k, const realtype *h,
-                       const realtype *w, const realtype *dwdx);
+                       const realtype *w, const realtype *dwdx,
+                       const realtype *xp, const realtype *dxpdx);
 
     /**
      * Model specific implementation of fz
@@ -661,6 +668,52 @@ class AbstractModel {
                        const realtype *w, const realtype *tcl,
                        const realtype *stcl);
 
+    /**
+     * Model specific implementation of dwdx
+     * @param dwdx Recurring terms in xdot, state derivative
+     * @param t timepoint
+     * @param x vector with the states
+     * @param p parameter vector
+     * @param k constants vector
+     * @param h heavyside vector
+     * @param w vector with helper variables
+     * @param tcl total abundances for conservations laws
+     */
+    virtual void fdwdx(realtype *dwdx, const realtype t, const realtype *x,
+                       const realtype *p, const realtype *k, const realtype *h,
+                       const realtype *w, const realtype *tcl);
+    
+    /**
+     * Model specific implementation of fxp
+     * @param w Recurring terms in xdot
+     * @param t timepoint
+     * @param x vector with the states
+     * @param p parameter vector
+     * @param k constants vector
+     * @param h heavyside vector
+     * @param tcl total abundances for conservations laws
+     */
+    virtual void fw(realtype *w, const realtype t, const realtype *x,
+                    const realtype *p, const realtype *k, const realtype *h,
+                    const realtype *tcl);
+    
+    /**
+     * Model specific implementation of dxp
+     * @param dwdp Recurring terms in xdot, parameter derivative
+     * @param t timepoint
+     * @param x vector with the states
+     * @param p parameter vector
+     * @param k constants vector
+     * @param h heavyside vector
+     * @param w vector with helper variables
+     * @param tcl total abundances for conservations laws
+     * @param stcl sensitivities of total abundances for conservations laws
+     */
+    virtual void fdwdp(realtype *dwdp, const realtype t, const realtype *x,
+                       const realtype *p, const realtype *k, const realtype *h,
+                       const realtype *w, const realtype *tcl,
+                       const realtype *stcl);
+    
     /**
      * Model specific implementation of dwdx
      * @param dwdx Recurring terms in xdot, state derivative

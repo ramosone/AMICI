@@ -1420,7 +1420,7 @@ void Model::fdJrzdsigma(const int nroots,const ReturnData *rdata,
 
 void Model::fw(const realtype t, const realtype *x) {
     std::fill(w.begin(),w.end(),0.0);
-    fw(w.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), total_cl.data());
+    fw(w.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), xp.data());
 
     if(alwaysCheckFinite) {
         amici::checkFinite(w, "w");
@@ -1430,7 +1430,7 @@ void Model::fw(const realtype t, const realtype *x) {
 void Model::fdwdp(const realtype t, const realtype *x) {
     fw(t,x);
     std::fill(dwdp.begin(),dwdp.end(),0.0);
-    fdwdp(dwdp.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), w.data(), total_cl.data(), stotal_cl.data());
+    fdwdp(dwdp.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), w.data(), xp.data(), dxpdp.data());
 
     if(alwaysCheckFinite) {
         amici::checkFinite(dwdp, "dwdp");
@@ -1440,8 +1440,36 @@ void Model::fdwdp(const realtype t, const realtype *x) {
 void Model::fdwdx(const realtype t, const realtype *x) {
     fw(t,x);
     std::fill(dwdx.begin(),dwdx.end(),0.0);
-    fdwdx(dwdx.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), w.data(), total_cl.data());
+    fdwdx(dwdx.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), w.data(), xp.data(), dxpdx.data());
 
+    if(alwaysCheckFinite) {
+        amici::checkFinite(dwdx, "dwdx");
+    }
+}
+    
+void Model::fxp(const realtype t, const realtype *x, const realtype *tcl) {
+    std::fill(xp.begin(),xp.end(),0.0);
+    fw(xp.data(), x, total_cl.data());
+    
+    if(alwaysCheckFinite) {
+        amici::checkFinite(w, "w");
+    }
+}
+
+void Model::fdxpdp(const realtype t, const realtype *x, , const realtype *tcl) {
+    std::fill(dwdp.begin(),dwdp.end(),0.0);
+    fdwdp(dxpdp.data(), x, total_cl.data(), stotal_cl.data());
+    
+    if(alwaysCheckFinite) {
+        amici::checkFinite(dwdp, "dwdp");
+    }
+}
+
+void Model::fdxpdx(const realtype t, const realtype *x) {
+    fw(t,x);
+    std::fill(dwdx.begin(),dwdx.end(),0.0);
+    fdwdx(dwdx.data(), t, x, unscaledParameters.data(), fixedParameters.data(), h.data(), w.data(), total_cl.data());
+    
     if(alwaysCheckFinite) {
         amici::checkFinite(dwdx, "dwdx");
     }

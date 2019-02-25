@@ -107,6 +107,8 @@ class Model : public AbstractModel {
     using AbstractModel::fdsigmazdp;
     using AbstractModel::fdwdp;
     using AbstractModel::fdwdx;
+    using AbstractModel::fdxpdp;
+    using AbstractModel::fdxpdx;
     using AbstractModel::fdydp;
     using AbstractModel::fdydx;
     using AbstractModel::fdzdp;
@@ -123,6 +125,7 @@ class Model : public AbstractModel {
     using AbstractModel::fsx0_fixedParameters;
     using AbstractModel::fsz;
     using AbstractModel::fw;
+    using AbstractModel::fxp;
     using AbstractModel::fx0;
     using AbstractModel::fx0_fixedParameters;
     using AbstractModel::fy;

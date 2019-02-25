@@ -110,203 +110,279 @@ namespace amici {
 
         virtual std::unique_ptr<Solver> getSolver() override;
     protected:
+      /** model specific implementation for fJ
+       * @param J output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJ(realtype *J, const realtype t, const realtype *x,
+                      const realtype *p, const realtype *k, const realtype *h,
+                      const realtype *w, const realtype *dwdx,
+                      const realtype *xp, const realtype *dxpdx) = 0;
 
-        /** model specific implementation for fJ
-         * @param J Matrix to which the Jacobian will be written
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJ(realtype *J, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                        const realtype *w, const realtype *dwdx) = 0;
+      /** model specific implementation for fJB
+       * @param JB output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param xB Vector with the adjoint states
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJB(realtype *JB, const realtype t, const realtype *x,
+                       const realtype *p, const realtype *k, const realtype *h,
+                       const realtype *xB, const realtype *w,
+                       const realtype *dwdx, const realtype *xp,
+                       const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__);
+      }
 
-        /** model specific implementation for fJB
-         * @param JB Matrix to which the Jacobian will be written
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJB(realtype *JB, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                         const realtype *xB, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
-        }
+      /** model specific implementation for fJSparse
+       * @param JSparse output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJSparse(SlsMat JSparse, const realtype t, const realtype *x,
+                            const realtype *p, const realtype *k,
+                            const realtype *h, const realtype *w,
+                            const realtype *dwdx, const realtype *xp,
+                            const realtype *dxpdx) = 0;
 
-        /** model specific implementation for fJSparse
-         * @param JSparse Matrix to which the Jacobian will be written
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJSparse(SlsMat JSparse, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h, const realtype *w, const realtype *dwdx) = 0;
+      /** model specific implementation for fJSparseB
+       * @param JSparseB output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param xB Vector with the adjoint states
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJSparseB(SlsMat JSparseB, const realtype t,
+                             const realtype *x, const realtype *p,
+                             const realtype *k, const realtype *h,
+                             const realtype *xB, const realtype *w,
+                             const realtype *dwdx, const realtype *xp,
+                             const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__);
+      }
 
-        /** model specific implementation for fJSparseB
-         * @param JSparseB Matrix to which the Jacobian will be written
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJSparseB(SlsMat JSparseB, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                               const realtype *xB, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
-        }
+      /** model specific implementation for fJDiag
+       * @param JDiag output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJDiag(realtype *JDiag, const realtype t, const realtype *x,
+                          const realtype *p, const realtype *k,
+                          const realtype *h, const realtype *w,
+                          const realtype *dwdx, const realtype *xp,
+                          const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__);
+      }
 
-        /** model specific implementation for fJDiag
-         * @param JDiag Matrix to which the Jacobian will be written
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJDiag(realtype *JDiag, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
-        }
+      /** model specific implementation for fJv
+       * @param Jv output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param v vector with which the Jacobian is multiplied
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJv(realtype *Jv, const realtype t, const realtype *x,
+                       const realtype *p, const realtype *k, const realtype *h,
+                       const realtype *v, const realtype *w,
+                       const realtype *dwdx, const realtype *xp,
+                       const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__);
+      }
 
-        /** model specific implementation for fJv
-         * @param Jv Matrix vector product of J with a vector v
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param v Vector with which the Jacobian is multiplied
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJv(realtype *Jv, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                         const realtype *v, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
-        }
+      /** model specific implementation for fJvB
+       * @param JvB output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param xB adjoint states
+       * @param vB vector with which the Jacobian is multiplied
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fJvB(realtype *JvB, const realtype t, const realtype *x,
+                        const realtype *p, const realtype *k, const realtype *h,
+                        const realtype *xB, const realtype *vB,
+                        const realtype *w, const realtype *dwdx,
+                        const realtype *xp, const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__); // not implemented
+      }
 
-        /** model specific implementation for fJvB
-         * @param JvB Matrix vector product of JB with a vector v
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param vB Vector with which the Jacobian is multiplied
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fJvB(realtype *JvB, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                          const realtype *xB, const realtype *vB, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
-        }
+      /** model specific implementation for froot
+       * @param root output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       **/
+      virtual void froot(realtype *root, const realtype t, const realtype *x,
+                         const realtype *p, const realtype *k,
+                         const realtype *h) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__); // not implemented
+      }
 
-        /** model specific implementation for froot
-         * @param root values of the trigger function
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         **/
-        virtual void froot(realtype *root, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
-        }
+      /** model specific implementation for fxdot
+       * @param xdot output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param w recurring expressions
+       * @param xp state proxys
+       **/
+      virtual void fxdot(realtype *xdot, const realtype t, const realtype *x,
+                         const realtype *p, const realtype *k,
+                         const realtype *h, const realtype *w,
+                         const realtype *xp) = 0;
 
-        /** model specific implementation for fxdot
-         * @param xdot residual function
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param w vector with helper variables
-         **/
-        virtual void fxdot(realtype *xdot, const realtype t, const realtype *x, const realtype *p, const             realtype *k, const realtype *h, const realtype *w) = 0;
+      /** model specific implementation for fxBdot
+       * @param xBdot output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param xB adjoint states
+       * @param w recurring expressions
+       * @param dwdx recurring expressions, state derivative
+       * @param xp state proxys
+       * @param dxpdx state proxys, state derivative
+       **/
+      virtual void fxBdot(realtype *xBdot, const realtype t, const realtype *x,
+                          const realtype *p, const realtype *k,
+                          const realtype *h, const realtype *xB,
+                          const realtype *w, const realtype *dwdx,
+                          const realtype *xp, const realtype *dxpdx) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__); // not implemented
+      }
 
-        /** model specific implementation for fxBdot
-         * @param xBdot adjoint residual function
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         **/
-        virtual void fxBdot(realtype *xBdot, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const realtype *xB, const realtype *w, const realtype *dwdx) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
-        }
+      /** model specific implementation for fqBdot
+       * @param qBdot output array
+       * @param ip sensitivity index
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param xB adjoint states
+       * @param w recurring expressions
+       * @param dwdp recurring expressions, parameter derivative
+       * @param xp state proxys
+       * @param dxpdp state proxys, parameter derivative
+       **/
+      virtual void fqBdot(realtype *qBdot, const int ip, const realtype t,
+                          const realtype *x, const realtype *p,
+                          const realtype *k, const realtype *h,
+                          const realtype *xB, const realtype *w,
+                          const realtype *dwdp, const realtype *xp,
+                          const realtype *dxpdp) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__); // not implemented
+      }
 
-        /** model specific implementation for fqBdot
-         * @param qBdot adjoint quadrature equation
-         * @param ip sensitivity index
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param w vector with helper variables
-         * @param dwdp derivative of w wrt p
-         **/
-        virtual void fqBdot(realtype *qBdot, const int ip, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const realtype *xB, const realtype *w, const realtype *dwdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
-        }
+      /** model specific implementation of fdxdotdp
+       * @param dxdotdp output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param ip parameter index
+       * @param w recurring expressions
+       * @param dwdp recurring expressions, parameter derivative
+       * @param xp state proxys
+       * @param dxpdp state proxys, parameter derivative
+       */
+      virtual void fdxdotdp(realtype *dxdotdp, const realtype t,
+                            const realtype *x, const realtype *p,
+                            const realtype *k, const realtype *h, const int ip,
+                            const realtype *w, const realtype *dwdp,
+                            const realtype *xp, const realtype *dxpdp) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__); // not implemented
+      }
 
-        /** model specific implementation of fdxdotdp
-         * @param dxdotdp partial derivative xdot wrt p
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param ip parameter index
-         * @param w vector with helper variables
-         * @param dwdp derivative of w wrt p
-         */
-        virtual void fdxdotdp(realtype *dxdotdp, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                              const int ip, const realtype *w, const realtype *dwdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
-        }
-
-        /** model specific implementation of fsxdot
-         * @param sxdot sensitivity rhs
-         * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param ip parameter index
-         * @param sx Vector with the state sensitivities
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
-         * @param J jacobian
-         * @param dxdotdp parameter derivative of residual function
-         */
-        virtual void fsxdot(realtype *sxdot, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const int ip, const realtype *sx, const realtype *w, const realtype *dwdx, const realtype *J,
-                            const realtype *dxdotdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
-        }
+      /** model specific implementation of fsxdot
+       * @param sxdot output array
+       * @param t timepoint
+       * @param x states
+       * @param p parameters
+       * @param k constants
+       * @param h heavyside variables
+       * @param ip parameter index
+       * @param sx state sensitivities
+       * @param J jacobian
+       * @param dxdotdp parameter derivative of residual function
+       */
+      virtual void fsxdot(realtype *sxdot, const realtype t, const realtype *x,
+                          const realtype *p, const realtype *k,
+                          const realtype *h, const int ip, const realtype *sx,
+                          const realtype *J, const realtype *dxdotdp) {
+          throw AmiException("Requested functionality is not supported as %s "
+                             "is not implemented for this model!",
+                             __func__);
+      }
     };
 
 } // namespace amici

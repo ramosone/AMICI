@@ -112,252 +112,328 @@ namespace amici {
 
 
         virtual std::unique_ptr<Solver> getSolver() override;
-    protected:
 
+      protected:
         /** model specific implementation for fJ
          * @param J Matrix to which the Jacobian will be written
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param dx Vector with the derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param dx state time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fJ(realtype *J, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                        const realtype cj, const realtype *dx, const realtype *w, const realtype *dwdx) = 0;
+        virtual void fJ(realtype *J, const realtype t, const realtype *x,
+                        const double *p, const double *k, const realtype *h,
+                        const realtype cj, const realtype *dx,
+                        const realtype *w, const realtype *dwdx,
+                        const realtype *xp, const realtype *dxpdx) = 0;
 
         /** model specific implementation for fJB
          * @param JB Matrix to which the Jacobian will be written
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param xB Vector with the adjoint states
-         * @param dx Vector with the derivative states
-         * @param dxB Vector with the adjoint derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param xB adjoint states
+         * @param dx state time derivative
+         * @param dxB adjoint time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fJB(realtype *JB, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                         const realtype cj, const realtype *xB, const realtype *dx, const realtype *dxB,
-                         const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fJB(realtype *JB, const realtype t, const realtype *x,
+                         const double *p, const double *k, const realtype *h,
+                         const realtype cj, const realtype *xB,
+                         const realtype *dx, const realtype *dxB,
+                         const realtype *w, const realtype *dwdx,
+                         const realtype *xp, const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         }
 
         /** model specific implementation for fJSparse
          * @param JSparse Matrix to which the Jacobian will be written
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param dx Vector with the derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param dx state time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fJSparse(SlsMat JSparse, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                              const realtype cj, const realtype *dx, const realtype *w, const realtype *dwdx) = 0;
+        virtual void fJSparse(SlsMat JSparse, const realtype t,
+                              const realtype *x, const double *p,
+                              const double *k, const realtype *h,
+                              const realtype cj, const realtype *dx,
+                              const realtype *w, const realtype *dwdx,
+                              const realtype *xp, const realtype *dxpdx) = 0;
 
         /** model specific implementation for fJSparseB
          * @param JSparseB Matrix to which the Jacobian will be written
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param xB Vector with the adjoint states
-         * @param dx Vector with the derivative states
-         * @param dxB Vector with the adjoint derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param xB adjoint states
+         * @param dx state time derivative
+         * @param dxB adjoint time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fJSparseB(SlsMat JSparseB, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                               const realtype cj, const realtype *xB, const realtype *dx, const realtype *dxB,
-                               const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fJSparseB(SlsMat JSparseB, const realtype t,
+                               const realtype *x, const double *p,
+                               const double *k, const realtype *h,
+                               const realtype cj, const realtype *xB,
+                               const realtype *dx, const realtype *dxB,
+                               const realtype *w, const realtype *dwdx,
+                               const realtype *xp, const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         }
 
         /** model specific implementation for fJDiag
          * @param JDiag array to which the Jacobian diagonal will be written
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param dx Vector with the derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param dx state time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fJDiag(realtype *JDiag, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const realtype cj, const realtype *dx, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fJDiag(realtype *JDiag, const realtype t,
+                            const realtype *x, const realtype *p,
+                            const realtype *k, const realtype *h,
+                            const realtype cj, const realtype *dx,
+                            const realtype *w, const realtype *dwdx,
+                            const realtype *xp, const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         }
 
         /** model specific implementation for fJv
          * @param Jv Matrix vector product of J with a vector v
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param dx Vector with the derivative states
-         * @param v Vector with which the Jacobian is multiplied
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param dx state time derivative
+         * @param v vector with which the Jacobian is multiplied
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
          **/
-        virtual void fJv(realtype *Jv, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                         const realtype cj, const realtype *dx,const realtype *v,
-                         const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fJv(realtype *Jv, const realtype t, const realtype *x,
+                         const double *p, const double *k, const realtype *h,
+                         const realtype cj, const realtype *dx,
+                         const realtype *v, const realtype *w,
+                         const realtype *dwdx, const realtype *xp,
+                         const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         }
 
         /** model specific implementation for fJvB
          * @param JvB Matrix vector product of JB with a vector v
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param cj scaling factor, inverse of the step size
-         * @param xB Vector with the adjoint states
-         * @param dx Vector with the derivative states
-         * @param dxB Vector with the adjoint derivative states
-         * @param vB Vector with which the Jacobian is multiplied
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param xB adjoint states
+         * @param dx state time derivative
+         * @param dxB adjoint time derivative
+         * @param vB vector with which the Jacobian is multiplied
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
          **/
-        virtual void fJvB(realtype *JvB, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                          const realtype cj, const realtype *xB, const realtype *dx, const realtype *dxB,
-                          const realtype *vB, const realtype *w, const realtype *dwdx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
+        virtual void fJvB(realtype *JvB, const realtype t, const realtype *x,
+                          const double *p, const double *k, const realtype *h,
+                          const realtype cj, const realtype *xB,
+                          const realtype *dx, const realtype *dxB,
+                          const realtype *vB, const realtype *w,
+                          const realtype *dwdx, const realtype *xp,
+                          const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__); // not implemented
         }
 
         /** model specific implementation for froot
          * @param root values of the trigger function
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param dx Vector with the derivative states
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
+         * @param dx state time derivative
          **/
-        virtual void froot(realtype *root, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                           const realtype *dx){
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
+        virtual void froot(realtype *root, const realtype t, const realtype *x,
+                           const double *p, const double *k, const realtype *h,
+                           const realtype *dx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__); // not implemented
         }
 
         /** model specific implementation for fxdot
          * @param xdot residual function
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param w vector with helper variables
-         * @param dx Vector with the derivative states
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
+         * @param dx state time derivative
+         * @param w recurring expressions
+         * @param xp state proxys
          **/
-        virtual void fxdot(realtype *xdot, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                           const realtype *dx, const realtype *w) = 0;
+        virtual void fxdot(realtype *xdot, const realtype t, const realtype *x,
+                           const double *p, const double *k, const realtype *h,
+                           const realtype *dx, const realtype *w,
+                           const realtype *xp) = 0;
 
         /** model specific implementation for fxBdot
          * @param xBdot adjoint residual function
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param dx Vector with the derivative states
-         * @param dxB Vector with the adjoint derivative states
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
+         * @param xB adjoint states
+         * @param dx state time derivative
+         * @param dxB adjoint time derivative
+         * @param w recurring expressions
+         * @param dwdx recurring expressions, state derivative
+         * @param xp state proxys
+         * @param dxpdx state proxys, state derivative
          **/
-        virtual void fxBdot(realtype *xBdot, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                            const realtype *xB, const realtype *dx, const realtype *dxB,
-                            const realtype *w, const realtype *dwdx) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
+        virtual void fxBdot(realtype *xBdot, const realtype t,
+                            const realtype *x, const double *p, const double *k,
+                            const realtype *h, const realtype *xB,
+                            const realtype *dx, const realtype *dxB,
+                            const realtype *w, const realtype *dwdx,
+                            const realtype *xp, const realtype *dxpdx) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__); // not implemented
         }
 
         /** model specific implementation for fqBdot
          * @param qBdot adjoint quadrature equation
          * @param ip sensitivity index
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
-         * @param xB Vector with the adjoint states
-         * @param dx Vector with the derivative states
-         * @param dxB Vector with the adjoint derivative states
-         * @param w vector with helper variables
-         * @param dwdp derivative of w wrt p
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
+         * @param xB adjoint states
+         * @param dx state time derivative
+         * @param dxB adjoint time derivative
+         * @param w recurring expressions
+         * @param dwdp recurring expressions, parameter derivative
+         * @param xp state proxys
+         * @param dxpdp state proxys, parameter derivative
          **/
-        virtual void fqBdot(realtype *qBdot, const int ip, const realtype t, const realtype *x, const double *p, const double *k, const realtype *h,
-                            const realtype *xB, const realtype *dx, const realtype *dxB,
-                            const realtype *w, const realtype *dwdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__); // not implemented
+        virtual void fqBdot(realtype *qBdot, const int ip, const realtype t,
+                            const realtype *x, const double *p, const double *k,
+                            const realtype *h, const realtype *xB,
+                            const realtype *dx, const realtype *dxB,
+                            const realtype *w, const realtype *dwdp,
+                            const realtype *xp, const realtype *dxpdp) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__); // not implemented
         }
 
         /** model specific implementation of fdxdotdp
          * @param dxdotdp partial derivative xdot wrt p
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param ip parameter index
-         * @param dx Vector with the derivative states
-         * @param w vector with helper variables
-         * @param dwdp derivative of w wrt p
+         * @param dx state time derivative
+         * @param w recurring expressions
+         * @param dwdp recurring expressions, parameter derivative
+         * @param xp state proxys
+         * @param dxpdp state proxys, parameter derivative
          */
-        virtual void fdxdotdp(realtype *dxdotdp, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                              const int ip, const realtype *dx, const realtype *w, const realtype *dwdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fdxdotdp(realtype *dxdotdp, const realtype t,
+                              const realtype *x, const realtype *p,
+                              const realtype *k, const realtype *h,
+                              const int ip, const realtype *dx,
+                              const realtype *w, const realtype *dwdp,
+                              const realtype *xp, const realtype *dxpdp) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         };
 
         /** model specific implementation of fsxdot
          * @param sxdot sensitivity rhs
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
-         * @param h heavyside vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param h heavyside variables
          * @param ip parameter index
-         * @param dx Vector with the derivative states
-         * @param sx Vector with the state sensitivities
-         * @param sdx Vector with the derivative state sensitivities
-         * @param w vector with helper variables
-         * @param dwdx derivative of w wrt x
+         * @param dx state time derivative
+         * @param sx state parameter sensitivities
+         * @param sdx state time derivative parameter sensitivities
          * @param M mass matrix
          * @param J jacobian
          * @param dxdotdp parameter derivative of residual function
          */
-        virtual void fsxdot(realtype *sxdot, const realtype t, const realtype *x, const realtype *p, const realtype *k, const realtype *h,
-                            const int ip, const realtype *dx, const realtype *sx, const realtype *sdx,
-                            const realtype *w, const realtype *dwdx, const realtype *M, const realtype *J,
-                            const realtype *dxdotdp) {
-            throw AmiException("Requested functionality is not supported as %s is not implemented for this model!",__func__);
+        virtual void fsxdot(realtype *sxdot, const realtype t,
+                            const realtype *x, const realtype *p,
+                            const realtype *k, const realtype *h, const int ip,
+                            const realtype *dx, const realtype *sx,
+                            const realtype *sdx, const realtype *M,
+                            const realtype *J, const realtype *dxdotdp) {
+            throw AmiException("Requested functionality is not supported as %s "
+                               "is not implemented for this model!",
+                               __func__);
         };
 
         /** model specific implementation of fM
          * @param M mass matrix
          * @param t timepoint
-         * @param x Vector with the states
-         * @param p parameter vector
-         * @param k constants vector
+         * @param x states
+         * @param p parameters
+         * @param k constants
+         * @param xp state proxys
          */
-        virtual void fM(realtype *M, const realtype t, const realtype *x, const realtype *p,
-                        const realtype *k) {};
-
+        virtual void fM(realtype *M, const realtype t, const realtype *x,
+                        const realtype *p, const realtype *k,
+                        const realtype *xp){};
     };
 } // namespace amici
 
