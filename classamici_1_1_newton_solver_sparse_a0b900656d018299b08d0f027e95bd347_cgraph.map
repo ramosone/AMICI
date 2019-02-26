@@ -1,0 +1,6 @@
+<map id="prepareLinearSystem" name="prepareLinearSystem">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,154,107"/>
+<area shape="rect" id="node2" href="$classamici_1_1_abstract_model.html#a4b499d01a3e0504bcd8eda681b8da277" title=" " alt="" coords="205,5,350,48"/>
+<area shape="rect" id="node3" href="$classamici_1_1_sls_mat_wrapper.html#ae1d2d562c699946445244cca406c4994" title="Get the wrapped SlsMat." alt="" coords="202,72,354,115"/>
+<area shape="rect" id="node4" href="$classamici_1_1_sls_mat_wrapper.html#ace31bbb9df6dd42f70286108ecafa01b" title="Access raw data." alt="" coords="202,139,354,181"/>
+</map>

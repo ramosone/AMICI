@@ -1,0 +1,1413 @@
+\hypertarget{classamici_1_1_exp_data}{}\subsection{Exp\+Data Class Reference}
+\label{classamici_1_1_exp_data}\index{ExpData@{ExpData}}
+
+
+\mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} carries all information about experimental or condition-\/specific data.  
+
+
+
+
+{\ttfamily \#include $<$edata.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_a19c9736cc55da621d8de182a76cc1e8f}{Exp\+Data}} ()
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_a74a4a08956d260ee4a1b8f701564496d}{Exp\+Data}} (const \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} \&)=default
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_af2322d528ad31a4335b0e5178b373649}{Exp\+Data}} (int \mbox{\hyperlink{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}{nytrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}{nztrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}{nmaxevent}})
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_a25832fe613894e3ab4e9c438936c4286}{Exp\+Data}} (int \mbox{\hyperlink{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}{nytrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}{nztrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}{nmaxevent}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{ts}})
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_a4dc836c2db72abcd32318fc6654fc131}{Exp\+Data}} (int \mbox{\hyperlink{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}{nytrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}{nztrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}{nmaxevent}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{ts}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_ac1d5115134ec1c839f1e913724ceb2b4}{fixed\+Parameters}})
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_af7b389e6ef9cd1cd5facacc783a8e1e9}{Exp\+Data}} (int \mbox{\hyperlink{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}{nytrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}{nztrue}}, int \mbox{\hyperlink{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}{nmaxevent}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{ts}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}{observed\+Data}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{observed\+Data\+Std\+Dev}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}{observed\+Events}}, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&\mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{observed\+Events\+Std\+Dev}})
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_af4ce16765488e3857131aa5aea0c38b4}{Exp\+Data}} (const \mbox{\hyperlink{classamici_1_1_model}{Model}} \&model)
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_a30619c6fa4a5f5cc07e7dcc0824aa0fc}{Exp\+Data}} (const \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} \&rdata, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} sigma\+\_\+y, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} sigma\+\_\+z)
+\item 
+\mbox{\hyperlink{classamici_1_1_exp_data_ac1cf98522f4ac1b25f33b6b3fdd69d95}{Exp\+Data}} (const \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} \&rdata, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ sigma\+\_\+y, std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ sigma\+\_\+z)
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}{nytrue}} () const
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}{nztrue}} () const
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}{nmaxevent}} () const
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_a4c23d300cbe15b0afb1ee3731d47cc93}{nt}} () const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a058fb6c96339b5116b1af937bc77c2e4}{set\+Timepoints}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{ts}})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_exp_data_a50ea5198d117f8f4ad1e34bb279975c8}{get\+Timepoints}} () const
+\item 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} \mbox{\hyperlink{classamici_1_1_exp_data_abee92d90cb7fe75fa39fb98c2ab0fd0a}{get\+Timepoint}} (int it) const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a85ca23791c279fe94e5d9f8e528ca63e}{set\+Observed\+Data}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}{observed\+Data}})
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a814827d61da6c675276758c856faf794}{set\+Observed\+Data}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}{observed\+Data}}, int iy)
+\item 
+bool \mbox{\hyperlink{classamici_1_1_exp_data_aedcda756b6356d6e147f2f4eb7658500}{is\+Set\+Observed\+Data}} (int it, int iy) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_exp_data_a509b3b8f38e8529dd59c1415dc6b839c}{get\+Observed\+Data}} () const
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_exp_data_a8839910b831f8c55976d880df081fb3e}{get\+Observed\+Data\+Ptr}} (int it) const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a5d84a162eb705e032820acd004603f29}{set\+Observed\+Data\+Std\+Dev}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{observed\+Data\+Std\+Dev}})
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_ae6ed832b9bee1861d233c90d5a37c677}{set\+Observed\+Data\+Std\+Dev}} (const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} std\+Dev)
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a90948c75e8ce51cd69be08a92215e6c2}{set\+Observed\+Data\+Std\+Dev}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{observed\+Data\+Std\+Dev}}, int iy)
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a10c64e99f5f3a2b19e3944b69b0d69ff}{set\+Observed\+Data\+Std\+Dev}} (const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} std\+Dev, int iy)
+\item 
+bool \mbox{\hyperlink{classamici_1_1_exp_data_a75808a32f77afa60bb736a1dfbce9aba}{is\+Set\+Observed\+Data\+Std\+Dev}} (int it, int iy) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_exp_data_ada8a2eebadd4eba1a7c3fa1a014a76d0}{get\+Observed\+Data\+Std\+Dev}} () const
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_exp_data_ad0ca0d6d8d5b6bb5587570d70bd3a4fc}{get\+Observed\+Data\+Std\+Dev\+Ptr}} (int it) const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_ae621c2d67f85f390d01a97658c956098}{set\+Observed\+Events}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}{observed\+Events}})
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a22ae335c4988600623e7a0c5ca7b47aa}{set\+Observed\+Events}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}{observed\+Events}}, int iz)
+\item 
+bool \mbox{\hyperlink{classamici_1_1_exp_data_a7270ea1362212e4dc344e24dc01b70ee}{is\+Set\+Observed\+Events}} (int ie, int iz) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_exp_data_a4f70119553de7d120b14600d7a6d5267}{get\+Observed\+Events}} () const
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_exp_data_a95ab3fe91af62612f202fdc6cd033d2a}{get\+Observed\+Events\+Ptr}} (int ie) const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_af55c1775810031cd4b6e283f6dd220be}{set\+Observed\+Events\+Std\+Dev}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{observed\+Events\+Std\+Dev}})
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a7be54ad0b0116325f4955f10a759a018}{set\+Observed\+Events\+Std\+Dev}} (const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} std\+Dev)
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a9fe1de066fcba20ce994d9817442a826}{set\+Observed\+Events\+Std\+Dev}} (const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&\mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{observed\+Events\+Std\+Dev}}, int iz)
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a2533798d195c8ede07c783800adf1d82}{set\+Observed\+Events\+Std\+Dev}} (const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} std\+Dev, int iz)
+\item 
+bool \mbox{\hyperlink{classamici_1_1_exp_data_a29530529cf50b9fa791e02fed620ea7a}{is\+Set\+Observed\+Events\+Std\+Dev}} (int ie, int iz) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_exp_data_a18cd150b527e08a9dd4a02b242a76d46}{get\+Observed\+Events\+Std\+Dev}} () const
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_exp_data_aabab4dfc080fdf961b6a3bbf1aebd631}{get\+Observed\+Events\+Std\+Dev\+Ptr}} (int ie) const
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_ac1d5115134ec1c839f1e913724ceb2b4}{fixed\+Parameters}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_acee836e015941b3984c44e1c7423b101}{fixed\+Parameters\+Preequilibration}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_a86fb66aedc21085f868fb6509a45c92d}{fixed\+Parameters\+Presimulation}}
+\item 
+\mbox{\Hypertarget{classamici_1_1_exp_data_acb5fa397f91ea45e9e2890036d339969}\label{classamici_1_1_exp_data_acb5fa397f91ea45e9e2890036d339969}} 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} \mbox{\hyperlink{classamici_1_1_exp_data_acb5fa397f91ea45e9e2890036d339969}{t\+\_\+presim}} = 0
+\begin{DoxyCompactList}\small\item\em duration of pre-\/simulation if this is $>$ 0, presimualation will be performed from (model-\/$>$t0 -\/ t\+\_\+presim) to model-\/$>$t0 using the fixed\+Parameters in fixed\+Parameters\+Presimulation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_a81a6a21cd5d905d5b6199f3a97030f61}{apply\+Dimensions}} ()
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_ae0f51d05d7fbaf7f61e0795301bad084}{apply\+Data\+Dimension}} ()
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_ae872e294aa6f34e90844905fd203eb16}{apply\+Event\+Dimension}} ()
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_acad115e928a8b0bc8e90ebf9553d3eed}{check\+Data\+Dimension}} (std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ input, const char $\ast$fieldname) const
+\item 
+void \mbox{\hyperlink{classamici_1_1_exp_data_adcf5587f972fdef595fff78123f5118a}{check\+Events\+Dimension}} (std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ input, const char $\ast$fieldname) const
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_ad7e81d1df451bdfcc55008fa06f2f389}{nytrue\+\_\+}}
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_a8913df548ec3837f9179a5ab63b32d13}{nztrue\+\_\+}}
+\item 
+int \mbox{\hyperlink{classamici_1_1_exp_data_af1bb7f9e32c45f8f3c34c9c4a7e5b1ac}{nmaxevent\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{ts}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}{observed\+Data}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{observed\+Data\+Std\+Dev}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}{observed\+Events}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{observed\+Events\+Std\+Dev}}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+
+
+Definition at line 14 of file edata.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a19c9736cc55da621d8de182a76cc1e8f}\label{classamici_1_1_exp_data_a19c9736cc55da621d8de182a76cc1e8f}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+default constructor 
+
+Definition at line 14 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a74a4a08956d260ee4a1b8f701564496d}\label{classamici_1_1_exp_data_a74a4a08956d260ee4a1b8f701564496d}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+default copy constructor, needs to be declared to be generated in swig \mbox{\Hypertarget{classamici_1_1_exp_data_af2322d528ad31a4335b0e5178b373649}\label{classamici_1_1_exp_data_af2322d528ad31a4335b0e5178b373649}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{int}]{nytrue,  }\item[{int}]{nztrue,  }\item[{int}]{nmaxevent }\end{DoxyParamCaption})}
+
+constructor that only initializes dimensions 
+\begin{DoxyParams}{Parameters}
+{\em nytrue} & \\
+\hline
+{\em nztrue} & \\
+\hline
+{\em nmaxevent} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_af2322d528ad31a4335b0e5178b373649_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a25832fe613894e3ab4e9c438936c4286}\label{classamici_1_1_exp_data_a25832fe613894e3ab4e9c438936c4286}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{int}]{nytrue,  }\item[{int}]{nztrue,  }\item[{int}]{nmaxevent,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{ts }\end{DoxyParamCaption})}
+
+constructor that initializes timepoints from vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em nytrue} & (dimension\+: scalar) \\
+\hline
+{\em nztrue} & (dimension\+: scalar) \\
+\hline
+{\em nmaxevent} & (dimension\+: scalar) \\
+\hline
+{\em ts} & (dimension\+: nt) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a25832fe613894e3ab4e9c438936c4286_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a4dc836c2db72abcd32318fc6654fc131}\label{classamici_1_1_exp_data_a4dc836c2db72abcd32318fc6654fc131}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{int}]{nytrue,  }\item[{int}]{nztrue,  }\item[{int}]{nmaxevent,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{ts,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{fixed\+Parameters }\end{DoxyParamCaption})}
+
+constructor that initializes timepoints and fixed parameters from vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em nytrue} & (dimension\+: scalar) \\
+\hline
+{\em nztrue} & (dimension\+: scalar) \\
+\hline
+{\em nmaxevent} & (dimension\+: scalar) \\
+\hline
+{\em ts} & (dimension\+: nt) \\
+\hline
+{\em fixed\+Parameters} & (dimension\+: nk) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a4dc836c2db72abcd32318fc6654fc131_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_af7b389e6ef9cd1cd5facacc783a8e1e9}\label{classamici_1_1_exp_data_af7b389e6ef9cd1cd5facacc783a8e1e9}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{int}]{nytrue,  }\item[{int}]{nztrue,  }\item[{int}]{nmaxevent,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{ts,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{observed\+Data,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{observed\+Data\+Std\+Dev,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{observed\+Events,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const \&}]{observed\+Events\+Std\+Dev }\end{DoxyParamCaption})}
+
+constructor that initializes timepoints and data from vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em nytrue} & (dimension\+: scalar) \\
+\hline
+{\em nztrue} & (dimension\+: scalar) \\
+\hline
+{\em nmaxevent} & (dimension\+: scalar) \\
+\hline
+{\em ts} & (dimension\+: nt) \\
+\hline
+{\em observed\+Data} & (dimension\+: nt x nytrue, row-\/major) \\
+\hline
+{\em observed\+Data\+Std\+Dev} & (dimension\+: nt x nytrue, row-\/major) \\
+\hline
+{\em observed\+Events} & (dimension\+: nmaxevent x nztrue, row-\/major) \\
+\hline
+{\em observed\+Events\+Std\+Dev} & (dimension\+: nmaxevent x nztrue, row-\/major) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_af7b389e6ef9cd1cd5facacc783a8e1e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_af4ce16765488e3857131aa5aea0c38b4}\label{classamici_1_1_exp_data_af4ce16765488e3857131aa5aea0c38b4}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_model}{Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructor that initializes with \mbox{\hyperlink{classamici_1_1_model}{Model}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & pointer to model specification object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a30619c6fa4a5f5cc07e7dcc0824aa0fc}\label{classamici_1_1_exp_data_a30619c6fa4a5f5cc07e7dcc0824aa0fc}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} \&}]{rdata,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{sigma\+\_\+y,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{sigma\+\_\+z }\end{DoxyParamCaption})}
+
+constructor that initializes with return\+Data, adds
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & return data pointer with stored simulation results \\
+\hline
+{\em sigma\+\_\+y} & scalar standard deviations for all observables \\
+\hline
+{\em sigma\+\_\+z} & scalar standard deviations for all event observables \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_ac1cf98522f4ac1b25f33b6b3fdd69d95}\label{classamici_1_1_exp_data_ac1cf98522f4ac1b25f33b6b3fdd69d95}} 
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\index{ExpData@{ExpData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ExpData()}{ExpData()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_exp_data}{Exp\+Data}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} \&}]{rdata,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$}]{sigma\+\_\+y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$}]{sigma\+\_\+z }\end{DoxyParamCaption})}
+
+constructor that initializes with return\+Data, adds
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & return data pointer with stored simulation results \\
+\hline
+{\em sigma\+\_\+y} & vector of standard deviations for observables (dimension\+: nytrue or nt x nytrue, row-\/major) \\
+\hline
+{\em sigma\+\_\+z} & vector of standard deviations for event observables (dimension\+: nztrue or nmaxevent x nztrue, row-\/major) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classamici_1_1_exp_data_ac1cf98522f4ac1b25f33b6b3fdd69d95_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}\label{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942}} 
+\index{ExpData@{ExpData}!nytrue@{nytrue}}
+\index{nytrue@{nytrue}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nytrue()}{nytrue()}}
+{\footnotesize\ttfamily int nytrue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+number of observables of the non-\/augmented model
+
+\begin{DoxyReturn}{Returns}
+number of observables of the non-\/augmented model 
+\end{DoxyReturn}
+
+
+Definition at line 310 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classamici_1_1_exp_data_ac2657ffc58ee1ea80d6c4db40010e942_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}\label{classamici_1_1_exp_data_a9e9b6341842d8860b0114faa4e0c97ee}} 
+\index{ExpData@{ExpData}!nztrue@{nztrue}}
+\index{nztrue@{nztrue}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nztrue()}{nztrue()}}
+{\footnotesize\ttfamily int nztrue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+number of event observables of the non-\/augmented model
+
+\begin{DoxyReturn}{Returns}
+number of event observables of the non-\/augmented model 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}\label{classamici_1_1_exp_data_ae6996d31ed94180a4b1d79412eb5ce31}} 
+\index{ExpData@{ExpData}!nmaxevent@{nmaxevent}}
+\index{nmaxevent@{nmaxevent}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nmaxevent()}{nmaxevent()}}
+{\footnotesize\ttfamily int nmaxevent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+maximal number of events to track
+
+\begin{DoxyReturn}{Returns}
+maximal number of events to track 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a4c23d300cbe15b0afb1ee3731d47cc93}\label{classamici_1_1_exp_data_a4c23d300cbe15b0afb1ee3731d47cc93}} 
+\index{ExpData@{ExpData}!nt@{nt}}
+\index{nt@{nt}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nt()}{nt()}}
+{\footnotesize\ttfamily int nt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+number of timepoints
+
+\begin{DoxyReturn}{Returns}
+number of timepoints 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a4c23d300cbe15b0afb1ee3731d47cc93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a058fb6c96339b5116b1af937bc77c2e4}\label{classamici_1_1_exp_data_a058fb6c96339b5116b1af937bc77c2e4}} 
+\index{ExpData@{ExpData}!setTimepoints@{setTimepoints}}
+\index{setTimepoints@{setTimepoints}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setTimepoints()}{setTimepoints()}}
+{\footnotesize\ttfamily void set\+Timepoints (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{ts }\end{DoxyParamCaption})}
+
+set function that copies data from input to \mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{Exp\+Data\+::ts}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & timepoints \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a058fb6c96339b5116b1af937bc77c2e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a50ea5198d117f8f4ad1e34bb279975c8}\label{classamici_1_1_exp_data_a50ea5198d117f8f4ad1e34bb279975c8}} 
+\index{ExpData@{ExpData}!getTimepoints@{getTimepoints}}
+\index{getTimepoints@{getTimepoints}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getTimepoints()}{getTimepoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& get\+Timepoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get function that copies data from \mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{Exp\+Data\+::ts}} to output
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}{Exp\+Data\+::ts}} 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a50ea5198d117f8f4ad1e34bb279975c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_abee92d90cb7fe75fa39fb98c2ab0fd0a}\label{classamici_1_1_exp_data_abee92d90cb7fe75fa39fb98c2ab0fd0a}} 
+\index{ExpData@{ExpData}!getTimepoint@{getTimepoint}}
+\index{getTimepoint@{getTimepoint}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getTimepoint()}{getTimepoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} get\+Timepoint (\begin{DoxyParamCaption}\item[{int}]{it }\end{DoxyParamCaption}) const}
+
+get function that returns timepoint at index
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & timepoint index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+timepoint timepoint at index 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a85ca23791c279fe94e5d9f8e528ca63e}\label{classamici_1_1_exp_data_a85ca23791c279fe94e5d9f8e528ca63e}} 
+\index{ExpData@{ExpData}!setObservedData@{setObservedData}}
+\index{setObservedData@{setObservedData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedData()}{setObservedData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void set\+Observed\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Data }\end{DoxyParamCaption})}
+
+set function that copies data from input to Exp\+Data\+::my
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Data} & observed data (dimension\+: nt x nytrue, row-\/major) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 116 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a85ca23791c279fe94e5d9f8e528ca63e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classamici_1_1_exp_data_a85ca23791c279fe94e5d9f8e528ca63e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a814827d61da6c675276758c856faf794}\label{classamici_1_1_exp_data_a814827d61da6c675276758c856faf794}} 
+\index{ExpData@{ExpData}!setObservedData@{setObservedData}}
+\index{setObservedData@{setObservedData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedData()}{setObservedData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void set\+Observed\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Data,  }\item[{int}]{iy }\end{DoxyParamCaption})}
+
+set function that copies observed data for specific observable
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Data} & observed data (dimension\+: nt) \\
+\hline
+{\em iy} & oberved data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classamici_1_1_exp_data_a814827d61da6c675276758c856faf794_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_aedcda756b6356d6e147f2f4eb7658500}\label{classamici_1_1_exp_data_aedcda756b6356d6e147f2f4eb7658500}} 
+\index{ExpData@{ExpData}!isSetObservedData@{isSetObservedData}}
+\index{isSetObservedData@{isSetObservedData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{isSetObservedData()}{isSetObservedData()}}
+{\footnotesize\ttfamily bool is\+Set\+Observed\+Data (\begin{DoxyParamCaption}\item[{int}]{it,  }\item[{int}]{iy }\end{DoxyParamCaption}) const}
+
+get function that checks whether data at specified indices has been set
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & time index \\
+\hline
+{\em iy} & observable index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean specifying if data was set 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classamici_1_1_exp_data_aedcda756b6356d6e147f2f4eb7658500_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classamici_1_1_exp_data_aedcda756b6356d6e147f2f4eb7658500_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a509b3b8f38e8529dd59c1415dc6b839c}\label{classamici_1_1_exp_data_a509b3b8f38e8529dd59c1415dc6b839c}} 
+\index{ExpData@{ExpData}!getObservedData@{getObservedData}}
+\index{getObservedData@{getObservedData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedData()}{getObservedData()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& get\+Observed\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get function that copies data from \mbox{\hyperlink{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}{Exp\+Data\+::observed\+Data}} to output
+
+\begin{DoxyReturn}{Returns}
+observed data (dimension\+: nt x nytrue, row-\/major) 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a8839910b831f8c55976d880df081fb3e}\label{classamici_1_1_exp_data_a8839910b831f8c55976d880df081fb3e}} 
+\index{ExpData@{ExpData}!getObservedDataPtr@{getObservedDataPtr}}
+\index{getObservedDataPtr@{getObservedDataPtr}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedDataPtr()}{getObservedDataPtr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ get\+Observed\+Data\+Ptr (\begin{DoxyParamCaption}\item[{int}]{it }\end{DoxyParamCaption}) const}
+
+get function that returns a pointer to observed data at index
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & timepoint index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to observed data at index (dimension\+: nytrue) 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a8839910b831f8c55976d880df081fb3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a5d84a162eb705e032820acd004603f29}\label{classamici_1_1_exp_data_a5d84a162eb705e032820acd004603f29}} 
+\index{ExpData@{ExpData}!setObservedDataStdDev@{setObservedDataStdDev}}
+\index{setObservedDataStdDev@{setObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedDataStdDev()}{setObservedDataStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Data\+Std\+Dev }\end{DoxyParamCaption})}
+
+set function that copies data from input to \mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{Exp\+Data\+::observed\+Data\+Std\+Dev}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Data\+Std\+Dev} & standard deviation of observed data (dimension\+: nt x nytrue, row-\/major) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a5d84a162eb705e032820acd004603f29_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classamici_1_1_exp_data_a5d84a162eb705e032820acd004603f29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ae6ed832b9bee1861d233c90d5a37c677}\label{classamici_1_1_exp_data_ae6ed832b9bee1861d233c90d5a37c677}} 
+\index{ExpData@{ExpData}!setObservedDataStdDev@{setObservedDataStdDev}}
+\index{setObservedDataStdDev@{setObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedDataStdDev()}{setObservedDataStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{std\+Dev }\end{DoxyParamCaption})}
+
+set function that sets all \mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{Exp\+Data\+::observed\+Data\+Std\+Dev}} to the input value
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+Dev} & standard deviation (dimension\+: scalar) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_ae6ed832b9bee1861d233c90d5a37c677_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a90948c75e8ce51cd69be08a92215e6c2}\label{classamici_1_1_exp_data_a90948c75e8ce51cd69be08a92215e6c2}} 
+\index{ExpData@{ExpData}!setObservedDataStdDev@{setObservedDataStdDev}}
+\index{setObservedDataStdDev@{setObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedDataStdDev()}{setObservedDataStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Data\+Std\+Dev,  }\item[{int}]{iy }\end{DoxyParamCaption})}
+
+set function that copies standard deviation of observed data for specific observable
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Data\+Std\+Dev} & standard deviation of observed data (dimension\+: nt) \\
+\hline
+{\em iy} & observed data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a90948c75e8ce51cd69be08a92215e6c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a10c64e99f5f3a2b19e3944b69b0d69ff}\label{classamici_1_1_exp_data_a10c64e99f5f3a2b19e3944b69b0d69ff}} 
+\index{ExpData@{ExpData}!setObservedDataStdDev@{setObservedDataStdDev}}
+\index{setObservedDataStdDev@{setObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedDataStdDev()}{setObservedDataStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{std\+Dev,  }\item[{int}]{iy }\end{DoxyParamCaption})}
+
+set function that sets all standard deviation of a specific observable to the input value
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+Dev} & standard deviation (dimension\+: scalar) \\
+\hline
+{\em iy} & observed data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 172 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a10c64e99f5f3a2b19e3944b69b0d69ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a75808a32f77afa60bb736a1dfbce9aba}\label{classamici_1_1_exp_data_a75808a32f77afa60bb736a1dfbce9aba}} 
+\index{ExpData@{ExpData}!isSetObservedDataStdDev@{isSetObservedDataStdDev}}
+\index{isSetObservedDataStdDev@{isSetObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{isSetObservedDataStdDev()}{isSetObservedDataStdDev()}}
+{\footnotesize\ttfamily bool is\+Set\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}\item[{int}]{it,  }\item[{int}]{iy }\end{DoxyParamCaption}) const}
+
+get function that checks whether standard deviation of data at specified indices has been set
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & time index \\
+\hline
+{\em iy} & observable index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean specifying if standard deviation of data was set 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classamici_1_1_exp_data_a75808a32f77afa60bb736a1dfbce9aba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a75808a32f77afa60bb736a1dfbce9aba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ada8a2eebadd4eba1a7c3fa1a014a76d0}\label{classamici_1_1_exp_data_ada8a2eebadd4eba1a7c3fa1a014a76d0}} 
+\index{ExpData@{ExpData}!getObservedDataStdDev@{getObservedDataStdDev}}
+\index{getObservedDataStdDev@{getObservedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedDataStdDev()}{getObservedDataStdDev()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& get\+Observed\+Data\+Std\+Dev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get function that copies data from \mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{Exp\+Data\+::observed\+Data\+Std\+Dev}} to output
+
+\begin{DoxyReturn}{Returns}
+standard deviation of observed data 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_ad0ca0d6d8d5b6bb5587570d70bd3a4fc}\label{classamici_1_1_exp_data_ad0ca0d6d8d5b6bb5587570d70bd3a4fc}} 
+\index{ExpData@{ExpData}!getObservedDataStdDevPtr@{getObservedDataStdDevPtr}}
+\index{getObservedDataStdDevPtr@{getObservedDataStdDevPtr}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedDataStdDevPtr()}{getObservedDataStdDevPtr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ get\+Observed\+Data\+Std\+Dev\+Ptr (\begin{DoxyParamCaption}\item[{int}]{it }\end{DoxyParamCaption}) const}
+
+get function that returns a pointer to standard deviation of observed data at index
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & timepoint index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to standard deviation of observed data at index 
+\end{DoxyReturn}
+
+
+Definition at line 186 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_ad0ca0d6d8d5b6bb5587570d70bd3a4fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ae621c2d67f85f390d01a97658c956098}\label{classamici_1_1_exp_data_ae621c2d67f85f390d01a97658c956098}} 
+\index{ExpData@{ExpData}!setObservedEvents@{setObservedEvents}}
+\index{setObservedEvents@{setObservedEvents}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEvents()}{setObservedEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void set\+Observed\+Events (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Events }\end{DoxyParamCaption})}
+
+set function that copies observed event data from input to \mbox{\hyperlink{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}{Exp\+Data\+::observed\+Events}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Events} & observed data (dimension\+: nmaxevent x nztrue, row-\/major) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 193 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classamici_1_1_exp_data_ae621c2d67f85f390d01a97658c956098_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classamici_1_1_exp_data_ae621c2d67f85f390d01a97658c956098_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a22ae335c4988600623e7a0c5ca7b47aa}\label{classamici_1_1_exp_data_a22ae335c4988600623e7a0c5ca7b47aa}} 
+\index{ExpData@{ExpData}!setObservedEvents@{setObservedEvents}}
+\index{setObservedEvents@{setObservedEvents}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEvents()}{setObservedEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void set\+Observed\+Events (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Events,  }\item[{int}]{iz }\end{DoxyParamCaption})}
+
+set function that copies observed event data for specific event observable
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Events} & observed data (dimension\+: nmaxevent) \\
+\hline
+{\em iz} & observed event data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 202 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a7270ea1362212e4dc344e24dc01b70ee}\label{classamici_1_1_exp_data_a7270ea1362212e4dc344e24dc01b70ee}} 
+\index{ExpData@{ExpData}!isSetObservedEvents@{isSetObservedEvents}}
+\index{isSetObservedEvents@{isSetObservedEvents}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{isSetObservedEvents()}{isSetObservedEvents()}}
+{\footnotesize\ttfamily bool is\+Set\+Observed\+Events (\begin{DoxyParamCaption}\item[{int}]{ie,  }\item[{int}]{iz }\end{DoxyParamCaption}) const}
+
+get function that checks whether event data at specified indices has been set
+
+
+\begin{DoxyParams}{Parameters}
+{\em ie} & event index \\
+\hline
+{\em iz} & event observable index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean specifying if data was set 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classamici_1_1_exp_data_a7270ea1362212e4dc344e24dc01b70ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a4f70119553de7d120b14600d7a6d5267}\label{classamici_1_1_exp_data_a4f70119553de7d120b14600d7a6d5267}} 
+\index{ExpData@{ExpData}!getObservedEvents@{getObservedEvents}}
+\index{getObservedEvents@{getObservedEvents}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedEvents()}{getObservedEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& get\+Observed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get function that copies data from Exp\+Data\+::mz to output
+
+\begin{DoxyReturn}{Returns}
+observed event data 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a95ab3fe91af62612f202fdc6cd033d2a}\label{classamici_1_1_exp_data_a95ab3fe91af62612f202fdc6cd033d2a}} 
+\index{ExpData@{ExpData}!getObservedEventsPtr@{getObservedEventsPtr}}
+\index{getObservedEventsPtr@{getObservedEventsPtr}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedEventsPtr()}{getObservedEventsPtr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ get\+Observed\+Events\+Ptr (\begin{DoxyParamCaption}\item[{int}]{ie }\end{DoxyParamCaption}) const}
+
+get function that returns a pointer to observed data at ieth occurence
+
+
+\begin{DoxyParams}{Parameters}
+{\em ie} & event occurence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to observed event data at ieth occurence 
+\end{DoxyReturn}
+
+
+Definition at line 219 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a95ab3fe91af62612f202fdc6cd033d2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_af55c1775810031cd4b6e283f6dd220be}\label{classamici_1_1_exp_data_af55c1775810031cd4b6e283f6dd220be}} 
+\index{ExpData@{ExpData}!setObservedEventsStdDev@{setObservedEventsStdDev}}
+\index{setObservedEventsStdDev@{setObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEventsStdDev()}{setObservedEventsStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Events\+Std\+Dev }\end{DoxyParamCaption})}
+
+set function that copies data from input to \mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{Exp\+Data\+::observed\+Events\+Std\+Dev}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Events\+Std\+Dev} & standard deviation of observed event data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 226 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_af55c1775810031cd4b6e283f6dd220be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classamici_1_1_exp_data_af55c1775810031cd4b6e283f6dd220be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a7be54ad0b0116325f4955f10a759a018}\label{classamici_1_1_exp_data_a7be54ad0b0116325f4955f10a759a018}} 
+\index{ExpData@{ExpData}!setObservedEventsStdDev@{setObservedEventsStdDev}}
+\index{setObservedEventsStdDev@{setObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEventsStdDev()}{setObservedEventsStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{std\+Dev }\end{DoxyParamCaption})}
+
+set function that sets all \mbox{\hyperlink{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}{Exp\+Data\+::observed\+Data\+Std\+Dev}} to the input value
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+Dev} & standard deviation (dimension\+: scalar) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 236 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a7be54ad0b0116325f4955f10a759a018_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a9fe1de066fcba20ce994d9817442a826}\label{classamici_1_1_exp_data_a9fe1de066fcba20ce994d9817442a826}} 
+\index{ExpData@{ExpData}!setObservedEventsStdDev@{setObservedEventsStdDev}}
+\index{setObservedEventsStdDev@{setObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEventsStdDev()}{setObservedEventsStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{observed\+Events\+Std\+Dev,  }\item[{int}]{iz }\end{DoxyParamCaption})}
+
+set function that copies standard deviation of observed data for specific observable
+
+
+\begin{DoxyParams}{Parameters}
+{\em observed\+Events\+Std\+Dev} & standard deviation of observed data (dimension\+: nmaxevent) \\
+\hline
+{\em iz} & observed data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 241 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a9fe1de066fcba20ce994d9817442a826_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a2533798d195c8ede07c783800adf1d82}\label{classamici_1_1_exp_data_a2533798d195c8ede07c783800adf1d82}} 
+\index{ExpData@{ExpData}!setObservedEventsStdDev@{setObservedEventsStdDev}}
+\index{setObservedEventsStdDev@{setObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{setObservedEventsStdDev()}{setObservedEventsStdDev()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void set\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{std\+Dev,  }\item[{int}]{iz }\end{DoxyParamCaption})}
+
+set function that sets all standard deviation of a specific observable to the input value
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+Dev} & standard deviation (dimension\+: scalar) \\
+\hline
+{\em iz} & observed data index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 250 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a2533798d195c8ede07c783800adf1d82_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a29530529cf50b9fa791e02fed620ea7a}\label{classamici_1_1_exp_data_a29530529cf50b9fa791e02fed620ea7a}} 
+\index{ExpData@{ExpData}!isSetObservedEventsStdDev@{isSetObservedEventsStdDev}}
+\index{isSetObservedEventsStdDev@{isSetObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{isSetObservedEventsStdDev()}{isSetObservedEventsStdDev()}}
+{\footnotesize\ttfamily bool is\+Set\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}\item[{int}]{ie,  }\item[{int}]{iz }\end{DoxyParamCaption}) const}
+
+get function that checks whether standard deviation of even data at specified indices has been set
+
+
+\begin{DoxyParams}{Parameters}
+{\em ie} & event index \\
+\hline
+{\em iz} & event observable index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean specifying if standard deviation of event data was set 
+\end{DoxyReturn}
+
+
+Definition at line 257 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classamici_1_1_exp_data_a29530529cf50b9fa791e02fed620ea7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a29530529cf50b9fa791e02fed620ea7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a18cd150b527e08a9dd4a02b242a76d46}\label{classamici_1_1_exp_data_a18cd150b527e08a9dd4a02b242a76d46}} 
+\index{ExpData@{ExpData}!getObservedEventsStdDev@{getObservedEventsStdDev}}
+\index{getObservedEventsStdDev@{getObservedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedEventsStdDev()}{getObservedEventsStdDev()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& get\+Observed\+Events\+Std\+Dev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get function that copies data from \mbox{\hyperlink{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}{Exp\+Data\+::observed\+Events\+Std\+Dev}} to output
+
+\begin{DoxyReturn}{Returns}
+standard deviation of observed event data 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file edata.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_aabab4dfc080fdf961b6a3bbf1aebd631}\label{classamici_1_1_exp_data_aabab4dfc080fdf961b6a3bbf1aebd631}} 
+\index{ExpData@{ExpData}!getObservedEventsStdDevPtr@{getObservedEventsStdDevPtr}}
+\index{getObservedEventsStdDevPtr@{getObservedEventsStdDevPtr}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{getObservedEventsStdDevPtr()}{getObservedEventsStdDevPtr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ get\+Observed\+Events\+Std\+Dev\+Ptr (\begin{DoxyParamCaption}\item[{int}]{ie }\end{DoxyParamCaption}) const}
+
+get function that returns a pointer to standard deviation of observed event data at ieth occurence
+
+
+\begin{DoxyParams}{Parameters}
+{\em ie} & event occurence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to standard deviation of observed event data at ieth occurence 
+\end{DoxyReturn}
+
+
+Definition at line 268 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_aabab4dfc080fdf961b6a3bbf1aebd631_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_a81a6a21cd5d905d5b6199f3a97030f61}\label{classamici_1_1_exp_data_a81a6a21cd5d905d5b6199f3a97030f61}} 
+\index{ExpData@{ExpData}!applyDimensions@{applyDimensions}}
+\index{applyDimensions@{applyDimensions}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{applyDimensions()}{applyDimensions()}}
+{\footnotesize\ttfamily void apply\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+resizes observed\+Data, observed\+Data\+Std\+Dev, observed\+Events and observed\+Events\+Std\+Dev 
+
+Definition at line 275 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_a81a6a21cd5d905d5b6199f3a97030f61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classamici_1_1_exp_data_a81a6a21cd5d905d5b6199f3a97030f61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ae0f51d05d7fbaf7f61e0795301bad084}\label{classamici_1_1_exp_data_ae0f51d05d7fbaf7f61e0795301bad084}} 
+\index{ExpData@{ExpData}!applyDataDimension@{applyDataDimension}}
+\index{applyDataDimension@{applyDataDimension}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{applyDataDimension()}{applyDataDimension()}}
+{\footnotesize\ttfamily void apply\+Data\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+resizes observed\+Data and observed\+Data\+Std\+Dev 
+
+Definition at line 280 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classamici_1_1_exp_data_ae0f51d05d7fbaf7f61e0795301bad084_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_ae0f51d05d7fbaf7f61e0795301bad084_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ae872e294aa6f34e90844905fd203eb16}\label{classamici_1_1_exp_data_ae872e294aa6f34e90844905fd203eb16}} 
+\index{ExpData@{ExpData}!applyEventDimension@{applyEventDimension}}
+\index{applyEventDimension@{applyEventDimension}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{applyEventDimension()}{applyEventDimension()}}
+{\footnotesize\ttfamily void apply\+Event\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+resizes observed\+Events and observed\+Events\+Std\+Dev 
+
+Definition at line 285 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classamici_1_1_exp_data_ae872e294aa6f34e90844905fd203eb16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_ae872e294aa6f34e90844905fd203eb16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_acad115e928a8b0bc8e90ebf9553d3eed}\label{classamici_1_1_exp_data_acad115e928a8b0bc8e90ebf9553d3eed}} 
+\index{ExpData@{ExpData}!checkDataDimension@{checkDataDimension}}
+\index{checkDataDimension@{checkDataDimension}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{checkDataDimension()}{checkDataDimension()}}
+{\footnotesize\ttfamily void check\+Data\+Dimension (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$}]{input,  }\item[{const char $\ast$}]{fieldname }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+checker for dimensions of input observed\+Data or observed\+Data\+Std\+Dev
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & vector input to be checked \\
+\hline
+{\em fieldname} & name of the input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 290 of file edata.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classamici_1_1_exp_data_acad115e928a8b0bc8e90ebf9553d3eed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_acad115e928a8b0bc8e90ebf9553d3eed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_exp_data_adcf5587f972fdef595fff78123f5118a}\label{classamici_1_1_exp_data_adcf5587f972fdef595fff78123f5118a}} 
+\index{ExpData@{ExpData}!checkEventsDimension@{checkEventsDimension}}
+\index{checkEventsDimension@{checkEventsDimension}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{checkEventsDimension()}{checkEventsDimension()}}
+{\footnotesize\ttfamily void check\+Events\+Dimension (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$}]{input,  }\item[{const char $\ast$}]{fieldname }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+checker for dimensions of input observed\+Events or observed\+Events\+Std\+Dev
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & vector input to be checkedjupyter\+\_\+contrib\+\_\+nbextensions \\
+\hline
+{\em fieldname} & name of the input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 295 of file edata.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_exp_data_adcf5587f972fdef595fff78123f5118a_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classamici_1_1_exp_data_ac1d5115134ec1c839f1e913724ceb2b4}\label{classamici_1_1_exp_data_ac1d5115134ec1c839f1e913724ceb2b4}} 
+\index{ExpData@{ExpData}!fixedParameters@{fixedParameters}}
+\index{fixedParameters@{fixedParameters}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{fixedParameters}{fixedParameters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ fixed\+Parameters}
+
+condition-\/specific parameters of size \mbox{\hyperlink{classamici_1_1_model_a3d4130da64883565a06a86e7d6029da1}{Model\+::nk()}} or empty 
+
+Definition at line 340 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_acee836e015941b3984c44e1c7423b101}\label{classamici_1_1_exp_data_acee836e015941b3984c44e1c7423b101}} 
+\index{ExpData@{ExpData}!fixedParametersPreequilibration@{fixedParametersPreequilibration}}
+\index{fixedParametersPreequilibration@{fixedParametersPreequilibration}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{fixedParametersPreequilibration}{fixedParametersPreequilibration}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ fixed\+Parameters\+Preequilibration}
+
+condition-\/specific parameters for pre-\/equilibration of size \mbox{\hyperlink{classamici_1_1_model_a3d4130da64883565a06a86e7d6029da1}{Model\+::nk()}} or empty. Overrides Solver\+::newton\+\_\+preeq 
+
+Definition at line 343 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a86fb66aedc21085f868fb6509a45c92d}\label{classamici_1_1_exp_data_a86fb66aedc21085f868fb6509a45c92d}} 
+\index{ExpData@{ExpData}!fixedParametersPresimulation@{fixedParametersPresimulation}}
+\index{fixedParametersPresimulation@{fixedParametersPresimulation}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{fixedParametersPresimulation}{fixedParametersPresimulation}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ fixed\+Parameters\+Presimulation}
+
+condition-\/specific parameters for pre-\/simulation of size \mbox{\hyperlink{classamici_1_1_model_a3d4130da64883565a06a86e7d6029da1}{Model\+::nk()}} or empty. 
+
+Definition at line 345 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_ad7e81d1df451bdfcc55008fa06f2f389}\label{classamici_1_1_exp_data_ad7e81d1df451bdfcc55008fa06f2f389}} 
+\index{ExpData@{ExpData}!nytrue\_@{nytrue\_}}
+\index{nytrue\_@{nytrue\_}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nytrue\_}{nytrue\_}}
+{\footnotesize\ttfamily int nytrue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+number of observables 
+
+Definition at line 388 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a8913df548ec3837f9179a5ab63b32d13}\label{classamici_1_1_exp_data_a8913df548ec3837f9179a5ab63b32d13}} 
+\index{ExpData@{ExpData}!nztrue\_@{nztrue\_}}
+\index{nztrue\_@{nztrue\_}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nztrue\_}{nztrue\_}}
+{\footnotesize\ttfamily int nztrue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+number of event observables 
+
+Definition at line 391 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_af1bb7f9e32c45f8f3c34c9c4a7e5b1ac}\label{classamici_1_1_exp_data_af1bb7f9e32c45f8f3c34c9c4a7e5b1ac}} 
+\index{ExpData@{ExpData}!nmaxevent\_@{nmaxevent\_}}
+\index{nmaxevent\_@{nmaxevent\_}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{nmaxevent\_}{nmaxevent\_}}
+{\footnotesize\ttfamily int nmaxevent\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+maximal number of event occurences 
+
+Definition at line 394 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}\label{classamici_1_1_exp_data_aa7014a80e7b102f85a10e3b9a480e8e5}} 
+\index{ExpData@{ExpData}!ts@{ts}}
+\index{ts@{ts}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{ts}{ts}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ ts\hspace{0.3cm}{\ttfamily [protected]}}
+
+observation timepoints (dimension\+: nt) 
+
+Definition at line 397 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}\label{classamici_1_1_exp_data_a6acedf749a3c5e4c4dcbc822f58a565d}} 
+\index{ExpData@{ExpData}!observedData@{observedData}}
+\index{observedData@{observedData}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{observedData}{observedData}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ observed\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+observed data (dimension\+: nt x nytrue, row-\/major) 
+
+Definition at line 400 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}\label{classamici_1_1_exp_data_aa097568cebb4be48c4c1dfaab0c2a159}} 
+\index{ExpData@{ExpData}!observedDataStdDev@{observedDataStdDev}}
+\index{observedDataStdDev@{observedDataStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{observedDataStdDev}{observedDataStdDev}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ observed\+Data\+Std\+Dev\hspace{0.3cm}{\ttfamily [protected]}}
+
+standard deviation of observed data (dimension\+: nt x nytrue, row-\/major) 
+
+Definition at line 402 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}\label{classamici_1_1_exp_data_a629e6085839e16bac95ef0eba580f7f0}} 
+\index{ExpData@{ExpData}!observedEvents@{observedEvents}}
+\index{observedEvents@{observedEvents}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{observedEvents}{observedEvents}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ observed\+Events\hspace{0.3cm}{\ttfamily [protected]}}
+
+observed events (dimension\+: nmaxevents x nztrue, row-\/major) 
+
+Definition at line 405 of file edata.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}\label{classamici_1_1_exp_data_abb12a8f75b4e6c936ae6c0be770628c9}} 
+\index{ExpData@{ExpData}!observedEventsStdDev@{observedEventsStdDev}}
+\index{observedEventsStdDev@{observedEventsStdDev}!ExpData@{ExpData}}
+\paragraph{\texorpdfstring{observedEventsStdDev}{observedEventsStdDev}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ observed\+Events\+Std\+Dev\hspace{0.3cm}{\ttfamily [protected]}}
+
+standard deviation of observed events/roots (dimension\+: nmaxevents x nztrue, row-\/major) 
+
+Definition at line 408 of file edata.\+h.
+

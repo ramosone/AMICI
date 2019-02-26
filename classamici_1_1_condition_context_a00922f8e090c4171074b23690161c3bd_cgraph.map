@@ -1,0 +1,10 @@
+<map id="ConditionContext" name="ConditionContext">
+<area shape="rect" id="node1" title="Apply condition&#45;specific settings from edata to model while keeping a backup of the original values." alt="" coords="5,107,129,134"/>
+<area shape="rect" id="node2" href="$classamici_1_1_condition_context.html#a3afbbd4b46cbd46cbc07960705492843" title="Apply condition&#45;specific settings from edata to the constructor&#45;supplied model, not changing the sett..." alt="" coords="177,107,286,134"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a3d4130da64883565a06a86e7d6029da1" title="Number of constants." alt="" coords="605,5,723,33"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#a14ba63ae81b4e8fa1f46884b703e2c30" title="Sets the fixedParameter member." alt="" coords="334,56,557,83"/>
+<area shape="rect" id="node6" href="$classamici_1_1_exp_data.html#a4c23d300cbe15b0afb1ee3731d47cc93" title=" " alt="" coords="381,107,511,134"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model.html#a50f9642f9bcb883dbd3925c85abc4c24" title="Set the timepoint vector." alt="" coords="353,157,539,185"/>
+<area shape="rect" id="node8" href="$classamici_1_1_exp_data.html#a50ea5198d117f8f4ad1e34bb279975c8" title=" " alt="" coords="345,208,547,235"/>
+<area shape="rect" id="node5" href="$classamici_1_1_model.html#adde50e0d8a99d20354c8403bf93fab6f" title="Fixed parameters." alt="" coords="609,56,719,83"/>
+</map>

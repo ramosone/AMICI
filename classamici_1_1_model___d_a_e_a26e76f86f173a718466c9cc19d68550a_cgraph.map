@@ -1,0 +1,18 @@
+<map id="fsxdot" name="fsxdot">
+<area shape="rect" id="node1" title=" " alt="" coords="5,277,62,304"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#a0c06c5326bb82ceedba30171c122cb8a" title="Computes nonnegative state vector according to stateIsNonNegative if anyStateNonNegative is set to fa..." alt="" coords="310,201,502,228"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model___d_a_e.html#a82db0639f98056acc376569457c95ca4" title="Mass matrix for DAE systems." alt="" coords="167,252,205,279"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model.html#a711281d57e9710226face29151cc4641" title="Get timepoint for given index." alt="" coords="802,302,910,330"/>
+<area shape="rect" id="node8" href="$classamici_1_1_model___d_a_e.html#a551dfccd2fb1aa618c644a580639f5b8" title=" " alt="" coords="150,353,222,380"/>
+<area shape="rect" id="node13" href="$classamici_1_1_model___d_a_e.html#a3147c7a327fead438efe714f04491c82" title=" " alt="" coords="369,49,443,76"/>
+<area shape="rect" id="node14" href="$classamici_1_1_sls_mat_wrapper.html#ae1d2d562c699946445244cca406c4994" title="Get the wrapped SlsMat." alt="" coords="110,404,262,447"/>
+<area shape="rect" id="node15" href="$classamici_1_1_model___d_a_e.html#a01f84575fd8df46a04fd472bbbc9d821" title=" " alt="" coords="378,100,434,127"/>
+<area shape="rect" id="node16" href="$classamici_1_1_sls_mat_wrapper.html#ace31bbb9df6dd42f70286108ecafa01b" title="Access raw data." alt="" coords="110,471,262,513"/>
+<area shape="rect" id="node3" href="$classamici_1_1_ami_vector.html#a5f00d4dc3e7866d193ce926f35542801" title=" " alt="" coords="554,201,741,228"/>
+<area shape="rect" id="node4" href="$classamici_1_1_ami_vector.html#ae62cf934983479ccb255785bdf455a2c" title=" " alt="" coords="578,150,717,178"/>
+<area shape="rect" id="node5" href="$classamici_1_1_ami_vector.html#acf288b105b2fa4520d0d73f828687533" title=" " alt="" coords="550,49,744,76"/>
+<area shape="rect" id="node9" href="$classamici_1_1_model.html#a7a8903313cd31dad4fa580c0e434bb1c" title="Recurring terms in xdot, parameter derivative." alt="" coords="336,454,476,482"/>
+<area shape="rect" id="node12" href="$classamici_1_1_model.html#a0f8e994055e37954d7746f3c1af27a5c" title="Number of parameters wrt to which sensitivities are computed." alt="" coords="339,404,473,431"/>
+<area shape="rect" id="node10" href="$classamici_1_1_model.html#a7e63009c65fc1361cc5a6e1fc3d5ff1a" title="Recurring terms in xdot." alt="" coords="589,454,706,482"/>
+<area shape="rect" id="node11" href="$namespaceamici.html#a1c2cd160b1b5061e19257f2a7947c8ed" title=" " alt="" coords="792,480,920,507"/>
+</map>

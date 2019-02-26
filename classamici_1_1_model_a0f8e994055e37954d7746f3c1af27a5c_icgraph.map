@@ -1,0 +1,39 @@
+<map id="nplist" name="nplist">
+<area shape="rect" id="node1" title="Number of parameters wrt to which sensitivities are computed." alt="" coords="636,689,689,717"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#a9469743e91fe7a63974ba2ac58a50396" title=" " alt="" coords="455,5,494,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a6c533c9b3476d81336d1758a817d0746" title=" " alt="" coords="448,56,501,83"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#accad5c6b805db97a0066842883e9a750" title=" " alt="" coords="452,107,497,134"/>
+<area shape="rect" id="node5" href="$classamici_1_1_model.html#a244bed76a2775b92cfbbb347ec65a54f" title=" " alt="" coords="452,157,497,185"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model.html#a9dd884d676d173f976a8e74ef7717198" title=" " alt="" coords="132,260,303,287"/>
+<area shape="rect" id="node8" href="$classamici_1_1_model.html#a82941b121d9db31d357642092a2cd41d" title="Set the initial state sensitivities." alt="" coords="389,259,561,286"/>
+<area shape="rect" id="node9" href="$classamici_1_1_model.html#a55c3dcaac3e24e7b6ec3a80c7f148ed6" title="Set the initial state sensitivities." alt="" coords="361,309,588,337"/>
+<area shape="rect" id="node10" href="$classamici_1_1_model.html#a01b01e15d5cac9cec911a30f65e327f8" title="Set the nplist&#45;dependent vectors to their proper sizes." alt="" coords="418,411,531,438"/>
+<area shape="rect" id="node14" href="$classamici_1_1_model.html#aa19d5feeb75bc472ce6244790ebf765b" title=" " alt="" coords="437,461,513,489"/>
+<area shape="rect" id="node15" href="$classamici_1_1_model.html#acd951497e01220e545bbb238cc48e7bb" title=" " alt="" coords="142,491,293,518"/>
+<area shape="rect" id="node16" href="$classamici_1_1_model.html#a6f46a63f0524ad25e4125254b78fdee9" title=" " alt="" coords="452,360,498,387"/>
+<area shape="rect" id="node17" href="$classamici_1_1_model.html#a382cd2049c70f0dd4aafe483e4a50cff" title=" " alt="" coords="450,563,500,590"/>
+<area shape="rect" id="node18" href="$classamici_1_1_model.html#a322eb75785aa46abe19813b9c56d706e" title=" " alt="" coords="448,613,502,641"/>
+<area shape="rect" id="node19" href="$classamici_1_1_model.html#ae977a1364eb91b11b7a1f6f63c0c4547" title=" " alt="" coords="455,664,494,691"/>
+<area shape="rect" id="node20" href="$classamici_1_1_model.html#a5ddd801e9951f8057c2cfd8c66a27c42" title=" " alt="" coords="453,715,496,742"/>
+<area shape="rect" id="node21" href="$classamici_1_1_model.html#a0be0b4d550d53eebd0e35c65f1b1bbc6" title=" " alt="" coords="448,765,502,793"/>
+<area shape="rect" id="node22" href="$classamici_1_1_model.html#ae7dc86ad0c432396fa21ad0f423c531c" title=" " alt="" coords="446,816,504,843"/>
+<area shape="rect" id="node23" href="$classamici_1_1_model.html#a685b7374d29d96f7d40d83c7d92fcf27" title=" " alt="" coords="441,867,508,894"/>
+<area shape="rect" id="node24" href="$classamici_1_1_model.html#aef4944ffd8a1b4f9a92ce1f8923af695" title=" " alt="" coords="440,917,510,945"/>
+<area shape="rect" id="node25" href="$classamici_1_1_model.html#acd0838d3644e9232cc2e65d7a8c956cf" title=" " alt="" coords="430,968,520,995"/>
+<area shape="rect" id="node26" href="$classamici_1_1_model.html#a0c9fd2d7e184d44745130d7ffa2a0075" title=" " alt="" coords="430,1019,520,1046"/>
+<area shape="rect" id="node27" href="$classamici_1_1_model.html#a2a774934ab3b0a22a706f6328dd95597" title=" " alt="" coords="450,1069,500,1097"/>
+<area shape="rect" id="node28" href="$classamici_1_1_model.html#aba7a1237e503813d9ec7ca56413f1e1d" title=" " alt="" coords="451,1120,499,1147"/>
+<area shape="rect" id="node29" href="$classamici_1_1_model.html#a78863f621eda7016ab7136a357dacdaf" title=" " alt="" coords="448,1171,501,1198"/>
+<area shape="rect" id="node30" href="$classamici_1_1_model.html#a49336e5923942fc5b4b26d6facf90b1d" title=" " alt="" coords="446,1221,504,1249"/>
+<area shape="rect" id="node31" href="$classamici_1_1_model___d_a_e.html#a551dfccd2fb1aa618c644a580639f5b8" title=" " alt="" coords="380,1272,570,1299"/>
+<area shape="rect" id="node34" href="$classamici_1_1_model___o_d_e.html#a371aa66b99b1b3b20ed2e533d9b44870" title=" " alt="" coords="379,1323,570,1350"/>
+<area shape="rect" id="node37" href="$classamici_1_1_newton_solver.html#a90d4823c7b8373d9aaccba80c930a7c7" title=" " alt="" coords="392,1374,557,1416"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model.html#ac49b8bcfed2798f9220180e038ae7354" title=" " alt="" coords="5,260,74,287"/>
+<area shape="rect" id="node11" href="$classamici_1_1_model.html#a2afe974183e4bccaf746f6409941fe8f" title="Set the list of parameters for which sensitivities are computed, resets initial state sensitivities." alt="" coords="157,363,279,390"/>
+<area shape="rect" id="node12" href="$classamici_1_1_model.html#a9b03cc8dbac85d38ced3f59234ba27d9" title="Require computation of sensitivities for all parameters p [0..np[ in natural order,..." alt="" coords="134,414,302,456"/>
+<area shape="rect" id="node13" href="$classamici_1_1_model.html#abd567a1612a8b947ca43c74df3b83273" title=" " alt="" coords="11,421,69,449"/>
+<area shape="rect" id="node32" href="$classamici_1_1_model___d_a_e.html#a26e76f86f173a718466c9cc19d68550a" title=" " alt="" coords="131,1221,305,1249"/>
+<area shape="rect" id="node33" href="$classamici_1_1_model___d_a_e.html#afd60580b84c72713288796453f6da33a" title=" " alt="" coords="123,1272,312,1299"/>
+<area shape="rect" id="node35" href="$classamici_1_1_model___o_d_e.html#a786f028681b0928eb431cd44e9bd254a" title=" " alt="" coords="130,1323,305,1350"/>
+<area shape="rect" id="node36" href="$classamici_1_1_model___o_d_e.html#afd60580b84c72713288796453f6da33a" title=" " alt="" coords="122,1373,313,1401"/>
+</map>

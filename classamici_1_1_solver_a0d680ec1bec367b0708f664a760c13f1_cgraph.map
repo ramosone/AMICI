@@ -1,0 +1,5 @@
+<map id="setAbsoluteToleranceB" name="setAbsoluteToleranceB">
+<area shape="rect" id="node1" title="Sets the absolute tolerances for the backward problem for adjoint sensitivity analysis." alt="" coords="5,31,163,58"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#af4bbf9fea3348d86380be1c059e4b9f5" title="checks whether memory for the forward problem has been allocated" alt="" coords="245,5,355,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#a2d93ff630e5bb38f4bc6d8b47b46bd73" title="updates all senstivivity solver tolerances according to the currently specified member variables" alt="" coords="211,56,389,83"/>
+</map>

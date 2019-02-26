@@ -1,0 +1,2998 @@
+\hypertarget{classamici_1_1_solver}{}\subsection{Solver Class Reference}
+\label{classamici_1_1_solver}\index{Solver@{Solver}}
+
+
+{\ttfamily \#include $<$solver.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamici_1_1_solver_a4676b699f5efede8bee51636bbe8b54a}{Solver}} (const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&other)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classamici_1_1_solver}{Solver}} copy constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classamici_1_1_solver}{Solver}} $\ast$ \mbox{\hyperlink{classamici_1_1_solver_ad40c0e06f5ee35afc1dd60e9f80ac5be}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Clone this instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a5cffde567803181ec12c71117c74b47a}{setup}} (\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$x, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dx, \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$sx, \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$sdx, \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)
+\begin{DoxyCompactList}\small\item\em Initialises the ami memory object and applies specified options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_ad053924ece01f2958b5bc2332f56a0d6}{setupB}} (\mbox{\hyperlink{classamici_1_1_backward_problem}{Backward\+Problem}} $\ast$bwd, \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)
+\begin{DoxyCompactList}\small\item\em Initialises the A\+MI memory object for the backwards problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a0db027ca9e9778c0b40afdb80f11a3af}{get\+Sens}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$tret, \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$yy\+Sout) const =0
+\begin{DoxyCompactList}\small\item\em Extracts diagnosis information from solver memory block and writes them into the return data instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a07318808fed3463ea8de7f25e3698343}{get\+Diagnosis}} (const int it, \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} $\ast$rdata) const
+\begin{DoxyCompactList}\small\item\em Extracts diagnosis information from solver memory block and writes them into the return data object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_aa7aec3090326db73739483e141e65cda}{get\+DiagnosisB}} (const int it, \mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} $\ast$rdata, int which) const
+\begin{DoxyCompactList}\small\item\em Extracts diagnosis information from solver memory block and writes them into the return data object for the backward problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_acab2ddcee3d62bef9f3e186aee8898e9}{get\+Root\+Info}} (int $\ast$rootsfound) const =0
+\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_acfcd1423675ef1abc302f3ac50353932}{re\+Init}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t0, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yy0, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yp0)=0
+\begin{DoxyCompactList}\small\item\em Reinitializes the states in the solver after an event occurence. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a5a982db994b0ee9127a2f688e3b38911}{sens\+Re\+Init}} (\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$y\+S0, \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$yp\+S0)=0
+\begin{DoxyCompactList}\small\item\em Reinitializes the state sensitivites in the solver after an event occurence. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac3a257a7b79cc6d69a980a0148873ccc}{calc\+IC}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} tout1, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$x, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dx)=0
+\begin{DoxyCompactList}\small\item\em Calculates consistent initial conditions, assumes initial states to be correct (D\+AE only) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a2c1d163bbfb33e9f9c93cda583ad6537}{calc\+I\+CB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} tout1, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$xB, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dxB)=0
+\begin{DoxyCompactList}\small\item\em Calculates consistent initial conditions for the backwards problem, assumes initial states to be correct (D\+AE only) \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classamici_1_1_solver_a977280dc1ce01449f530a2ebc31e5dea}{solve}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} tout, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yret, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$ypret, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$tret, int itask)=0
+\begin{DoxyCompactList}\small\item\em Solves the forward problem until a predefined timepoint. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classamici_1_1_solver_aeb16e555b95787057153731984d69ca1}{solveF}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} tout, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yret, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$ypret, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$tret, int itask, int $\ast$ncheck\+Ptr)=0
+\begin{DoxyCompactList}\small\item\em Solves the forward problem until a predefined timepoint (adjoint only) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ad1e0c0377036b859c20a67e13532e5f0}{solveB}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t\+Bout, int itaskB)=0
+\begin{DoxyCompactList}\small\item\em Solves the backward problem until a predefined timepoint (adjoint only) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a5cc7e9730c6ab9490087203b8dd25d55}{set\+Stop\+Time}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} tstop)=0
+\begin{DoxyCompactList}\small\item\em Sets a timepoint at which the simulation will be stopped. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac94e2d6eca13827dbf7771cc8abf144f}{re\+InitB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t\+B0, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yy\+B0, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yp\+B0)=0
+\begin{DoxyCompactList}\small\item\em Reinitializes the adjoint states after an event occurence. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_af0e3dc2584bfd8a8b1a1625ac9dad4f4}{getB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$tret, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yy, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$yp) const =0
+\begin{DoxyCompactList}\small\item\em Returns the current adjoint states. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1a4af06dc12f51c43315cba90c4c9181}{get\+QuadB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$tret, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$qB) const =0
+\begin{DoxyCompactList}\small\item\em Returns the current adjoint states. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ae40c916280416567c031c2a14ad957b3}{quad\+Re\+InitB}} (int which, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$y\+Q\+B0)=0
+\begin{DoxyCompactList}\small\item\em Reinitialize the adjoint states after an event occurence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_acdf98951e1b488e1ca7c099c2b054939}\label{classamici_1_1_solver_acdf98951e1b488e1ca7c099c2b054939}} 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_acdf98951e1b488e1ca7c099c2b054939}{turn\+Off\+Root\+Finding}} ()=0
+\begin{DoxyCompactList}\small\item\em Disable rootfinding. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_aa0fa493529f6872e7e776b91fbbf38f9}{Sensitivity\+Method}} \mbox{\hyperlink{classamici_1_1_solver_a888cb7142e103c84bdeeb99566aba65a}{get\+Sensitivity\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Return current sensitivity method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a3a7713f2ce77ffade77445a825ad289d}{set\+Sensitivity\+Method}} (\mbox{\hyperlink{namespaceamici_aa0fa493529f6872e7e776b91fbbf38f9}{Sensitivity\+Method}} sensi\+\_\+meth)
+\begin{DoxyCompactList}\small\item\em Set sensitivity method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classamici_1_1_solver_ad68589cfe3af35633ff5fa1a4e7aaddb}{get\+Newton\+Max\+Steps}} () const
+\begin{DoxyCompactList}\small\item\em Get maximum number of allowed Newton steps for steady state computation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_abf2e868e186c724c8ab939ba261ef314}{set\+Newton\+Max\+Steps}} (int newton\+\_\+maxsteps)
+\begin{DoxyCompactList}\small\item\em Set maximum number of allowed Newton steps for steady state computation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classamici_1_1_solver_a75aabe2e004edaba96db48b0abd3fc6f}{get\+Newton\+Preequilibration}} () const
+\begin{DoxyCompactList}\small\item\em Get if preequilibration of model via Newton solver is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a8e71a26a59a4c3c03b362a72079377f2}{set\+Newton\+Preequilibration}} (bool newton\+\_\+preeq)
+\begin{DoxyCompactList}\small\item\em Enable/disable preequilibration of model via Newton solver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classamici_1_1_solver_a874c929a78d0e2af11c62ba958e1b3d1}{get\+Newton\+Max\+Linear\+Steps}} () const
+\begin{DoxyCompactList}\small\item\em Get maximum number of allowed linear steps per Newton step for steady state computation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_af9143ab28630d5db394f641df0a8e477}{set\+Newton\+Max\+Linear\+Steps}} (int newton\+\_\+maxlinsteps)
+\begin{DoxyCompactList}\small\item\em Set maximum number of allowed linear steps per Newton step for steady state computation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_aaa03ec2f8c4d5323b98d71134a462fda}{Sensitivity\+Order}} \mbox{\hyperlink{classamici_1_1_solver_affde3089fec2a1cca40d6cc0c4c2cf1d}{get\+Sensitivity\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Get sensitvity order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a26129f061fdf7869be2d3e4aa22532b6}{set\+Sensitivity\+Order}} (\mbox{\hyperlink{namespaceamici_aaa03ec2f8c4d5323b98d71134a462fda}{Sensitivity\+Order}} sensi)
+\begin{DoxyCompactList}\small\item\em Set the sensitvity order. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_a54fe1b062315ed19b2dbf88206415e06}{get\+Relative\+Tolerance}} () const
+\begin{DoxyCompactList}\small\item\em Get the relative tolerances for the forward problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_afb5f0c48f24e4bc3efad8ef599adde56}{set\+Relative\+Tolerance}} (double rtol)
+\begin{DoxyCompactList}\small\item\em Sets the relative tolerances for the forward problem. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_a676df944b6737474dd4ef74fe9212f3e}{get\+Absolute\+Tolerance}} () const
+\begin{DoxyCompactList}\small\item\em Get the absolute tolerances for the forward problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_afe0fd2fad6ce110ad8421f5979945f90}{set\+Absolute\+Tolerance}} (double atol)
+\begin{DoxyCompactList}\small\item\em Sets the absolute tolerances for the forward problem. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_acf203e64c34e2d20a6fd563029c19b57}{get\+Relative\+Tolerance\+F\+SA}} () const
+\begin{DoxyCompactList}\small\item\em Returns the relative tolerances for the forward sensitivity problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_af82e072706f6bc6819c154b86bec309f}{set\+Relative\+Tolerance\+F\+SA}} (double rtol)
+\begin{DoxyCompactList}\small\item\em Sets the relative tolerances for the forward sensitivity problem. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ac4b72ec37a7ab41b520b5c540a382165}{get\+Absolute\+Tolerance\+F\+SA}} () const
+\begin{DoxyCompactList}\small\item\em Returns the absolute tolerances for the forward sensitivity problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a96ccd686d0ce5c2c43071537e088e42a}{set\+Absolute\+Tolerance\+F\+SA}} (double atol)
+\begin{DoxyCompactList}\small\item\em Sets the absolute tolerances for the forward sensitivity problem. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ae62749d65b73e317be96b0556401f29d}{get\+Relative\+ToleranceB}} () const
+\begin{DoxyCompactList}\small\item\em Returns the relative tolerances for the adjoint sensitivity problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a63eaa8593d16c31cedbbd038925eff2d}{set\+Relative\+ToleranceB}} (double rtol)
+\begin{DoxyCompactList}\small\item\em Sets the relative tolerances for the adjoint sensitivity problem. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ac495bd9ff960704197bc5e48ef9ee5de}{get\+Absolute\+ToleranceB}} () const
+\begin{DoxyCompactList}\small\item\em Returns the absolute tolerances for the backward problem for adjoint sensitivity analysis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a0d680ec1bec367b0708f664a760c13f1}{set\+Absolute\+ToleranceB}} (double atol)
+\begin{DoxyCompactList}\small\item\em Sets the absolute tolerances for the backward problem for adjoint sensitivity analysis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_a40124a6593fea7f5ddbf39385b021a9e}{get\+Relative\+Tolerance\+Quadratures}} () const
+\begin{DoxyCompactList}\small\item\em Returns the relative tolerance for the quadrature problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a086428d30274f2b7e6f94e8e7593dd8b}{set\+Relative\+Tolerance\+Quadratures}} (double rtol)
+\begin{DoxyCompactList}\small\item\em sets the relative tolerance for the quadrature problem \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_a1f50a4e21784c2757530068483c405cb}{get\+Absolute\+Tolerance\+Quadratures}} () const
+\begin{DoxyCompactList}\small\item\em returns the absolute tolerance for the quadrature problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_af425163c5d98c472d17e080da4ee3b78}{set\+Absolute\+Tolerance\+Quadratures}} (double atol)
+\begin{DoxyCompactList}\small\item\em sets the absolute tolerance for the quadrature problem \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ae598de1a48d3c4af1d08b8436d481e11}{get\+Relative\+Tolerance\+Steady\+State}} () const
+\begin{DoxyCompactList}\small\item\em returns the relative tolerance for the steady state problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_abdc290e52ae8a037aa65648f044c1ab5}{set\+Relative\+Tolerance\+Steady\+State}} (double rtol)
+\begin{DoxyCompactList}\small\item\em sets the relative tolerance for the steady state problem \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_adbb1549f9762649455bde39c29d47a03}{get\+Absolute\+Tolerance\+Steady\+State}} () const
+\begin{DoxyCompactList}\small\item\em returns the absolute tolerance for the steady state problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a78e5814a90b24ff22d5ef1fbed1fc23c}{set\+Absolute\+Tolerance\+Steady\+State}} (double atol)
+\begin{DoxyCompactList}\small\item\em sets the absolute tolerance for the steady state problem \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ac47e18a62130e7c84a8d7ceb0cb9d7eb}{get\+Relative\+Tolerance\+Steady\+State\+Sensi}} () const
+\begin{DoxyCompactList}\small\item\em returns the relative tolerance for the sensitivities of the steady state problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a7a324b1a30b5246828354c60c86c3583}{set\+Relative\+Tolerance\+Steady\+State\+Sensi}} (double rtol)
+\begin{DoxyCompactList}\small\item\em sets the relative tolerance for the sensitivities of the steady state problem \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classamici_1_1_solver_ae1b148791e34ba2220eba9c75d21afb0}{get\+Absolute\+Tolerance\+Steady\+State\+Sensi}} () const
+\begin{DoxyCompactList}\small\item\em returns the absolute tolerance for the sensitivities of the steady state problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a7907d753a8151ececcb4f60cb9721064}{set\+Absolute\+Tolerance\+Steady\+State\+Sensi}} (double atol)
+\begin{DoxyCompactList}\small\item\em sets the absolute tolerance for the sensitivities of the steady state problem \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classamici_1_1_solver_acf39690ae4c940c7734fc3fadabb4d50}{get\+Max\+Steps}} () const
+\begin{DoxyCompactList}\small\item\em returns the maximum number of solver steps for the forward problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_ab321627a9f9d22013638e0eb9b14d2dc}{set\+Max\+Steps}} (int \mbox{\hyperlink{classamici_1_1_solver_a029415ebe024ac6281fd9f190aefb2ee}{maxsteps}})
+\begin{DoxyCompactList}\small\item\em sets the maximum number of solver steps for the forward problem \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classamici_1_1_solver_a8f683e8adf7b34cab6dff296b1d38c83}{get\+Max\+Steps\+Backward\+Problem}} () const
+\begin{DoxyCompactList}\small\item\em returns the maximum number of solver steps for the backward problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_aa1d39cd744f489c17c3497c98acb7f59}{set\+Max\+Steps\+Backward\+Problem}} (int \mbox{\hyperlink{classamici_1_1_solver_a029415ebe024ac6281fd9f190aefb2ee}{maxsteps}})
+\begin{DoxyCompactList}\small\item\em sets the maximum number of solver steps for the backward problem \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}} \mbox{\hyperlink{classamici_1_1_solver_a60631d9a18e29c1102cae7cb77b9918c}{get\+Linear\+Multistep\+Method}} () const
+\begin{DoxyCompactList}\small\item\em returns the linear system multistep method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a2143a6f85b81c24611aad5689865953c}{set\+Linear\+Multistep\+Method}} (\mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}} \mbox{\hyperlink{classamici_1_1_solver_af71d1353291520f9ba68df79c4b9f053}{lmm}})
+\begin{DoxyCompactList}\small\item\em sets the linear system multistep method \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}} \mbox{\hyperlink{classamici_1_1_solver_a33883905a8ab056896373d76f18ce683}{get\+Nonlinear\+Solver\+Iteration}} () const
+\begin{DoxyCompactList}\small\item\em returns the nonlinear system solution method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a1dc7983f545ee95f7e6fb38cfb0b3286}{set\+Nonlinear\+Solver\+Iteration}} (\mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}} \mbox{\hyperlink{classamici_1_1_solver_a0ef59d3f746d2ec0e3f126b7b9989f50}{iter}})
+\begin{DoxyCompactList}\small\item\em sets the nonlinear system solution method \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}} \mbox{\hyperlink{classamici_1_1_solver_a69568ccb5de1bcdd4344e105ddb12324}{get\+Interpolation\+Type}} () const
+\begin{DoxyCompactList}\small\item\em get\+Interpolation\+Type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a9d9a0a5f8cdfdb993960706c646e240f}{set\+Interpolation\+Type}} (\mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}} \mbox{\hyperlink{classamici_1_1_solver_a5a80193af5ca74a4a4e3da67a7e74a98}{interp\+Type}})
+\begin{DoxyCompactList}\small\item\em sets the interpolation of the forward solution that is used for the backwards problem \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a890d968060d6d830aeed98dbeb04447f}{State\+Ordering}} \mbox{\hyperlink{classamici_1_1_solver_ac758cf7c51f50db18ea58898623ce12c}{get\+State\+Ordering}} () const
+\begin{DoxyCompactList}\small\item\em sets K\+LU state ordering mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_aa22ae4579c350a6f3fae2e3b5a0da1de}{set\+State\+Ordering}} (\mbox{\hyperlink{namespaceamici_a890d968060d6d830aeed98dbeb04447f}{State\+Ordering}} ordering)
+\begin{DoxyCompactList}\small\item\em sets K\+LU state ordering mode (only applies when linsol is set to amici.\+A\+M\+I\+C\+I\+\_\+\+K\+LU) \end{DoxyCompactList}\item 
+booleantype \mbox{\hyperlink{classamici_1_1_solver_ae1e9c3c5e59413ae25fb67c29983e3f3}{get\+Stability\+Limit\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em returns stability limit detection mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a618a94f1d84f9c71230d476f9a0205ce}{set\+Stability\+Limit\+Flag}} (booleantype stldet)
+\begin{DoxyCompactList}\small\item\em set stability limit detection mode \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a1a6a4776314a0843143e5631c3ce21a7}{Linear\+Solver}} \mbox{\hyperlink{classamici_1_1_solver_aa5cde2d316aae1d60d6eaf94ce7a854f}{get\+Linear\+Solver}} () const
+\begin{DoxyCompactList}\small\item\em get\+Linear\+Solver \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_acc8ecf11ad5a8480dd02f757faa264b2}{set\+Linear\+Solver}} (\mbox{\hyperlink{namespaceamici_a1a6a4776314a0843143e5631c3ce21a7}{Linear\+Solver}} linsol)
+\begin{DoxyCompactList}\small\item\em set\+Linear\+Solver \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}} \mbox{\hyperlink{classamici_1_1_solver_a256c45c84346e83402b665493e04e65e}{get\+Internal\+Sensitivity\+Method}} () const
+\begin{DoxyCompactList}\small\item\em returns the internal sensitivity method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_ab114a079f23232a521ad2e81a0a30e36}{set\+Internal\+Sensitivity\+Method}} (\mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}} \mbox{\hyperlink{classamici_1_1_solver_a5b3b5ca18d3932765358bdf278290861}{ism}})
+\begin{DoxyCompactList}\small\item\em sets the internal sensitivity method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a566d267fa2815fe0dd3c29d44f68209b}{init}} (\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$x, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dx, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t)=0
+\begin{DoxyCompactList}\small\item\em Initialises the states at the specified initial timepoint. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a14a9fe177339143801b38baeb800317a}{binit}} (int which, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$xB, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dxB, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t)=0
+\begin{DoxyCompactList}\small\item\em Initialise the adjoint states at the specified final timepoint. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a57c1900d556ab878f5fad94b4fcd1abd}{qbinit}} (int which, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$q\+Bdot)=0
+\begin{DoxyCompactList}\small\item\em Initialise the quadrature states at the specified final timepoint. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a0bb31b3b358751d4447199e2732db932}{root\+Init}} (int ne)=0
+\begin{DoxyCompactList}\small\item\em Initialises the rootfinding for events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a9e5cc83868435443926cde99c1a1d864}{sens\+Init1}} (\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$sx, \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$sdx, int \mbox{\hyperlink{classamici_1_1_solver_a9a135f04f34dbf45cf980b97e6906665}{nplist}})=0
+\begin{DoxyCompactList}\small\item\em initialises the sensitivities at the specified initial timepoint \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_abb3355b298fb576e7bcd3f333d14b5af}{set\+Dense\+Jac\+Fn}} ()=0
+\begin{DoxyCompactList}\small\item\em Set the dense Jacobian function. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_aabf68f0f9ee981fd320420f3ba5c5f8d}{set\+Sparse\+Jac\+Fn}} ()=0
+\begin{DoxyCompactList}\small\item\em sets the sparse Jacobian function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1ac4c2c1cf9df3c478ade2b1d5e728c6}{set\+Band\+Jac\+Fn}} ()=0
+\begin{DoxyCompactList}\small\item\em sets the banded Jacobian function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a151ebe8ad33f1e635289c869d1412375}{set\+Jac\+Times\+Vec\+Fn}} ()=0
+\begin{DoxyCompactList}\small\item\em sets the Jacobian vector multiplication function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1081b1ac835a2bf9221552a07d04ef4d}{set\+Dense\+Jac\+FnB}} (int which)=0
+\begin{DoxyCompactList}\small\item\em sets the dense Jacobian function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a101c62151da172cc06a025a3060b50de}{set\+Sparse\+Jac\+FnB}} (int which)=0
+\begin{DoxyCompactList}\small\item\em sets the sparse Jacobian function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1040308561e87b1e2d24c3ab9581e14d}{set\+Band\+Jac\+FnB}} (int which)=0
+\begin{DoxyCompactList}\small\item\em sets the banded Jacobian function \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a2c30d06de7f3f5f452dc80d5f03db9d7}{set\+Jac\+Times\+Vec\+FnB}} (int which)=0
+\begin{DoxyCompactList}\small\item\em sets the Jacobian vector multiplication function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_a0ae4930d2f6fa37ebcc55e334012fd6d}\label{classamici_1_1_solver_a0ae4930d2f6fa37ebcc55e334012fd6d}} 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a0ae4930d2f6fa37ebcc55e334012fd6d}{allocate\+Solver}} ()=0
+\begin{DoxyCompactList}\small\item\em Create specifies solver method and initializes solver memory for the forward problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a6a688afa51ec71eded6c8801faaafac3}{set\+S\+Stolerances}} (double rtol, double atol)=0
+\begin{DoxyCompactList}\small\item\em sets scalar relative and absolute tolerances for the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a16ec3b994dd433e71fcb58eea3cd529f}{set\+Sens\+S\+Stolerances}} (double rtol, double $\ast$atol)=0
+\begin{DoxyCompactList}\small\item\em activates sets scalar relative and absolute tolerances for the sensitivity variables \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1928530b3110cb9229d6836c5389379f}{set\+Sens\+Err\+Con}} (bool error\+\_\+corr)=0
+\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a0d5e55201b30383f1272146935f43c78}{set\+Quad\+Err\+ConB}} (int which, bool flag)=0
+\begin{DoxyCompactList}\small\item\em Specifies whether error control is also enforced for the backward quadrature problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ab5e90e0ad8f195cd6ca2ce477cc734b7}{set\+Err\+Handler\+Fn}} ()=0
+\begin{DoxyCompactList}\small\item\em Attaches the error handler function (err\+Msg\+Id\+And\+Txt) to the solver. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac1ca4675503688acf946f6530fb12c10}{set\+User\+Data}} (\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)=0
+\begin{DoxyCompactList}\small\item\em Attaches the user data instance (here this is a \mbox{\hyperlink{classamici_1_1_model}{Model}}) to the forward problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac5c347a985fa73861a88e76c7b9904f8}{set\+User\+DataB}} (int which, \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)=0
+\begin{DoxyCompactList}\small\item\em attaches the user data instance (here this is a \mbox{\hyperlink{classamici_1_1_model}{Model}}) to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a29f208ce304b01c8fe294ab9143a98e5}{set\+Max\+Num\+Steps}} (long int mxsteps)=0
+\begin{DoxyCompactList}\small\item\em specifies the maximum number of steps for the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a1163fddb222195354bdcf306fc52a1d0}{set\+Max\+Num\+StepsB}} (int which, long int mxstepsB)=0
+\begin{DoxyCompactList}\small\item\em specifies the maximum number of steps for the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a040fb365c47a8e8ccc1f32021b38bfcb}{set\+Stab\+Lim\+Det}} (int stldet)=0
+\begin{DoxyCompactList}\small\item\em activates stability limit detection for the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_acb7f8ad7671faf5fa7e5fa7851e662ec}{set\+Stab\+Lim\+DetB}} (int which, int stldet)=0
+\begin{DoxyCompactList}\small\item\em activates stability limit detection for the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a5c1ec0904b36a63c3d8adc74ffbb3718}{set\+Id}} (\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)=0
+\begin{DoxyCompactList}\small\item\em specify algebraic/differential components (D\+AE only) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_aaf6b0aa0540ff3600fdcc555f721e147}{set\+Suppress\+Alg}} (bool flag)=0
+\begin{DoxyCompactList}\small\item\em deactivates error control for algebraic components (D\+AE only) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac729d2b36333e1bb658a1ca1a717bd9a}{set\+Sens\+Params}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$p, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$pbar, int $\ast$plist)=0
+\begin{DoxyCompactList}\small\item\em specifies the scaling and indexes for sensitivity computation \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_abea88e1516775b1307f8ad837913ebc0}{get\+Dky}} (\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} t, int k, \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$dky) const =0
+\begin{DoxyCompactList}\small\item\em interpolates the (derivative of the) solution at the requested timepoint \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a5c0a23a7a9c8d21c76e0b1e6ef6e1947}{adj\+Init}} ()=0
+\begin{DoxyCompactList}\small\item\em initializes the adjoint problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_adb86fe4b29dd9c370bccee609b8deba3}{allocate\+SolverB}} (int $\ast$which)=0
+\begin{DoxyCompactList}\small\item\em Specifies solver method and initializes solver memory for the backward problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_abc7770e462f49fb8de643ab46ab94985}{set\+S\+StolerancesB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} rel\+TolB, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} abs\+TolB)=0
+\begin{DoxyCompactList}\small\item\em sets relative and absolute tolerances for the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_afe71105db4de90ce12a37309b252101e}{quad\+S\+StolerancesB}} (int which, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} reltol\+QB, \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} abstol\+QB)=0
+\begin{DoxyCompactList}\small\item\em sets relative and absolute tolerances for the quadrature backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ae98355a8a81e3b54c362413e0de2adbc}{dense}} (int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}})=0
+\begin{DoxyCompactList}\small\item\em Attaches a dense linear solver to the forward problem. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_aaa1ecd357b3facae2f2d12784563ad25}{denseB}} (int which, int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}})=0
+\begin{DoxyCompactList}\small\item\em attaches a dense linear solver to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a00863fd76b453dae4e883a6dd5512df3}{band}} (int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}}, int ubw, int lbw)=0
+\begin{DoxyCompactList}\small\item\em attaches a banded linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a635908e6d209f02160e791f3ee9d0660}{bandB}} (int which, int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}}, int ubw, int lbw)=0
+\begin{DoxyCompactList}\small\item\em attaches a banded linear solver to the backward problem \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_a8c82b886a5a8f4c33218e7345be700e2}\label{classamici_1_1_solver_a8c82b886a5a8f4c33218e7345be700e2}} 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a8c82b886a5a8f4c33218e7345be700e2}{diag}} ()=0
+\begin{DoxyCompactList}\small\item\em attaches a diagonal linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_abaeb82c5ccd678c2c2ce3e4988704c24}{diagB}} (int which)=0
+\begin{DoxyCompactList}\small\item\em attaches a diagonal linear solver to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a41fd75dd5f9bc7363ca1c1079c2d0014}{spgmr}} (int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned G\+M\+R\+ES linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a466c88dd599259b83fe6140e7a454759}{spgmrB}} (int which, int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned G\+M\+R\+ES linear solver to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ace3159c84746c594a0fb6a5f00773c44}{spbcg}} (int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned Bi-\/\+C\+G\+Stab linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a9b165bfcf1a6a482a6c9bd84197df6e2}{spbcgB}} (int which, int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned Bi-\/\+C\+G\+Stab linear solver to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ad58de0bff9b336ed3a053a79fb8e6c80}{sptfqmr}} (int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned T\+F\+Q\+MR linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a4504b729da34114dd11eab83161c5670}{sptfqmrB}} (int which, int prectype, int maxl)=0
+\begin{DoxyCompactList}\small\item\em attaches a scaled predonditioned T\+F\+Q\+MR linear solver to the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a4d8be62dca7f7db6563b9b3261a44c01}{klu}} (int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}}, int nnz, int sparsetype)=0
+\begin{DoxyCompactList}\small\item\em attaches a sparse linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a30d4c8cfff0c6a74116b15bcfeecbd33}{klu\+Set\+Ordering}} (int ordering)=0
+\begin{DoxyCompactList}\small\item\em sets the ordering for the sparse linear solver of the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_aa24ecf586126da19bb338ec8d08fe323}{klu\+Set\+OrderingB}} (int which, int ordering)=0
+\begin{DoxyCompactList}\small\item\em sets the ordering for the sparse linear solver of the backward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a5f9c6152e6e01f631cd5b68fd638281c}{kluB}} (int which, int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}}, int nnz, int sparsetype)=0
+\begin{DoxyCompactList}\small\item\em attaches a sparse linear solver to the forward problem \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_ac72a1a31217465d0f016b38382e487fa}{get\+Num\+Steps}} (void $\ast$ami\+\_\+mem, long int $\ast$numsteps) const =0
+\begin{DoxyCompactList}\small\item\em reports the number of solver steps \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_aaf8d4b1375cfa9e517ef0ec54e33d4d8}{get\+Num\+Rhs\+Evals}} (void $\ast$ami\+\_\+mem, long int $\ast$numrhsevals) const =0
+\begin{DoxyCompactList}\small\item\em reports the number of right hand evaluations \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a605fc85e2d8183dca4ebe24f9d810516}{get\+Num\+Err\+Test\+Fails}} (void $\ast$ami\+\_\+mem, long int $\ast$numerrtestfails) const =0
+\begin{DoxyCompactList}\small\item\em reports the number of local error test failures \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a34f79927b47e70db74f77943936e18b0}{get\+Num\+Nonlin\+Solv\+Conv\+Fails}} (void $\ast$ami\+\_\+mem, long int $\ast$numnonlinsolvconvfails) const =0
+\begin{DoxyCompactList}\small\item\em reports the number of nonlinear convergence failures \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classamici_1_1_solver_a491a5e0ffd6c1678a8bb5313df88ab45}{get\+Last\+Order}} (void $\ast$ami\+\_\+mem, int $\ast$order) const =0
+\begin{DoxyCompactList}\small\item\em Reports the order of the integration method during the last internal step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a6f41389f3a02d0b1ed9bfebcc080d3e1}{initialize\+Linear\+Solver}} (const \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model)
+\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a4f596731d15be6e9e76a2147aa1cce34}{initialize\+Linear\+SolverB}} (const \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$model, const int which)
+\begin{DoxyCompactList}\small\item\em Sets the linear solver for the backward problem. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classamici_1_1_solver_a9a135f04f34dbf45cf980b97e6906665}{nplist}} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor function to the number of sensitivity parameters in the model stored in the user data. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}{nx}} () const =0
+\begin{DoxyCompactList}\small\item\em Accessor function to the number of state variables in the model stored in the user data. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$ \mbox{\hyperlink{classamici_1_1_solver_a3ea583e4e53b188c54f426f1bc652a0f}{get\+Model}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classamici_1_1_solver_af4bbf9fea3348d86380be1c059e4b9f5}{get\+Malloc\+Done}} () const =0
+\begin{DoxyCompactList}\small\item\em checks whether memory for the forward problem has been allocated \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classamici_1_1_solver_a9673b3bc9248c4b7a156da9632b91436}{get\+Adj\+Malloc\+Done}} () const =0
+\begin{DoxyCompactList}\small\item\em checks whether memory for the backward problem has been allocated \end{DoxyCompactList}\item 
+virtual void $\ast$ \mbox{\hyperlink{classamici_1_1_solver_a96a36300db9c200d9586c2b90ced4195}{get\+Adj\+Bmem}} (void $\ast$ami\+\_\+mem, int which)=0
+\begin{DoxyCompactList}\small\item\em retrieves the solver memory instance for the backward problem \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_a9819e5e5fa0d702721235eabd9e7c0e6}\label{classamici_1_1_solver_a9819e5e5fa0d702721235eabd9e7c0e6}} 
+void \mbox{\hyperlink{classamici_1_1_solver_a9819e5e5fa0d702721235eabd9e7c0e6}{apply\+Tolerances}} ()
+\begin{DoxyCompactList}\small\item\em updates solver tolerances according to the currently specified member variables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_a45ec22a0fddb6a8b37a3c3fdbdf7374f}\label{classamici_1_1_solver_a45ec22a0fddb6a8b37a3c3fdbdf7374f}} 
+void \mbox{\hyperlink{classamici_1_1_solver_a45ec22a0fddb6a8b37a3c3fdbdf7374f}{apply\+Tolerances\+F\+SA}} ()
+\begin{DoxyCompactList}\small\item\em updates F\+SA solver tolerances according to the currently specified member variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_abdf8989d57153fde8988e73a98979297}{apply\+Tolerances\+A\+SA}} (int which)
+\begin{DoxyCompactList}\small\item\em updates A\+SA solver tolerances according to the currently specified member variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_solver_a09d47957ba70f725efb5e3a385a274a6}{apply\+Quad\+Tolerances\+A\+SA}} (int which)
+\begin{DoxyCompactList}\small\item\em updates A\+SA quadrature solver tolerances according to the currently specified member variables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classamici_1_1_solver_a2d93ff630e5bb38f4bc6d8b47b46bd73}\label{classamici_1_1_solver_a2d93ff630e5bb38f4bc6d8b47b46bd73}} 
+void \mbox{\hyperlink{classamici_1_1_solver_a2d93ff630e5bb38f4bc6d8b47b46bd73}{apply\+Sensitivity\+Tolerances}} ()
+\begin{DoxyCompactList}\small\item\em updates all senstivivity solver tolerances according to the currently specified member variables \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classamici_1_1_solver_a0040ff50d302fddc63a175cbb773d21e}{wrap\+Err\+Handler\+Fn}} (int error\+\_\+code, const char $\ast$module, const char $\ast$function, char $\ast$msg, void $\ast$eh\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Extracts diagnosis information from solver memory block and writes them into the return data object for the backward problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ void, std\+::function$<$ void(void $\ast$)$>$ $>$ \mbox{\hyperlink{classamici_1_1_solver_ae002c62062f2e9dafc944c78165abcac}{solver\+Memory}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ void, std\+::function$<$ void(void $\ast$)$>$ $>$ $>$ \mbox{\hyperlink{classamici_1_1_solver_af450f49c134cba233622f7d07fc78c06}{solver\+MemoryB}}
+\item 
+bool \mbox{\hyperlink{classamici_1_1_solver_a454f49f72b43a33add909d7ac630ce1c}{solver\+Was\+Called}} = false
+\item 
+\mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}} \mbox{\hyperlink{classamici_1_1_solver_a5b3b5ca18d3932765358bdf278290861}{ism}} = Internal\+Sensitivity\+Method\+::simultaneous
+\item 
+\mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}} \mbox{\hyperlink{classamici_1_1_solver_af71d1353291520f9ba68df79c4b9f053}{lmm}} = Linear\+Multistep\+Method\+::\+B\+DF
+\item 
+\mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}} \mbox{\hyperlink{classamici_1_1_solver_a0ef59d3f746d2ec0e3f126b7b9989f50}{iter}} = Nonlinear\+Solver\+Iteration\+::newton
+\item 
+\mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}} \mbox{\hyperlink{classamici_1_1_solver_a5a80193af5ca74a4a4e3da67a7e74a98}{interp\+Type}} = Interpolation\+Type\+::hermite
+\item 
+int \mbox{\hyperlink{classamici_1_1_solver_a029415ebe024ac6281fd9f190aefb2ee}{maxsteps}} = 10000
+\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classamici_1_1_solver_af5aefbc0a968aeae501d6d7f753ee2a4}{boost\+::serialization\+::serialize}} (Archive \&ar, \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&r, const unsigned int version)
+\begin{DoxyCompactList}\small\item\em Serialize \mbox{\hyperlink{classamici_1_1_solver}{Solver}} (see boost\+::serialization\+::serialize) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classamici_1_1_solver_a252a116a8f94abccc25b2086deb0734b}{operator==}} (const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&a, const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&b)
+\begin{DoxyCompactList}\small\item\em Check equality of data members excluding solver memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The \mbox{\hyperlink{classamici_1_1_solver}{Solver}} class provides a generic interface to C\+Vode and I\+DA solvers, individual realizations are realized in the C\+Vode\+Solver and the I\+D\+A\+Solver class.
+
+N\+O\+TE\+: Any changes in data members here must be propagated to copy ctor, equality operator, serialization functions in \mbox{\hyperlink{serialization_8h_source}{serialization.\+h}}, and amici\+::hdf5\+::read\+Solver\+Settings\+From\+H\+D\+F5 in \mbox{\hyperlink{hdf5_8cpp_source}{hdf5.\+cpp}}. 
+
+Definition at line 43 of file solver.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classamici_1_1_solver_a4676b699f5efede8bee51636bbe8b54a}\label{classamici_1_1_solver_a4676b699f5efede8bee51636bbe8b54a}} 
+\index{Solver@{Solver}!Solver@{Solver}}
+\index{Solver@{Solver}!Solver@{Solver}}
+\paragraph{\texorpdfstring{Solver()}{Solver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_solver}{Solver}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file solver.\+cpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_solver_ad40c0e06f5ee35afc1dd60e9f80ac5be}\label{classamici_1_1_solver_ad40c0e06f5ee35afc1dd60e9f80ac5be}} 
+\index{Solver@{Solver}!clone@{clone}}
+\index{clone@{clone}!Solver@{Solver}}
+\paragraph{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classamici_1_1_solver}{Solver}}$\ast$ clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The clone 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ad40c0e06f5ee35afc1dd60e9f80ac5be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a5cffde567803181ec12c71117c74b47a}\label{classamici_1_1_solver_a5cffde567803181ec12c71117c74b47a}} 
+\index{Solver@{Solver}!setup@{setup}}
+\index{setup@{setup}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{x,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dx,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{sx,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{sdx,  }\item[{\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & state vector \\
+\hline
+{\em dx} & state derivative vector (D\+AE only) \\
+\hline
+{\em sx} & state sensitivity vector \\
+\hline
+{\em sdx} & state derivative sensitivity vector (D\+AE only) \\
+\hline
+{\em model} & pointer to the model object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classamici_1_1_solver_a5cffde567803181ec12c71117c74b47a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ad053924ece01f2958b5bc2332f56a0d6}\label{classamici_1_1_solver_ad053924ece01f2958b5bc2332f56a0d6}} 
+\index{Solver@{Solver}!setupB@{setupB}}
+\index{setupB@{setupB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setupB()}{setupB()}}
+{\footnotesize\ttfamily void setupB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_backward_problem}{Backward\+Problem}} $\ast$}]{bwd,  }\item[{\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bwd} & pointer to backward problem \\
+\hline
+{\em model} & pointer to the model object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classamici_1_1_solver_ad053924ece01f2958b5bc2332f56a0d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a0db027ca9e9778c0b40afdb80f11a3af}\label{classamici_1_1_solver_a0db027ca9e9778c0b40afdb80f11a3af}} 
+\index{Solver@{Solver}!getSens@{getSens}}
+\index{getSens@{getSens}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getSens()}{getSens()}}
+{\footnotesize\ttfamily virtual void get\+Sens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{tret,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{yy\+Sout }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tret} & time at which the sensitivities should be computed \\
+\hline
+{\em yy\+Sout} & vector with sensitivities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a07318808fed3463ea8de7f25e3698343}\label{classamici_1_1_solver_a07318808fed3463ea8de7f25e3698343}} 
+\index{Solver@{Solver}!getDiagnosis@{getDiagnosis}}
+\index{getDiagnosis@{getDiagnosis}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getDiagnosis()}{getDiagnosis()}}
+{\footnotesize\ttfamily void get\+Diagnosis (\begin{DoxyParamCaption}\item[{const int}]{it,  }\item[{\mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} $\ast$}]{rdata }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & time-\/point index \\
+\hline
+{\em rdata} & pointer to the return data object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 176 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classamici_1_1_solver_a07318808fed3463ea8de7f25e3698343_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aa7aec3090326db73739483e141e65cda}\label{classamici_1_1_solver_aa7aec3090326db73739483e141e65cda}} 
+\index{Solver@{Solver}!getDiagnosisB@{getDiagnosisB}}
+\index{getDiagnosisB@{getDiagnosisB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getDiagnosisB()}{getDiagnosisB()}}
+{\footnotesize\ttfamily void get\+DiagnosisB (\begin{DoxyParamCaption}\item[{const int}]{it,  }\item[{\mbox{\hyperlink{classamici_1_1_return_data}{Return\+Data}} $\ast$}]{rdata,  }\item[{int}]{which }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & time-\/point index \\
+\hline
+{\em rdata} & pointer to the return data object \\
+\hline
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 196 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classamici_1_1_solver_aa7aec3090326db73739483e141e65cda_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_acab2ddcee3d62bef9f3e186aee8898e9}\label{classamici_1_1_solver_acab2ddcee3d62bef9f3e186aee8898e9}} 
+\index{Solver@{Solver}!getRootInfo@{getRootInfo}}
+\index{getRootInfo@{getRootInfo}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRootInfo()}{getRootInfo()}}
+{\footnotesize\ttfamily virtual void get\+Root\+Info (\begin{DoxyParamCaption}\item[{int $\ast$}]{rootsfound }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+get\+Root\+Info extracts information which event occured
+
+
+\begin{DoxyParams}{Parameters}
+{\em rootsfound} & array with flags indicating whether the respective event occured \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_acfcd1423675ef1abc302f3ac50353932}\label{classamici_1_1_solver_acfcd1423675ef1abc302f3ac50353932}} 
+\index{Solver@{Solver}!reInit@{reInit}}
+\index{reInit@{reInit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{reInit()}{reInit()}}
+{\footnotesize\ttfamily virtual void re\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t0,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yy0,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yp0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em t0} & new timepoint \\
+\hline
+{\em yy0} & new state variables \\
+\hline
+{\em yp0} & new derivative state variables (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a5a982db994b0ee9127a2f688e3b38911}\label{classamici_1_1_solver_a5a982db994b0ee9127a2f688e3b38911}} 
+\index{Solver@{Solver}!sensReInit@{sensReInit}}
+\index{sensReInit@{sensReInit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{sensReInit()}{sensReInit()}}
+{\footnotesize\ttfamily virtual void sens\+Re\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{y\+S0,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{yp\+S0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+S0} & new state sensitivity \\
+\hline
+{\em yp\+S0} & new derivative state sensitivities (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ac3a257a7b79cc6d69a980a0148873ccc}\label{classamici_1_1_solver_ac3a257a7b79cc6d69a980a0148873ccc}} 
+\index{Solver@{Solver}!calcIC@{calcIC}}
+\index{calcIC@{calcIC}!Solver@{Solver}}
+\paragraph{\texorpdfstring{calcIC()}{calcIC()}}
+{\footnotesize\ttfamily virtual void calc\+IC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{tout1,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{x,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tout1} & next timepoint to be computed (sets timescale) \\
+\hline
+{\em x} & initial state variables \\
+\hline
+{\em dx} & initial derivative state variables (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a2c1d163bbfb33e9f9c93cda583ad6537}\label{classamici_1_1_solver_a2c1d163bbfb33e9f9c93cda583ad6537}} 
+\index{Solver@{Solver}!calcICB@{calcICB}}
+\index{calcICB@{calcICB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{calcICB()}{calcICB()}}
+{\footnotesize\ttfamily virtual void calc\+I\+CB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{tout1,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{xB,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dxB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em tout1} & next timepoint to be computed (sets timescale) \\
+\hline
+{\em xB} & states of final solution of the forward problem \\
+\hline
+{\em dxB} & derivative states of final solution of the forward problem (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a977280dc1ce01449f530a2ebc31e5dea}\label{classamici_1_1_solver_a977280dc1ce01449f530a2ebc31e5dea}} 
+\index{Solver@{Solver}!solve@{solve}}
+\index{solve@{solve}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily virtual int solve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{tout,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yret,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{ypret,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{tret,  }\item[{int}]{itask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tout} & timepoint until which simulation should be performed \\
+\hline
+{\em yret} & states \\
+\hline
+{\em ypret} & derivative states (D\+AE only) \\
+\hline
+{\em tret} & pointer to the time variable \\
+\hline
+{\em itask} & task identifier, can be C\+V\+\_\+\+N\+O\+R\+M\+AL or C\+V\+\_\+\+O\+N\+E\+\_\+\+S\+T\+EP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status flag indicating success of execution 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classamici_1_1_solver_a977280dc1ce01449f530a2ebc31e5dea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aeb16e555b95787057153731984d69ca1}\label{classamici_1_1_solver_aeb16e555b95787057153731984d69ca1}} 
+\index{Solver@{Solver}!solveF@{solveF}}
+\index{solveF@{solveF}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solveF()}{solveF()}}
+{\footnotesize\ttfamily virtual int solveF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{tout,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yret,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{ypret,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{tret,  }\item[{int}]{itask,  }\item[{int $\ast$}]{ncheck\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tout} & timepoint until which simulation should be performed \\
+\hline
+{\em yret} & states \\
+\hline
+{\em ypret} & derivative states (D\+AE only) \\
+\hline
+{\em tret} & pointer to the time variable \\
+\hline
+{\em itask} & task identifier, can be C\+V\+\_\+\+N\+O\+R\+M\+AL or C\+V\+\_\+\+O\+N\+E\+\_\+\+S\+T\+EP \\
+\hline
+{\em ncheck\+Ptr} & pointer to a number that counts the internal checkpoints \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status flag indicating success of execution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classamici_1_1_solver_ad1e0c0377036b859c20a67e13532e5f0}\label{classamici_1_1_solver_ad1e0c0377036b859c20a67e13532e5f0}} 
+\index{Solver@{Solver}!solveB@{solveB}}
+\index{solveB@{solveB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solveB()}{solveB()}}
+{\footnotesize\ttfamily virtual void solveB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t\+Bout,  }\item[{int}]{itaskB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Bout} & timepoint until which simulation should be performed \\
+\hline
+{\em itaskB} & task identifier, can be C\+V\+\_\+\+N\+O\+R\+M\+AL or C\+V\+\_\+\+O\+N\+E\+\_\+\+S\+T\+EP \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a5cc7e9730c6ab9490087203b8dd25d55}\label{classamici_1_1_solver_a5cc7e9730c6ab9490087203b8dd25d55}} 
+\index{Solver@{Solver}!setStopTime@{setStopTime}}
+\index{setStopTime@{setStopTime}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setStopTime()}{setStopTime()}}
+{\footnotesize\ttfamily virtual void set\+Stop\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{tstop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstop} & timepoint until which simulation should be performed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ac94e2d6eca13827dbf7771cc8abf144f}\label{classamici_1_1_solver_ac94e2d6eca13827dbf7771cc8abf144f}} 
+\index{Solver@{Solver}!reInitB@{reInitB}}
+\index{reInitB@{reInitB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{reInitB()}{reInitB()}}
+{\footnotesize\ttfamily virtual void re\+InitB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t\+B0,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yy\+B0,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yp\+B0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em t\+B0} & new timepoint \\
+\hline
+{\em yy\+B0} & new adjoint state variables \\
+\hline
+{\em yp\+B0} & new adjoint derivative state variables (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_af0e3dc2584bfd8a8b1a1625ac9dad4f4}\label{classamici_1_1_solver_af0e3dc2584bfd8a8b1a1625ac9dad4f4}} 
+\index{Solver@{Solver}!getB@{getB}}
+\index{getB@{getB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getB()}{getB()}}
+{\footnotesize\ttfamily virtual void getB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{tret,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yy,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{yp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em tret} & time at which the adjoint states should be computed \\
+\hline
+{\em yy} & adjoint state variables \\
+\hline
+{\em yp} & adjoint derivative state variables (D\+AE only) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a1a4af06dc12f51c43315cba90c4c9181}\label{classamici_1_1_solver_a1a4af06dc12f51c43315cba90c4c9181}} 
+\index{Solver@{Solver}!getQuadB@{getQuadB}}
+\index{getQuadB@{getQuadB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getQuadB()}{getQuadB()}}
+{\footnotesize\ttfamily virtual void get\+QuadB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{tret,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{qB }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em tret} & time at which the adjoint states should be computed \\
+\hline
+{\em qB} & adjoint quadrature state variables \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ae40c916280416567c031c2a14ad957b3}\label{classamici_1_1_solver_ae40c916280416567c031c2a14ad957b3}} 
+\index{Solver@{Solver}!quadReInitB@{quadReInitB}}
+\index{quadReInitB@{quadReInitB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{quadReInitB()}{quadReInitB()}}
+{\footnotesize\ttfamily virtual void quad\+Re\+InitB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{y\+Q\+B0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em y\+Q\+B0} & new adjoint quadrature state variables \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a888cb7142e103c84bdeeb99566aba65a}\label{classamici_1_1_solver_a888cb7142e103c84bdeeb99566aba65a}} 
+\index{Solver@{Solver}!getSensitivityMethod@{getSensitivityMethod}}
+\index{getSensitivityMethod@{getSensitivityMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getSensitivityMethod()}{getSensitivityMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_aa0fa493529f6872e7e776b91fbbf38f9}{Sensitivity\+Method}} get\+Sensitivity\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+method enum 
+\end{DoxyReturn}
+
+
+Definition at line 464 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a3a7713f2ce77ffade77445a825ad289d}\label{classamici_1_1_solver_a3a7713f2ce77ffade77445a825ad289d}} 
+\index{Solver@{Solver}!setSensitivityMethod@{setSensitivityMethod}}
+\index{setSensitivityMethod@{setSensitivityMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSensitivityMethod()}{setSensitivityMethod()}}
+{\footnotesize\ttfamily void set\+Sensitivity\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_aa0fa493529f6872e7e776b91fbbf38f9}{Sensitivity\+Method}}}]{sensi\+\_\+meth }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensi\+\_\+meth} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 468 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classamici_1_1_solver_a3a7713f2ce77ffade77445a825ad289d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ad68589cfe3af35633ff5fa1a4e7aaddb}\label{classamici_1_1_solver_ad68589cfe3af35633ff5fa1a4e7aaddb}} 
+\index{Solver@{Solver}!getNewtonMaxSteps@{getNewtonMaxSteps}}
+\index{getNewtonMaxSteps@{getNewtonMaxSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNewtonMaxSteps()}{getNewtonMaxSteps()}}
+{\footnotesize\ttfamily int get\+Newton\+Max\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 472 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ad68589cfe3af35633ff5fa1a4e7aaddb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_abf2e868e186c724c8ab939ba261ef314}\label{classamici_1_1_solver_abf2e868e186c724c8ab939ba261ef314}} 
+\index{Solver@{Solver}!setNewtonMaxSteps@{setNewtonMaxSteps}}
+\index{setNewtonMaxSteps@{setNewtonMaxSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setNewtonMaxSteps()}{setNewtonMaxSteps()}}
+{\footnotesize\ttfamily void set\+Newton\+Max\+Steps (\begin{DoxyParamCaption}\item[{int}]{newton\+\_\+maxsteps }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em newton\+\_\+maxsteps} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 476 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classamici_1_1_solver_abf2e868e186c724c8ab939ba261ef314_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a75aabe2e004edaba96db48b0abd3fc6f}\label{classamici_1_1_solver_a75aabe2e004edaba96db48b0abd3fc6f}} 
+\index{Solver@{Solver}!getNewtonPreequilibration@{getNewtonPreequilibration}}
+\index{getNewtonPreequilibration@{getNewtonPreequilibration}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNewtonPreequilibration()}{getNewtonPreequilibration()}}
+{\footnotesize\ttfamily bool get\+Newton\+Preequilibration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 482 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a8e71a26a59a4c3c03b362a72079377f2}\label{classamici_1_1_solver_a8e71a26a59a4c3c03b362a72079377f2}} 
+\index{Solver@{Solver}!setNewtonPreequilibration@{setNewtonPreequilibration}}
+\index{setNewtonPreequilibration@{setNewtonPreequilibration}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setNewtonPreequilibration()}{setNewtonPreequilibration()}}
+{\footnotesize\ttfamily void set\+Newton\+Preequilibration (\begin{DoxyParamCaption}\item[{bool}]{newton\+\_\+preeq }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em newton\+\_\+preeq} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 486 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a8e71a26a59a4c3c03b362a72079377f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a874c929a78d0e2af11c62ba958e1b3d1}\label{classamici_1_1_solver_a874c929a78d0e2af11c62ba958e1b3d1}} 
+\index{Solver@{Solver}!getNewtonMaxLinearSteps@{getNewtonMaxLinearSteps}}
+\index{getNewtonMaxLinearSteps@{getNewtonMaxLinearSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNewtonMaxLinearSteps()}{getNewtonMaxLinearSteps()}}
+{\footnotesize\ttfamily int get\+Newton\+Max\+Linear\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 490 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a874c929a78d0e2af11c62ba958e1b3d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_af9143ab28630d5db394f641df0a8e477}\label{classamici_1_1_solver_af9143ab28630d5db394f641df0a8e477}} 
+\index{Solver@{Solver}!setNewtonMaxLinearSteps@{setNewtonMaxLinearSteps}}
+\index{setNewtonMaxLinearSteps@{setNewtonMaxLinearSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setNewtonMaxLinearSteps()}{setNewtonMaxLinearSteps()}}
+{\footnotesize\ttfamily void set\+Newton\+Max\+Linear\+Steps (\begin{DoxyParamCaption}\item[{int}]{newton\+\_\+maxlinsteps }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em newton\+\_\+maxlinsteps} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 494 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_af9143ab28630d5db394f641df0a8e477_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_affde3089fec2a1cca40d6cc0c4c2cf1d}\label{classamici_1_1_solver_affde3089fec2a1cca40d6cc0c4c2cf1d}} 
+\index{Solver@{Solver}!getSensitivityOrder@{getSensitivityOrder}}
+\index{getSensitivityOrder@{getSensitivityOrder}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getSensitivityOrder()}{getSensitivityOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_aaa03ec2f8c4d5323b98d71134a462fda}{Sensitivity\+Order}} get\+Sensitivity\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+sensitivity order 
+\end{DoxyReturn}
+
+
+Definition at line 500 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_affde3089fec2a1cca40d6cc0c4c2cf1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a26129f061fdf7869be2d3e4aa22532b6}\label{classamici_1_1_solver_a26129f061fdf7869be2d3e4aa22532b6}} 
+\index{Solver@{Solver}!setSensitivityOrder@{setSensitivityOrder}}
+\index{setSensitivityOrder@{setSensitivityOrder}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSensitivityOrder()}{setSensitivityOrder()}}
+{\footnotesize\ttfamily void set\+Sensitivity\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_aaa03ec2f8c4d5323b98d71134a462fda}{Sensitivity\+Order}}}]{sensi }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensi} & sensitivity order \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 504 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classamici_1_1_solver_a26129f061fdf7869be2d3e4aa22532b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classamici_1_1_solver_a26129f061fdf7869be2d3e4aa22532b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a54fe1b062315ed19b2dbf88206415e06}\label{classamici_1_1_solver_a54fe1b062315ed19b2dbf88206415e06}} 
+\index{Solver@{Solver}!getRelativeTolerance@{getRelativeTolerance}}
+\index{getRelativeTolerance@{getRelativeTolerance}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeTolerance()}{getRelativeTolerance()}}
+{\footnotesize\ttfamily double get\+Relative\+Tolerance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Same tolerance is used for the backward problem if not specified differently via set\+Relative\+Tolerance\+A\+SA.
+
+\begin{DoxyReturn}{Returns}
+relative tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 511 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a54fe1b062315ed19b2dbf88206415e06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_afb5f0c48f24e4bc3efad8ef599adde56}\label{classamici_1_1_solver_afb5f0c48f24e4bc3efad8ef599adde56}} 
+\index{Solver@{Solver}!setRelativeTolerance@{setRelativeTolerance}}
+\index{setRelativeTolerance@{setRelativeTolerance}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeTolerance()}{setRelativeTolerance()}}
+{\footnotesize\ttfamily void set\+Relative\+Tolerance (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+Same tolerance is used for the backward problem if not specified differently via set\+Relative\+Tolerance\+A\+SA.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 515 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_afb5f0c48f24e4bc3efad8ef599adde56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classamici_1_1_solver_afb5f0c48f24e4bc3efad8ef599adde56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a676df944b6737474dd4ef74fe9212f3e}\label{classamici_1_1_solver_a676df944b6737474dd4ef74fe9212f3e}} 
+\index{Solver@{Solver}!getAbsoluteTolerance@{getAbsoluteTolerance}}
+\index{getAbsoluteTolerance@{getAbsoluteTolerance}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteTolerance()}{getAbsoluteTolerance()}}
+{\footnotesize\ttfamily double get\+Absolute\+Tolerance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Same tolerance is used for the backward problem if not specified differently via set\+Absolute\+Tolerance\+A\+SA.
+
+\begin{DoxyReturn}{Returns}
+absolute tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 527 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a676df944b6737474dd4ef74fe9212f3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_afe0fd2fad6ce110ad8421f5979945f90}\label{classamici_1_1_solver_afe0fd2fad6ce110ad8421f5979945f90}} 
+\index{Solver@{Solver}!setAbsoluteTolerance@{setAbsoluteTolerance}}
+\index{setAbsoluteTolerance@{setAbsoluteTolerance}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteTolerance()}{setAbsoluteTolerance()}}
+{\footnotesize\ttfamily void set\+Absolute\+Tolerance (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+Same tolerance is used for the backward problem if not specified differently via set\+Absolute\+Tolerance\+A\+SA.
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 531 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_afe0fd2fad6ce110ad8421f5979945f90_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classamici_1_1_solver_afe0fd2fad6ce110ad8421f5979945f90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_acf203e64c34e2d20a6fd563029c19b57}\label{classamici_1_1_solver_acf203e64c34e2d20a6fd563029c19b57}} 
+\index{Solver@{Solver}!getRelativeToleranceFSA@{getRelativeToleranceFSA}}
+\index{getRelativeToleranceFSA@{getRelativeToleranceFSA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeToleranceFSA()}{getRelativeToleranceFSA()}}
+{\footnotesize\ttfamily double get\+Relative\+Tolerance\+F\+SA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+relative tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 543 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classamici_1_1_solver_acf203e64c34e2d20a6fd563029c19b57_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_af82e072706f6bc6819c154b86bec309f}\label{classamici_1_1_solver_af82e072706f6bc6819c154b86bec309f}} 
+\index{Solver@{Solver}!setRelativeToleranceFSA@{setRelativeToleranceFSA}}
+\index{setRelativeToleranceFSA@{setRelativeToleranceFSA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeToleranceFSA()}{setRelativeToleranceFSA()}}
+{\footnotesize\ttfamily void set\+Relative\+Tolerance\+F\+SA (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 547 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_af82e072706f6bc6819c154b86bec309f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ac4b72ec37a7ab41b520b5c540a382165}\label{classamici_1_1_solver_ac4b72ec37a7ab41b520b5c540a382165}} 
+\index{Solver@{Solver}!getAbsoluteToleranceFSA@{getAbsoluteToleranceFSA}}
+\index{getAbsoluteToleranceFSA@{getAbsoluteToleranceFSA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteToleranceFSA()}{getAbsoluteToleranceFSA()}}
+{\footnotesize\ttfamily double get\+Absolute\+Tolerance\+F\+SA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+absolute tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 558 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classamici_1_1_solver_ac4b72ec37a7ab41b520b5c540a382165_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a96ccd686d0ce5c2c43071537e088e42a}\label{classamici_1_1_solver_a96ccd686d0ce5c2c43071537e088e42a}} 
+\index{Solver@{Solver}!setAbsoluteToleranceFSA@{setAbsoluteToleranceFSA}}
+\index{setAbsoluteToleranceFSA@{setAbsoluteToleranceFSA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteToleranceFSA()}{setAbsoluteToleranceFSA()}}
+{\footnotesize\ttfamily void set\+Absolute\+Tolerance\+F\+SA (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 562 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a96ccd686d0ce5c2c43071537e088e42a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ae62749d65b73e317be96b0556401f29d}\label{classamici_1_1_solver_ae62749d65b73e317be96b0556401f29d}} 
+\index{Solver@{Solver}!getRelativeToleranceB@{getRelativeToleranceB}}
+\index{getRelativeToleranceB@{getRelativeToleranceB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeToleranceB()}{getRelativeToleranceB()}}
+{\footnotesize\ttfamily double get\+Relative\+ToleranceB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+relative tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 573 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classamici_1_1_solver_ae62749d65b73e317be96b0556401f29d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a63eaa8593d16c31cedbbd038925eff2d}\label{classamici_1_1_solver_a63eaa8593d16c31cedbbd038925eff2d}} 
+\index{Solver@{Solver}!setRelativeToleranceB@{setRelativeToleranceB}}
+\index{setRelativeToleranceB@{setRelativeToleranceB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeToleranceB()}{setRelativeToleranceB()}}
+{\footnotesize\ttfamily void set\+Relative\+ToleranceB (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 578 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a63eaa8593d16c31cedbbd038925eff2d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ac495bd9ff960704197bc5e48ef9ee5de}\label{classamici_1_1_solver_ac495bd9ff960704197bc5e48ef9ee5de}} 
+\index{Solver@{Solver}!getAbsoluteToleranceB@{getAbsoluteToleranceB}}
+\index{getAbsoluteToleranceB@{getAbsoluteToleranceB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteToleranceB()}{getAbsoluteToleranceB()}}
+{\footnotesize\ttfamily double get\+Absolute\+ToleranceB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+absolute tolerances 
+\end{DoxyReturn}
+
+
+Definition at line 590 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classamici_1_1_solver_ac495bd9ff960704197bc5e48ef9ee5de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a0d680ec1bec367b0708f664a760c13f1}\label{classamici_1_1_solver_a0d680ec1bec367b0708f664a760c13f1}} 
+\index{Solver@{Solver}!setAbsoluteToleranceB@{setAbsoluteToleranceB}}
+\index{setAbsoluteToleranceB@{setAbsoluteToleranceB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteToleranceB()}{setAbsoluteToleranceB()}}
+{\footnotesize\ttfamily void set\+Absolute\+ToleranceB (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 595 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a0d680ec1bec367b0708f664a760c13f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a40124a6593fea7f5ddbf39385b021a9e}\label{classamici_1_1_solver_a40124a6593fea7f5ddbf39385b021a9e}} 
+\index{Solver@{Solver}!getRelativeToleranceQuadratures@{getRelativeToleranceQuadratures}}
+\index{getRelativeToleranceQuadratures@{getRelativeToleranceQuadratures}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeToleranceQuadratures()}{getRelativeToleranceQuadratures()}}
+{\footnotesize\ttfamily double get\+Relative\+Tolerance\+Quadratures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+relative tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 607 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a086428d30274f2b7e6f94e8e7593dd8b}\label{classamici_1_1_solver_a086428d30274f2b7e6f94e8e7593dd8b}} 
+\index{Solver@{Solver}!setRelativeToleranceQuadratures@{setRelativeToleranceQuadratures}}
+\index{setRelativeToleranceQuadratures@{setRelativeToleranceQuadratures}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeToleranceQuadratures()}{setRelativeToleranceQuadratures()}}
+{\footnotesize\ttfamily void set\+Relative\+Tolerance\+Quadratures (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 611 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a086428d30274f2b7e6f94e8e7593dd8b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a086428d30274f2b7e6f94e8e7593dd8b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a1f50a4e21784c2757530068483c405cb}\label{classamici_1_1_solver_a1f50a4e21784c2757530068483c405cb}} 
+\index{Solver@{Solver}!getAbsoluteToleranceQuadratures@{getAbsoluteToleranceQuadratures}}
+\index{getAbsoluteToleranceQuadratures@{getAbsoluteToleranceQuadratures}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteToleranceQuadratures()}{getAbsoluteToleranceQuadratures()}}
+{\footnotesize\ttfamily double get\+Absolute\+Tolerance\+Quadratures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+absolute tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 625 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_af425163c5d98c472d17e080da4ee3b78}\label{classamici_1_1_solver_af425163c5d98c472d17e080da4ee3b78}} 
+\index{Solver@{Solver}!setAbsoluteToleranceQuadratures@{setAbsoluteToleranceQuadratures}}
+\index{setAbsoluteToleranceQuadratures@{setAbsoluteToleranceQuadratures}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteToleranceQuadratures()}{setAbsoluteToleranceQuadratures()}}
+{\footnotesize\ttfamily void set\+Absolute\+Tolerance\+Quadratures (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 629 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_af425163c5d98c472d17e080da4ee3b78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_af425163c5d98c472d17e080da4ee3b78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ae598de1a48d3c4af1d08b8436d481e11}\label{classamici_1_1_solver_ae598de1a48d3c4af1d08b8436d481e11}} 
+\index{Solver@{Solver}!getRelativeToleranceSteadyState@{getRelativeToleranceSteadyState}}
+\index{getRelativeToleranceSteadyState@{getRelativeToleranceSteadyState}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeToleranceSteadyState()}{getRelativeToleranceSteadyState()}}
+{\footnotesize\ttfamily double get\+Relative\+Tolerance\+Steady\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+relative tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 643 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classamici_1_1_solver_ae598de1a48d3c4af1d08b8436d481e11_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ae598de1a48d3c4af1d08b8436d481e11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_abdc290e52ae8a037aa65648f044c1ab5}\label{classamici_1_1_solver_abdc290e52ae8a037aa65648f044c1ab5}} 
+\index{Solver@{Solver}!setRelativeToleranceSteadyState@{setRelativeToleranceSteadyState}}
+\index{setRelativeToleranceSteadyState@{setRelativeToleranceSteadyState}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeToleranceSteadyState()}{setRelativeToleranceSteadyState()}}
+{\footnotesize\ttfamily void set\+Relative\+Tolerance\+Steady\+State (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 647 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_adbb1549f9762649455bde39c29d47a03}\label{classamici_1_1_solver_adbb1549f9762649455bde39c29d47a03}} 
+\index{Solver@{Solver}!getAbsoluteToleranceSteadyState@{getAbsoluteToleranceSteadyState}}
+\index{getAbsoluteToleranceSteadyState@{getAbsoluteToleranceSteadyState}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteToleranceSteadyState()}{getAbsoluteToleranceSteadyState()}}
+{\footnotesize\ttfamily double get\+Absolute\+Tolerance\+Steady\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+absolute tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 654 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classamici_1_1_solver_adbb1549f9762649455bde39c29d47a03_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_adbb1549f9762649455bde39c29d47a03_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a78e5814a90b24ff22d5ef1fbed1fc23c}\label{classamici_1_1_solver_a78e5814a90b24ff22d5ef1fbed1fc23c}} 
+\index{Solver@{Solver}!setAbsoluteToleranceSteadyState@{setAbsoluteToleranceSteadyState}}
+\index{setAbsoluteToleranceSteadyState@{setAbsoluteToleranceSteadyState}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteToleranceSteadyState()}{setAbsoluteToleranceSteadyState()}}
+{\footnotesize\ttfamily void set\+Absolute\+Tolerance\+Steady\+State (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 658 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_ac47e18a62130e7c84a8d7ceb0cb9d7eb}\label{classamici_1_1_solver_ac47e18a62130e7c84a8d7ceb0cb9d7eb}} 
+\index{Solver@{Solver}!getRelativeToleranceSteadyStateSensi@{getRelativeToleranceSteadyStateSensi}}
+\index{getRelativeToleranceSteadyStateSensi@{getRelativeToleranceSteadyStateSensi}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getRelativeToleranceSteadyStateSensi()}{getRelativeToleranceSteadyStateSensi()}}
+{\footnotesize\ttfamily double get\+Relative\+Tolerance\+Steady\+State\+Sensi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+relative tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 665 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classamici_1_1_solver_ac47e18a62130e7c84a8d7ceb0cb9d7eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ac47e18a62130e7c84a8d7ceb0cb9d7eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a7a324b1a30b5246828354c60c86c3583}\label{classamici_1_1_solver_a7a324b1a30b5246828354c60c86c3583}} 
+\index{Solver@{Solver}!setRelativeToleranceSteadyStateSensi@{setRelativeToleranceSteadyStateSensi}}
+\index{setRelativeToleranceSteadyStateSensi@{setRelativeToleranceSteadyStateSensi}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setRelativeToleranceSteadyStateSensi()}{setRelativeToleranceSteadyStateSensi()}}
+{\footnotesize\ttfamily void set\+Relative\+Tolerance\+Steady\+State\+Sensi (\begin{DoxyParamCaption}\item[{double}]{rtol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 669 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_ae1b148791e34ba2220eba9c75d21afb0}\label{classamici_1_1_solver_ae1b148791e34ba2220eba9c75d21afb0}} 
+\index{Solver@{Solver}!getAbsoluteToleranceSteadyStateSensi@{getAbsoluteToleranceSteadyStateSensi}}
+\index{getAbsoluteToleranceSteadyStateSensi@{getAbsoluteToleranceSteadyStateSensi}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAbsoluteToleranceSteadyStateSensi()}{getAbsoluteToleranceSteadyStateSensi()}}
+{\footnotesize\ttfamily double get\+Absolute\+Tolerance\+Steady\+State\+Sensi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+absolute tolerance 
+\end{DoxyReturn}
+
+
+Definition at line 676 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classamici_1_1_solver_ae1b148791e34ba2220eba9c75d21afb0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ae1b148791e34ba2220eba9c75d21afb0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a7907d753a8151ececcb4f60cb9721064}\label{classamici_1_1_solver_a7907d753a8151ececcb4f60cb9721064}} 
+\index{Solver@{Solver}!setAbsoluteToleranceSteadyStateSensi@{setAbsoluteToleranceSteadyStateSensi}}
+\index{setAbsoluteToleranceSteadyStateSensi@{setAbsoluteToleranceSteadyStateSensi}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setAbsoluteToleranceSteadyStateSensi()}{setAbsoluteToleranceSteadyStateSensi()}}
+{\footnotesize\ttfamily void set\+Absolute\+Tolerance\+Steady\+State\+Sensi (\begin{DoxyParamCaption}\item[{double}]{atol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em atol} & absolute tolerance (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 680 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_acf39690ae4c940c7734fc3fadabb4d50}\label{classamici_1_1_solver_acf39690ae4c940c7734fc3fadabb4d50}} 
+\index{Solver@{Solver}!getMaxSteps@{getMaxSteps}}
+\index{getMaxSteps@{getMaxSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getMaxSteps()}{getMaxSteps()}}
+{\footnotesize\ttfamily int get\+Max\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+maximum number of solver steps 
+\end{DoxyReturn}
+
+
+Definition at line 687 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classamici_1_1_solver_acf39690ae4c940c7734fc3fadabb4d50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ab321627a9f9d22013638e0eb9b14d2dc}\label{classamici_1_1_solver_ab321627a9f9d22013638e0eb9b14d2dc}} 
+\index{Solver@{Solver}!setMaxSteps@{setMaxSteps}}
+\index{setMaxSteps@{setMaxSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setMaxSteps()}{setMaxSteps()}}
+{\footnotesize\ttfamily void set\+Max\+Steps (\begin{DoxyParamCaption}\item[{int}]{maxsteps }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em maxsteps} & maximum number of solver steps (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 691 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classamici_1_1_solver_ab321627a9f9d22013638e0eb9b14d2dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classamici_1_1_solver_ab321627a9f9d22013638e0eb9b14d2dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a8f683e8adf7b34cab6dff296b1d38c83}\label{classamici_1_1_solver_a8f683e8adf7b34cab6dff296b1d38c83}} 
+\index{Solver@{Solver}!getMaxStepsBackwardProblem@{getMaxStepsBackwardProblem}}
+\index{getMaxStepsBackwardProblem@{getMaxStepsBackwardProblem}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getMaxStepsBackwardProblem()}{getMaxStepsBackwardProblem()}}
+{\footnotesize\ttfamily int get\+Max\+Steps\+Backward\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+maximum number of solver steps 
+\end{DoxyReturn}
+
+
+Definition at line 700 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_aa1d39cd744f489c17c3497c98acb7f59}\label{classamici_1_1_solver_aa1d39cd744f489c17c3497c98acb7f59}} 
+\index{Solver@{Solver}!setMaxStepsBackwardProblem@{setMaxStepsBackwardProblem}}
+\index{setMaxStepsBackwardProblem@{setMaxStepsBackwardProblem}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setMaxStepsBackwardProblem()}{setMaxStepsBackwardProblem()}}
+{\footnotesize\ttfamily void set\+Max\+Steps\+Backward\+Problem (\begin{DoxyParamCaption}\item[{int}]{maxsteps }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em maxsteps} & maximum number of solver steps (non-\/negative number) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 704 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_aa1d39cd744f489c17c3497c98acb7f59_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_aa1d39cd744f489c17c3497c98acb7f59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a60631d9a18e29c1102cae7cb77b9918c}\label{classamici_1_1_solver_a60631d9a18e29c1102cae7cb77b9918c}} 
+\index{Solver@{Solver}!getLinearMultistepMethod@{getLinearMultistepMethod}}
+\index{getLinearMultistepMethod@{getLinearMultistepMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getLinearMultistepMethod()}{getLinearMultistepMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}} get\+Linear\+Multistep\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+linear system multistep method 
+\end{DoxyReturn}
+
+
+Definition at line 714 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a2143a6f85b81c24611aad5689865953c}\label{classamici_1_1_solver_a2143a6f85b81c24611aad5689865953c}} 
+\index{Solver@{Solver}!setLinearMultistepMethod@{setLinearMultistepMethod}}
+\index{setLinearMultistepMethod@{setLinearMultistepMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setLinearMultistepMethod()}{setLinearMultistepMethod()}}
+{\footnotesize\ttfamily void set\+Linear\+Multistep\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}}}]{lmm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lmm} & linear system multistep method \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 718 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a2143a6f85b81c24611aad5689865953c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a33883905a8ab056896373d76f18ce683}\label{classamici_1_1_solver_a33883905a8ab056896373d76f18ce683}} 
+\index{Solver@{Solver}!getNonlinearSolverIteration@{getNonlinearSolverIteration}}
+\index{getNonlinearSolverIteration@{getNonlinearSolverIteration}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNonlinearSolverIteration()}{getNonlinearSolverIteration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}} get\+Nonlinear\+Solver\+Iteration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 724 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a1dc7983f545ee95f7e6fb38cfb0b3286}\label{classamici_1_1_solver_a1dc7983f545ee95f7e6fb38cfb0b3286}} 
+\index{Solver@{Solver}!setNonlinearSolverIteration@{setNonlinearSolverIteration}}
+\index{setNonlinearSolverIteration@{setNonlinearSolverIteration}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setNonlinearSolverIteration()}{setNonlinearSolverIteration()}}
+{\footnotesize\ttfamily void set\+Nonlinear\+Solver\+Iteration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}}}]{iter }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & nonlinear system solution method \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 728 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a1dc7983f545ee95f7e6fb38cfb0b3286_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a69568ccb5de1bcdd4344e105ddb12324}\label{classamici_1_1_solver_a69568ccb5de1bcdd4344e105ddb12324}} 
+\index{Solver@{Solver}!getInterpolationType@{getInterpolationType}}
+\index{getInterpolationType@{getInterpolationType}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getInterpolationType()}{getInterpolationType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}} get\+Interpolation\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 734 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a9d9a0a5f8cdfdb993960706c646e240f}\label{classamici_1_1_solver_a9d9a0a5f8cdfdb993960706c646e240f}} 
+\index{Solver@{Solver}!setInterpolationType@{setInterpolationType}}
+\index{setInterpolationType@{setInterpolationType}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setInterpolationType()}{setInterpolationType()}}
+{\footnotesize\ttfamily void set\+Interpolation\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}}}]{interp\+Type }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em interp\+Type} & interpolation type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 738 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classamici_1_1_solver_a9d9a0a5f8cdfdb993960706c646e240f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ac758cf7c51f50db18ea58898623ce12c}\label{classamici_1_1_solver_ac758cf7c51f50db18ea58898623ce12c}} 
+\index{Solver@{Solver}!getStateOrdering@{getStateOrdering}}
+\index{getStateOrdering@{getStateOrdering}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getStateOrdering()}{getStateOrdering()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a890d968060d6d830aeed98dbeb04447f}{State\+Ordering}} get\+State\+Ordering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 744 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_aa22ae4579c350a6f3fae2e3b5a0da1de}\label{classamici_1_1_solver_aa22ae4579c350a6f3fae2e3b5a0da1de}} 
+\index{Solver@{Solver}!setStateOrdering@{setStateOrdering}}
+\index{setStateOrdering@{setStateOrdering}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setStateOrdering()}{setStateOrdering()}}
+{\footnotesize\ttfamily void set\+State\+Ordering (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a890d968060d6d830aeed98dbeb04447f}{State\+Ordering}}}]{ordering }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordering} & state ordering \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 748 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classamici_1_1_solver_aa22ae4579c350a6f3fae2e3b5a0da1de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_ae1e9c3c5e59413ae25fb67c29983e3f3}\label{classamici_1_1_solver_ae1e9c3c5e59413ae25fb67c29983e3f3}} 
+\index{Solver@{Solver}!getStabilityLimitFlag@{getStabilityLimitFlag}}
+\index{getStabilityLimitFlag@{getStabilityLimitFlag}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getStabilityLimitFlag()}{getStabilityLimitFlag()}}
+{\footnotesize\ttfamily int get\+Stability\+Limit\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+stldet can be amici.\+F\+A\+L\+SE (deactivated) or amici.\+T\+R\+UE (activated) 
+\end{DoxyReturn}
+
+
+Definition at line 758 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a618a94f1d84f9c71230d476f9a0205ce}\label{classamici_1_1_solver_a618a94f1d84f9c71230d476f9a0205ce}} 
+\index{Solver@{Solver}!setStabilityLimitFlag@{setStabilityLimitFlag}}
+\index{setStabilityLimitFlag@{setStabilityLimitFlag}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setStabilityLimitFlag()}{setStabilityLimitFlag()}}
+{\footnotesize\ttfamily void set\+Stability\+Limit\+Flag (\begin{DoxyParamCaption}\item[{booleantype}]{stldet }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stldet} & can be amici.\+F\+A\+L\+SE (deactivated) or amici.\+T\+R\+UE (activated) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 762 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classamici_1_1_solver_a618a94f1d84f9c71230d476f9a0205ce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classamici_1_1_solver_a618a94f1d84f9c71230d476f9a0205ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aa5cde2d316aae1d60d6eaf94ce7a854f}\label{classamici_1_1_solver_aa5cde2d316aae1d60d6eaf94ce7a854f}} 
+\index{Solver@{Solver}!getLinearSolver@{getLinearSolver}}
+\index{getLinearSolver@{getLinearSolver}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getLinearSolver()}{getLinearSolver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1a6a4776314a0843143e5631c3ce21a7}{Linear\+Solver}} get\+Linear\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 775 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_aa5cde2d316aae1d60d6eaf94ce7a854f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_acc8ecf11ad5a8480dd02f757faa264b2}\label{classamici_1_1_solver_acc8ecf11ad5a8480dd02f757faa264b2}} 
+\index{Solver@{Solver}!setLinearSolver@{setLinearSolver}}
+\index{setLinearSolver@{setLinearSolver}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setLinearSolver()}{setLinearSolver()}}
+{\footnotesize\ttfamily void set\+Linear\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1a6a4776314a0843143e5631c3ce21a7}{Linear\+Solver}}}]{linsol }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em linsol} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 779 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classamici_1_1_solver_acc8ecf11ad5a8480dd02f757faa264b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a256c45c84346e83402b665493e04e65e}\label{classamici_1_1_solver_a256c45c84346e83402b665493e04e65e}} 
+\index{Solver@{Solver}!getInternalSensitivityMethod@{getInternalSensitivityMethod}}
+\index{getInternalSensitivityMethod@{getInternalSensitivityMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getInternalSensitivityMethod()}{getInternalSensitivityMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}} get\+Internal\+Sensitivity\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+internal sensitivity method 
+\end{DoxyReturn}
+
+
+Definition at line 787 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_ab114a079f23232a521ad2e81a0a30e36}\label{classamici_1_1_solver_ab114a079f23232a521ad2e81a0a30e36}} 
+\index{Solver@{Solver}!setInternalSensitivityMethod@{setInternalSensitivityMethod}}
+\index{setInternalSensitivityMethod@{setInternalSensitivityMethod}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setInternalSensitivityMethod()}{setInternalSensitivityMethod()}}
+{\footnotesize\ttfamily void set\+Internal\+Sensitivity\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}}}]{ism }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ism} & internal sensitivity method \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 791 of file solver.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_ab114a079f23232a521ad2e81a0a30e36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a566d267fa2815fe0dd3c29d44f68209b}\label{classamici_1_1_solver_a566d267fa2815fe0dd3c29d44f68209b}} 
+\index{Solver@{Solver}!init@{init}}
+\index{init@{init}!Solver@{Solver}}
+\paragraph{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{x,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dx,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & initial state variables \\
+\hline
+{\em dx} & initial derivative state variables (D\+AE only) \\
+\hline
+{\em t} & initial timepoint \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a14a9fe177339143801b38baeb800317a}\label{classamici_1_1_solver_a14a9fe177339143801b38baeb800317a}} 
+\index{Solver@{Solver}!binit@{binit}}
+\index{binit@{binit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{binit()}{binit()}}
+{\footnotesize\ttfamily virtual void binit (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{xB,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dxB,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em xB} & initial adjoint state variables \\
+\hline
+{\em dxB} & initial adjoint derivative state variables (D\+AE only) \\
+\hline
+{\em t} & final timepoint \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classamici_1_1_solver_a14a9fe177339143801b38baeb800317a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a57c1900d556ab878f5fad94b4fcd1abd}\label{classamici_1_1_solver_a57c1900d556ab878f5fad94b4fcd1abd}} 
+\index{Solver@{Solver}!qbinit@{qbinit}}
+\index{qbinit@{qbinit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{qbinit()}{qbinit()}}
+{\footnotesize\ttfamily virtual void qbinit (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{q\+Bdot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em q\+Bdot} & initial adjoint quadrature state variables \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classamici_1_1_solver_a57c1900d556ab878f5fad94b4fcd1abd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a0bb31b3b358751d4447199e2732db932}\label{classamici_1_1_solver_a0bb31b3b358751d4447199e2732db932}} 
+\index{Solver@{Solver}!rootInit@{rootInit}}
+\index{rootInit@{rootInit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{rootInit()}{rootInit()}}
+{\footnotesize\ttfamily virtual void root\+Init (\begin{DoxyParamCaption}\item[{int}]{ne }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ne} & number of different events \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a9e5cc83868435443926cde99c1a1d864}\label{classamici_1_1_solver_a9e5cc83868435443926cde99c1a1d864}} 
+\index{Solver@{Solver}!sensInit1@{sensInit1}}
+\index{sensInit1@{sensInit1}!Solver@{Solver}}
+\paragraph{\texorpdfstring{sensInit1()}{sensInit1()}}
+{\footnotesize\ttfamily virtual void sens\+Init1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{sx,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} $\ast$}]{sdx,  }\item[{int}]{nplist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sx} & initial state sensitivities \\
+\hline
+{\em sdx} & initial derivative state sensitivities (D\+AE only) \\
+\hline
+{\em nplist} & number parameter wrt which sensitivities are to be computed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_abb3355b298fb576e7bcd3f333d14b5af}\label{classamici_1_1_solver_abb3355b298fb576e7bcd3f333d14b5af}} 
+\index{Solver@{Solver}!setDenseJacFn@{setDenseJacFn}}
+\index{setDenseJacFn@{setDenseJacFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setDenseJacFn()}{setDenseJacFn()}}
+{\footnotesize\ttfamily virtual void set\+Dense\+Jac\+Fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classamici_1_1_solver_abb3355b298fb576e7bcd3f333d14b5af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aabf68f0f9ee981fd320420f3ba5c5f8d}\label{classamici_1_1_solver_aabf68f0f9ee981fd320420f3ba5c5f8d}} 
+\index{Solver@{Solver}!setSparseJacFn@{setSparseJacFn}}
+\index{setSparseJacFn@{setSparseJacFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSparseJacFn()}{setSparseJacFn()}}
+{\footnotesize\ttfamily virtual void set\+Sparse\+Jac\+Fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classamici_1_1_solver_a1ac4c2c1cf9df3c478ade2b1d5e728c6}\label{classamici_1_1_solver_a1ac4c2c1cf9df3c478ade2b1d5e728c6}} 
+\index{Solver@{Solver}!setBandJacFn@{setBandJacFn}}
+\index{setBandJacFn@{setBandJacFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setBandJacFn()}{setBandJacFn()}}
+{\footnotesize\ttfamily virtual void set\+Band\+Jac\+Fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classamici_1_1_solver_a1ac4c2c1cf9df3c478ade2b1d5e728c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a151ebe8ad33f1e635289c869d1412375}\label{classamici_1_1_solver_a151ebe8ad33f1e635289c869d1412375}} 
+\index{Solver@{Solver}!setJacTimesVecFn@{setJacTimesVecFn}}
+\index{setJacTimesVecFn@{setJacTimesVecFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setJacTimesVecFn()}{setJacTimesVecFn()}}
+{\footnotesize\ttfamily virtual void set\+Jac\+Times\+Vec\+Fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classamici_1_1_solver_a1081b1ac835a2bf9221552a07d04ef4d}\label{classamici_1_1_solver_a1081b1ac835a2bf9221552a07d04ef4d}} 
+\index{Solver@{Solver}!setDenseJacFnB@{setDenseJacFnB}}
+\index{setDenseJacFnB@{setDenseJacFnB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setDenseJacFnB()}{setDenseJacFnB()}}
+{\footnotesize\ttfamily virtual void set\+Dense\+Jac\+FnB (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a1081b1ac835a2bf9221552a07d04ef4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a101c62151da172cc06a025a3060b50de}\label{classamici_1_1_solver_a101c62151da172cc06a025a3060b50de}} 
+\index{Solver@{Solver}!setSparseJacFnB@{setSparseJacFnB}}
+\index{setSparseJacFnB@{setSparseJacFnB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSparseJacFnB()}{setSparseJacFnB()}}
+{\footnotesize\ttfamily virtual void set\+Sparse\+Jac\+FnB (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a1040308561e87b1e2d24c3ab9581e14d}\label{classamici_1_1_solver_a1040308561e87b1e2d24c3ab9581e14d}} 
+\index{Solver@{Solver}!setBandJacFnB@{setBandJacFnB}}
+\index{setBandJacFnB@{setBandJacFnB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setBandJacFnB()}{setBandJacFnB()}}
+{\footnotesize\ttfamily virtual void set\+Band\+Jac\+FnB (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a1040308561e87b1e2d24c3ab9581e14d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a2c30d06de7f3f5f452dc80d5f03db9d7}\label{classamici_1_1_solver_a2c30d06de7f3f5f452dc80d5f03db9d7}} 
+\index{Solver@{Solver}!setJacTimesVecFnB@{setJacTimesVecFnB}}
+\index{setJacTimesVecFnB@{setJacTimesVecFnB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setJacTimesVecFnB()}{setJacTimesVecFnB()}}
+{\footnotesize\ttfamily virtual void set\+Jac\+Times\+Vec\+FnB (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a0040ff50d302fddc63a175cbb773d21e}\label{classamici_1_1_solver_a0040ff50d302fddc63a175cbb773d21e}} 
+\index{Solver@{Solver}!wrapErrHandlerFn@{wrapErrHandlerFn}}
+\index{wrapErrHandlerFn@{wrapErrHandlerFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{wrapErrHandlerFn()}{wrapErrHandlerFn()}}
+{\footnotesize\ttfamily void wrap\+Err\+Handler\+Fn (\begin{DoxyParamCaption}\item[{int}]{error\+\_\+code,  }\item[{const char $\ast$}]{module,  }\item[{const char $\ast$}]{function,  }\item[{char $\ast$}]{msg,  }\item[{void $\ast$}]{eh\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+code} & error identifier \\
+\hline
+{\em module} & name of the module in which the error occured \\
+\hline
+{\em function} & name of the function in which the error occured ~\newline
+{\bfseries{Type}}\+: char \\
+\hline
+{\em msg} & error message \\
+\hline
+{\em eh\+\_\+data} & unused input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 141 of file solver.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a6a688afa51ec71eded6c8801faaafac3}\label{classamici_1_1_solver_a6a688afa51ec71eded6c8801faaafac3}} 
+\index{Solver@{Solver}!setSStolerances@{setSStolerances}}
+\index{setSStolerances@{setSStolerances}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSStolerances()}{setSStolerances()}}
+{\footnotesize\ttfamily virtual void set\+S\+Stolerances (\begin{DoxyParamCaption}\item[{double}]{rtol,  }\item[{double}]{atol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerances \\
+\hline
+{\em atol} & absolute tolerances \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a6a688afa51ec71eded6c8801faaafac3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a16ec3b994dd433e71fcb58eea3cd529f}\label{classamici_1_1_solver_a16ec3b994dd433e71fcb58eea3cd529f}} 
+\index{Solver@{Solver}!setSensSStolerances@{setSensSStolerances}}
+\index{setSensSStolerances@{setSensSStolerances}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSensSStolerances()}{setSensSStolerances()}}
+{\footnotesize\ttfamily virtual void set\+Sens\+S\+Stolerances (\begin{DoxyParamCaption}\item[{double}]{rtol,  }\item[{double $\ast$}]{atol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtol} & relative tolerances \\
+\hline
+{\em atol} & array of absolute tolerances for every sensitivy variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a1928530b3110cb9229d6836c5389379f}\label{classamici_1_1_solver_a1928530b3110cb9229d6836c5389379f}} 
+\index{Solver@{Solver}!setSensErrCon@{setSensErrCon}}
+\index{setSensErrCon@{setSensErrCon}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSensErrCon()}{setSensErrCon()}}
+{\footnotesize\ttfamily virtual void set\+Sens\+Err\+Con (\begin{DoxyParamCaption}\item[{bool}]{error\+\_\+corr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Set\+Sens\+Err\+Con specifies whether error control is also enforced for sensitivities for the forward problem
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+corr} & activation flag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a0d5e55201b30383f1272146935f43c78}\label{classamici_1_1_solver_a0d5e55201b30383f1272146935f43c78}} 
+\index{Solver@{Solver}!setQuadErrConB@{setQuadErrConB}}
+\index{setQuadErrConB@{setQuadErrConB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setQuadErrConB()}{setQuadErrConB()}}
+{\footnotesize\ttfamily virtual void set\+Quad\+Err\+ConB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{bool}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em flag} & activation flag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ab5e90e0ad8f195cd6ca2ce477cc734b7}\label{classamici_1_1_solver_ab5e90e0ad8f195cd6ca2ce477cc734b7}} 
+\index{Solver@{Solver}!setErrHandlerFn@{setErrHandlerFn}}
+\index{setErrHandlerFn@{setErrHandlerFn}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setErrHandlerFn()}{setErrHandlerFn()}}
+{\footnotesize\ttfamily virtual void set\+Err\+Handler\+Fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classamici_1_1_solver_ac1ca4675503688acf946f6530fb12c10}\label{classamici_1_1_solver_ac1ca4675503688acf946f6530fb12c10}} 
+\index{Solver@{Solver}!setUserData@{setUserData}}
+\index{setUserData@{setUserData}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setUserData()}{setUserData()}}
+{\footnotesize\ttfamily virtual void set\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \mbox{\hyperlink{classamici_1_1_model}{Model}} instance, \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ac5c347a985fa73861a88e76c7b9904f8}\label{classamici_1_1_solver_ac5c347a985fa73861a88e76c7b9904f8}} 
+\index{Solver@{Solver}!setUserDataB@{setUserDataB}}
+\index{setUserDataB@{setUserDataB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setUserDataB()}{setUserDataB()}}
+{\footnotesize\ttfamily virtual void set\+User\+DataB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em model} & \mbox{\hyperlink{classamici_1_1_model}{Model}} instance, \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classamici_1_1_solver_ac5c347a985fa73861a88e76c7b9904f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a29f208ce304b01c8fe294ab9143a98e5}\label{classamici_1_1_solver_a29f208ce304b01c8fe294ab9143a98e5}} 
+\index{Solver@{Solver}!setMaxNumSteps@{setMaxNumSteps}}
+\index{setMaxNumSteps@{setMaxNumSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setMaxNumSteps()}{setMaxNumSteps()}}
+{\footnotesize\ttfamily virtual void set\+Max\+Num\+Steps (\begin{DoxyParamCaption}\item[{long int}]{mxsteps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mxsteps} & number of steps \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a29f208ce304b01c8fe294ab9143a98e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a1163fddb222195354bdcf306fc52a1d0}\label{classamici_1_1_solver_a1163fddb222195354bdcf306fc52a1d0}} 
+\index{Solver@{Solver}!setMaxNumStepsB@{setMaxNumStepsB}}
+\index{setMaxNumStepsB@{setMaxNumStepsB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setMaxNumStepsB()}{setMaxNumStepsB()}}
+{\footnotesize\ttfamily virtual void set\+Max\+Num\+StepsB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{long int}]{mxstepsB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em mxstepsB} & number of steps \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a1163fddb222195354bdcf306fc52a1d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a040fb365c47a8e8ccc1f32021b38bfcb}\label{classamici_1_1_solver_a040fb365c47a8e8ccc1f32021b38bfcb}} 
+\index{Solver@{Solver}!setStabLimDet@{setStabLimDet}}
+\index{setStabLimDet@{setStabLimDet}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setStabLimDet()}{setStabLimDet()}}
+{\footnotesize\ttfamily virtual void set\+Stab\+Lim\+Det (\begin{DoxyParamCaption}\item[{int}]{stldet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stldet} & flag for stability limit detection (T\+R\+UE or F\+A\+L\+SE) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a040fb365c47a8e8ccc1f32021b38bfcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_acb7f8ad7671faf5fa7e5fa7851e662ec}\label{classamici_1_1_solver_acb7f8ad7671faf5fa7e5fa7851e662ec}} 
+\index{Solver@{Solver}!setStabLimDetB@{setStabLimDetB}}
+\index{setStabLimDetB@{setStabLimDetB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setStabLimDetB()}{setStabLimDetB()}}
+{\footnotesize\ttfamily virtual void set\+Stab\+Lim\+DetB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{stldet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em stldet} & flag for stability limit detection (T\+R\+UE or F\+A\+L\+SE) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_acb7f8ad7671faf5fa7e5fa7851e662ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a5c1ec0904b36a63c3d8adc74ffbb3718}\label{classamici_1_1_solver_a5c1ec0904b36a63c3d8adc74ffbb3718}} 
+\index{Solver@{Solver}!setId@{setId}}
+\index{setId@{setId}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily virtual void set\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & model specification \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_aaf6b0aa0540ff3600fdcc555f721e147}\label{classamici_1_1_solver_aaf6b0aa0540ff3600fdcc555f721e147}} 
+\index{Solver@{Solver}!setSuppressAlg@{setSuppressAlg}}
+\index{setSuppressAlg@{setSuppressAlg}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSuppressAlg()}{setSuppressAlg()}}
+{\footnotesize\ttfamily virtual void set\+Suppress\+Alg (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & deactivation flag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ac729d2b36333e1bb658a1ca1a717bd9a}\label{classamici_1_1_solver_ac729d2b36333e1bb658a1ca1a717bd9a}} 
+\index{Solver@{Solver}!setSensParams@{setSensParams}}
+\index{setSensParams@{setSensParams}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSensParams()}{setSensParams()}}
+{\footnotesize\ttfamily virtual void set\+Sens\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$}]{pbar,  }\item[{int $\ast$}]{plist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & paramaters \\
+\hline
+{\em pbar} & parameter scaling constants \\
+\hline
+{\em plist} & parameter index list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_abea88e1516775b1307f8ad837913ebc0}\label{classamici_1_1_solver_abea88e1516775b1307f8ad837913ebc0}} 
+\index{Solver@{Solver}!getDky@{getDky}}
+\index{getDky@{getDky}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getDky()}{getDky()}}
+{\footnotesize\ttfamily virtual void get\+Dky (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{t,  }\item[{int}]{k,  }\item[{\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$}]{dky }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & timepoint \\
+\hline
+{\em k} & derivative order \\
+\hline
+{\em dky} & interpolated solution \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a5c0a23a7a9c8d21c76e0b1e6ef6e1947}\label{classamici_1_1_solver_a5c0a23a7a9c8d21c76e0b1e6ef6e1947}} 
+\index{Solver@{Solver}!adjInit@{adjInit}}
+\index{adjInit@{adjInit}!Solver@{Solver}}
+\paragraph{\texorpdfstring{adjInit()}{adjInit()}}
+{\footnotesize\ttfamily virtual void adj\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classamici_1_1_solver_adb86fe4b29dd9c370bccee609b8deba3}\label{classamici_1_1_solver_adb86fe4b29dd9c370bccee609b8deba3}} 
+\index{Solver@{Solver}!allocateSolverB@{allocateSolverB}}
+\index{allocateSolverB@{allocateSolverB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{allocateSolverB()}{allocateSolverB()}}
+{\footnotesize\ttfamily virtual void allocate\+SolverB (\begin{DoxyParamCaption}\item[{int $\ast$}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classamici_1_1_solver_adb86fe4b29dd9c370bccee609b8deba3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_abc7770e462f49fb8de643ab46ab94985}\label{classamici_1_1_solver_abc7770e462f49fb8de643ab46ab94985}} 
+\index{Solver@{Solver}!setSStolerancesB@{setSStolerancesB}}
+\index{setSStolerancesB@{setSStolerancesB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{setSStolerancesB()}{setSStolerancesB()}}
+{\footnotesize\ttfamily virtual void set\+S\+StolerancesB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{rel\+TolB,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{abs\+TolB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em rel\+TolB} & relative tolerances \\
+\hline
+{\em abs\+TolB} & absolute tolerances \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_afe71105db4de90ce12a37309b252101e}\label{classamici_1_1_solver_afe71105db4de90ce12a37309b252101e}} 
+\index{Solver@{Solver}!quadSStolerancesB@{quadSStolerancesB}}
+\index{quadSStolerancesB@{quadSStolerancesB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{quadSStolerancesB()}{quadSStolerancesB()}}
+{\footnotesize\ttfamily virtual void quad\+S\+StolerancesB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{reltol\+QB,  }\item[{\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}}]{abstol\+QB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em reltol\+QB} & relative tolerances \\
+\hline
+{\em abstol\+QB} & absolute tolerances \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ae98355a8a81e3b54c362413e0de2adbc}\label{classamici_1_1_solver_ae98355a8a81e3b54c362413e0de2adbc}} 
+\index{Solver@{Solver}!dense@{dense}}
+\index{dense@{dense}!Solver@{Solver}}
+\paragraph{\texorpdfstring{dense()}{dense()}}
+{\footnotesize\ttfamily virtual void dense (\begin{DoxyParamCaption}\item[{int}]{nx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & number of state variables \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classamici_1_1_solver_ae98355a8a81e3b54c362413e0de2adbc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aaa1ecd357b3facae2f2d12784563ad25}\label{classamici_1_1_solver_aaa1ecd357b3facae2f2d12784563ad25}} 
+\index{Solver@{Solver}!denseB@{denseB}}
+\index{denseB@{denseB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{denseB()}{denseB()}}
+{\footnotesize\ttfamily virtual void denseB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{nx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em nx} & number of state variables \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_aaa1ecd357b3facae2f2d12784563ad25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a00863fd76b453dae4e883a6dd5512df3}\label{classamici_1_1_solver_a00863fd76b453dae4e883a6dd5512df3}} 
+\index{Solver@{Solver}!band@{band}}
+\index{band@{band}!Solver@{Solver}}
+\paragraph{\texorpdfstring{band()}{band()}}
+{\footnotesize\ttfamily virtual void band (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ubw,  }\item[{int}]{lbw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & number of state variables \\
+\hline
+{\em ubw} & upper matrix bandwidth \\
+\hline
+{\em lbw} & lower matrix bandwidth \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classamici_1_1_solver_a00863fd76b453dae4e883a6dd5512df3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a635908e6d209f02160e791f3ee9d0660}\label{classamici_1_1_solver_a635908e6d209f02160e791f3ee9d0660}} 
+\index{Solver@{Solver}!bandB@{bandB}}
+\index{bandB@{bandB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{bandB()}{bandB()}}
+{\footnotesize\ttfamily virtual void bandB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{nx,  }\item[{int}]{ubw,  }\item[{int}]{lbw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em nx} & number of state variables \\
+\hline
+{\em ubw} & upper matrix bandwidth \\
+\hline
+{\em lbw} & lower matrix bandwidth \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a635908e6d209f02160e791f3ee9d0660_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_abaeb82c5ccd678c2c2ce3e4988704c24}\label{classamici_1_1_solver_abaeb82c5ccd678c2c2ce3e4988704c24}} 
+\index{Solver@{Solver}!diagB@{diagB}}
+\index{diagB@{diagB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{diagB()}{diagB()}}
+{\footnotesize\ttfamily virtual void diagB (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a41fd75dd5f9bc7363ca1c1079c2d0014}\label{classamici_1_1_solver_a41fd75dd5f9bc7363ca1c1079c2d0014}} 
+\index{Solver@{Solver}!spgmr@{spgmr}}
+\index{spgmr@{spgmr}!Solver@{Solver}}
+\paragraph{\texorpdfstring{spgmr()}{spgmr()}}
+{\footnotesize\ttfamily virtual void spgmr (\begin{DoxyParamCaption}\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a466c88dd599259b83fe6140e7a454759}\label{classamici_1_1_solver_a466c88dd599259b83fe6140e7a454759}} 
+\index{Solver@{Solver}!spgmrB@{spgmrB}}
+\index{spgmrB@{spgmrB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{spgmrB()}{spgmrB()}}
+{\footnotesize\ttfamily virtual void spgmrB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ace3159c84746c594a0fb6a5f00773c44}\label{classamici_1_1_solver_ace3159c84746c594a0fb6a5f00773c44}} 
+\index{Solver@{Solver}!spbcg@{spbcg}}
+\index{spbcg@{spbcg}!Solver@{Solver}}
+\paragraph{\texorpdfstring{spbcg()}{spbcg()}}
+{\footnotesize\ttfamily virtual void spbcg (\begin{DoxyParamCaption}\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a9b165bfcf1a6a482a6c9bd84197df6e2}\label{classamici_1_1_solver_a9b165bfcf1a6a482a6c9bd84197df6e2}} 
+\index{Solver@{Solver}!spbcgB@{spbcgB}}
+\index{spbcgB@{spbcgB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{spbcgB()}{spbcgB()}}
+{\footnotesize\ttfamily virtual void spbcgB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ad58de0bff9b336ed3a053a79fb8e6c80}\label{classamici_1_1_solver_ad58de0bff9b336ed3a053a79fb8e6c80}} 
+\index{Solver@{Solver}!sptfqmr@{sptfqmr}}
+\index{sptfqmr@{sptfqmr}!Solver@{Solver}}
+\paragraph{\texorpdfstring{sptfqmr()}{sptfqmr()}}
+{\footnotesize\ttfamily virtual void sptfqmr (\begin{DoxyParamCaption}\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a4504b729da34114dd11eab83161c5670}\label{classamici_1_1_solver_a4504b729da34114dd11eab83161c5670}} 
+\index{Solver@{Solver}!sptfqmrB@{sptfqmrB}}
+\index{sptfqmrB@{sptfqmrB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{sptfqmrB()}{sptfqmrB()}}
+{\footnotesize\ttfamily virtual void sptfqmrB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{prectype,  }\item[{int}]{maxl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em prectype} & preconditioner type P\+R\+E\+C\+\_\+\+N\+O\+NE, P\+R\+E\+C\+\_\+\+L\+E\+FT, P\+R\+E\+C\+\_\+\+R\+I\+G\+HT or P\+R\+E\+C\+\_\+\+B\+O\+TH \\
+\hline
+{\em maxl} & maximum Kryloc subspace dimension \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a4d8be62dca7f7db6563b9b3261a44c01}\label{classamici_1_1_solver_a4d8be62dca7f7db6563b9b3261a44c01}} 
+\index{Solver@{Solver}!klu@{klu}}
+\index{klu@{klu}!Solver@{Solver}}
+\paragraph{\texorpdfstring{klu()}{klu()}}
+{\footnotesize\ttfamily virtual void klu (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{nnz,  }\item[{int}]{sparsetype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & number of state variables \\
+\hline
+{\em nnz} & number of nonzero entries in the jacobian \\
+\hline
+{\em sparsetype} & sparse storage type, C\+S\+C\+\_\+\+M\+AT for column matrix, C\+S\+R\+\_\+\+M\+AT for row matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a30d4c8cfff0c6a74116b15bcfeecbd33}\label{classamici_1_1_solver_a30d4c8cfff0c6a74116b15bcfeecbd33}} 
+\index{Solver@{Solver}!kluSetOrdering@{kluSetOrdering}}
+\index{kluSetOrdering@{kluSetOrdering}!Solver@{Solver}}
+\paragraph{\texorpdfstring{kluSetOrdering()}{kluSetOrdering()}}
+{\footnotesize\ttfamily virtual void klu\+Set\+Ordering (\begin{DoxyParamCaption}\item[{int}]{ordering }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordering} & ordering algorithm to reduce fill 0\+:A\+MD 1\+:C\+O\+L\+A\+MD 2\+: natural ordering \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_aa24ecf586126da19bb338ec8d08fe323}\label{classamici_1_1_solver_aa24ecf586126da19bb338ec8d08fe323}} 
+\index{Solver@{Solver}!kluSetOrderingB@{kluSetOrderingB}}
+\index{kluSetOrderingB@{kluSetOrderingB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{kluSetOrderingB()}{kluSetOrderingB()}}
+{\footnotesize\ttfamily virtual void klu\+Set\+OrderingB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{ordering }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em ordering} & ordering algorithm to reduce fill 0\+:A\+MD 1\+:C\+O\+L\+A\+MD 2\+: natural ordering \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a5f9c6152e6e01f631cd5b68fd638281c}\label{classamici_1_1_solver_a5f9c6152e6e01f631cd5b68fd638281c}} 
+\index{Solver@{Solver}!kluB@{kluB}}
+\index{kluB@{kluB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{kluB()}{kluB()}}
+{\footnotesize\ttfamily virtual void kluB (\begin{DoxyParamCaption}\item[{int}]{which,  }\item[{int}]{nx,  }\item[{int}]{nnz,  }\item[{int}]{sparsetype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em nx} & number of state variables \\
+\hline
+{\em nnz} & number of nonzero entries in the jacobian \\
+\hline
+{\em sparsetype} & sparse storage type, C\+S\+C\+\_\+\+M\+AT for column matrix, C\+S\+R\+\_\+\+M\+AT for row matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_ac72a1a31217465d0f016b38382e487fa}\label{classamici_1_1_solver_ac72a1a31217465d0f016b38382e487fa}} 
+\index{Solver@{Solver}!getNumSteps@{getNumSteps}}
+\index{getNumSteps@{getNumSteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNumSteps()}{getNumSteps()}}
+{\footnotesize\ttfamily virtual void get\+Num\+Steps (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{long int $\ast$}]{numsteps }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ami\+\_\+mem} & pointer to the solver memory instance (can be from forward or backward problem) \\
+\hline
+{\em numsteps} & output array \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classamici_1_1_solver_ac72a1a31217465d0f016b38382e487fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_aaf8d4b1375cfa9e517ef0ec54e33d4d8}\label{classamici_1_1_solver_aaf8d4b1375cfa9e517ef0ec54e33d4d8}} 
+\index{Solver@{Solver}!getNumRhsEvals@{getNumRhsEvals}}
+\index{getNumRhsEvals@{getNumRhsEvals}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNumRhsEvals()}{getNumRhsEvals()}}
+{\footnotesize\ttfamily virtual void get\+Num\+Rhs\+Evals (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{long int $\ast$}]{numrhsevals }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ami\+\_\+mem} & pointer to the solver memory instance (can be from forward or backward problem) \\
+\hline
+{\em numrhsevals} & output array \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classamici_1_1_solver_aaf8d4b1375cfa9e517ef0ec54e33d4d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a605fc85e2d8183dca4ebe24f9d810516}\label{classamici_1_1_solver_a605fc85e2d8183dca4ebe24f9d810516}} 
+\index{Solver@{Solver}!getNumErrTestFails@{getNumErrTestFails}}
+\index{getNumErrTestFails@{getNumErrTestFails}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNumErrTestFails()}{getNumErrTestFails()}}
+{\footnotesize\ttfamily virtual void get\+Num\+Err\+Test\+Fails (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{long int $\ast$}]{numerrtestfails }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ami\+\_\+mem} & pointer to the solver memory instance (can be from forward or backward problem) \\
+\hline
+{\em numerrtestfails} & output array \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classamici_1_1_solver_a605fc85e2d8183dca4ebe24f9d810516_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a34f79927b47e70db74f77943936e18b0}\label{classamici_1_1_solver_a34f79927b47e70db74f77943936e18b0}} 
+\index{Solver@{Solver}!getNumNonlinSolvConvFails@{getNumNonlinSolvConvFails}}
+\index{getNumNonlinSolvConvFails@{getNumNonlinSolvConvFails}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getNumNonlinSolvConvFails()}{getNumNonlinSolvConvFails()}}
+{\footnotesize\ttfamily virtual void get\+Num\+Nonlin\+Solv\+Conv\+Fails (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{long int $\ast$}]{numnonlinsolvconvfails }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ami\+\_\+mem} & pointer to the solver memory instance (can be from forward or backward problem) \\
+\hline
+{\em numnonlinsolvconvfails} & output array \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classamici_1_1_solver_a34f79927b47e70db74f77943936e18b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a491a5e0ffd6c1678a8bb5313df88ab45}\label{classamici_1_1_solver_a491a5e0ffd6c1678a8bb5313df88ab45}} 
+\index{Solver@{Solver}!getLastOrder@{getLastOrder}}
+\index{getLastOrder@{getLastOrder}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getLastOrder()}{getLastOrder()}}
+{\footnotesize\ttfamily virtual void get\+Last\+Order (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{int $\ast$}]{order }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ami\+\_\+mem} & pointer to the solver memory instance (can be from forward or backward problem) \\
+\hline
+{\em order} & output array \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classamici_1_1_solver_a491a5e0ffd6c1678a8bb5313df88ab45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a6f41389f3a02d0b1ed9bfebcc080d3e1}\label{classamici_1_1_solver_a6f41389f3a02d0b1ed9bfebcc080d3e1}} 
+\index{Solver@{Solver}!initializeLinearSolver@{initializeLinearSolver}}
+\index{initializeLinearSolver@{initializeLinearSolver}!Solver@{Solver}}
+\paragraph{\texorpdfstring{initializeLinearSolver()}{initializeLinearSolver()}}
+{\footnotesize\ttfamily void initialize\+Linear\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+initialize\+Linear\+Solver sets the linear solver for the forward problem
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & pointer to the model object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 219 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classamici_1_1_solver_a6f41389f3a02d0b1ed9bfebcc080d3e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a4f596731d15be6e9e76a2147aa1cce34}\label{classamici_1_1_solver_a4f596731d15be6e9e76a2147aa1cce34}} 
+\index{Solver@{Solver}!initializeLinearSolverB@{initializeLinearSolverB}}
+\index{initializeLinearSolverB@{initializeLinearSolverB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{initializeLinearSolverB()}{initializeLinearSolverB()}}
+{\footnotesize\ttfamily void initialize\+Linear\+SolverB (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_model}{Model}} $\ast$}]{model,  }\item[{const int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & pointer to the model object \\
+\hline
+{\em which} & index of the backward problem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 290 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classamici_1_1_solver_a4f596731d15be6e9e76a2147aa1cce34_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classamici_1_1_solver_a4f596731d15be6e9e76a2147aa1cce34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a9a135f04f34dbf45cf980b97e6906665}\label{classamici_1_1_solver_a9a135f04f34dbf45cf980b97e6906665}} 
+\index{Solver@{Solver}!nplist@{nplist}}
+\index{nplist@{nplist}!Solver@{Solver}}
+\paragraph{\texorpdfstring{nplist()}{nplist()}}
+{\footnotesize\ttfamily virtual int nplist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+number of sensitivity parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}\label{classamici_1_1_solver_a86a18c4e461de76881b6af72e4feb8d9}} 
+\index{Solver@{Solver}!nx@{nx}}
+\index{nx@{nx}!Solver@{Solver}}
+\paragraph{\texorpdfstring{nx()}{nx()}}
+{\footnotesize\ttfamily virtual int nx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+number of state variables 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classamici_1_1_solver_a3ea583e4e53b188c54f426f1bc652a0f}\label{classamici_1_1_solver_a3ea583e4e53b188c54f426f1bc652a0f}} 
+\index{Solver@{Solver}!getModel@{getModel}}
+\index{getModel@{getModel}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getModel()}{getModel()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classamici_1_1_model}{Model}}$\ast$ get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Accessor function to the model stored in the user data
+
+\begin{DoxyReturn}{Returns}
+user data model 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classamici_1_1_solver_af4bbf9fea3348d86380be1c059e4b9f5}\label{classamici_1_1_solver_af4bbf9fea3348d86380be1c059e4b9f5}} 
+\index{Solver@{Solver}!getMallocDone@{getMallocDone}}
+\index{getMallocDone@{getMallocDone}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getMallocDone()}{getMallocDone()}}
+{\footnotesize\ttfamily virtual bool get\+Malloc\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+solver\+Memory-\/$>$(cv$\vert$ida)\+\_\+\+\_\+\+Malloc\+Done 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_af4bbf9fea3348d86380be1c059e4b9f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a9673b3bc9248c4b7a156da9632b91436}\label{classamici_1_1_solver_a9673b3bc9248c4b7a156da9632b91436}} 
+\index{Solver@{Solver}!getAdjMallocDone@{getAdjMallocDone}}
+\index{getAdjMallocDone@{getAdjMallocDone}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAdjMallocDone()}{getAdjMallocDone()}}
+{\footnotesize\ttfamily virtual bool get\+Adj\+Malloc\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+solver\+Memory-\/$>$(cv$\vert$ida)\+\_\+\+\_\+adj\+Malloc\+Done 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a9673b3bc9248c4b7a156da9632b91436_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a96a36300db9c200d9586c2b90ced4195}\label{classamici_1_1_solver_a96a36300db9c200d9586c2b90ced4195}} 
+\index{Solver@{Solver}!getAdjBmem@{getAdjBmem}}
+\index{getAdjBmem@{getAdjBmem}!Solver@{Solver}}
+\paragraph{\texorpdfstring{getAdjBmem()}{getAdjBmem()}}
+{\footnotesize\ttfamily virtual void$\ast$ get\+Adj\+Bmem (\begin{DoxyParamCaption}\item[{void $\ast$}]{ami\+\_\+mem,  }\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+{\em ami\+\_\+mem} & pointer to the forward solver memory instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ami\+\_\+memB pointer to the backward solver memory instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classamici_1_1_solver_abdf8989d57153fde8988e73a98979297}\label{classamici_1_1_solver_abdf8989d57153fde8988e73a98979297}} 
+\index{Solver@{Solver}!applyTolerancesASA@{applyTolerancesASA}}
+\index{applyTolerancesASA@{applyTolerancesASA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{applyTolerancesASA()}{applyTolerancesASA()}}
+{\footnotesize\ttfamily void apply\+Tolerances\+A\+SA (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 422 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classamici_1_1_solver_abdf8989d57153fde8988e73a98979297_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_abdf8989d57153fde8988e73a98979297_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_solver_a09d47957ba70f725efb5e3a385a274a6}\label{classamici_1_1_solver_a09d47957ba70f725efb5e3a385a274a6}} 
+\index{Solver@{Solver}!applyQuadTolerancesASA@{applyQuadTolerancesASA}}
+\index{applyQuadTolerancesASA@{applyQuadTolerancesASA}!Solver@{Solver}}
+\paragraph{\texorpdfstring{applyQuadTolerancesASA()}{applyQuadTolerancesASA()}}
+{\footnotesize\ttfamily void apply\+Quad\+Tolerances\+A\+SA (\begin{DoxyParamCaption}\item[{int}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & identifier of the backwards problem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 433 of file solver.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classamici_1_1_solver_a09d47957ba70f725efb5e3a385a274a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_solver_a09d47957ba70f725efb5e3a385a274a6_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_solver_af5aefbc0a968aeae501d6d7f753ee2a4}\label{classamici_1_1_solver_af5aefbc0a968aeae501d6d7f753ee2a4}} 
+\index{Solver@{Solver}!boost::serialization::serialize@{boost::serialization::serialize}}
+\index{boost::serialization::serialize@{boost::serialization::serialize}!Solver@{Solver}}
+\paragraph{\texorpdfstring{boost::serialization::serialize}{boost::serialization::serialize}}
+{\footnotesize\ttfamily void boost\+::serialization\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&}]{r,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & Archive to serialize to \\
+\hline
+{\em r} & Data to serialize \\
+\hline
+{\em version} & Version number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classamici_1_1_solver_a252a116a8f94abccc25b2086deb0734b}\label{classamici_1_1_solver_a252a116a8f94abccc25b2086deb0734b}} 
+\index{Solver@{Solver}!operator==@{operator==}}
+\index{operator==@{operator==}!Solver@{Solver}}
+\paragraph{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&}]{a,  }\item[{const \mbox{\hyperlink{classamici_1_1_solver}{Solver}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 364 of file solver.\+cpp.
+
+
+
+\subsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classamici_1_1_solver_ae002c62062f2e9dafc944c78165abcac}\label{classamici_1_1_solver_ae002c62062f2e9dafc944c78165abcac}} 
+\index{Solver@{Solver}!solverMemory@{solverMemory}}
+\index{solverMemory@{solverMemory}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solverMemory}{solverMemory}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$void, std\+::function$<$void(void $\ast$)$>$ $>$ solver\+Memory\hspace{0.3cm}{\ttfamily [protected]}}
+
+pointer to solver memory block 
+
+Definition at line 1162 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_af450f49c134cba233622f7d07fc78c06}\label{classamici_1_1_solver_af450f49c134cba233622f7d07fc78c06}} 
+\index{Solver@{Solver}!solverMemoryB@{solverMemoryB}}
+\index{solverMemoryB@{solverMemoryB}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solverMemoryB}{solverMemoryB}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$void, std\+::function$<$void(void $\ast$)$>$ $>$ $>$ solver\+MemoryB\hspace{0.3cm}{\ttfamily [protected]}}
+
+pointer to solver memory block 
+
+Definition at line 1165 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a454f49f72b43a33add909d7ac630ce1c}\label{classamici_1_1_solver_a454f49f72b43a33add909d7ac630ce1c}} 
+\index{Solver@{Solver}!solverWasCalled@{solverWasCalled}}
+\index{solverWasCalled@{solverWasCalled}!Solver@{Solver}}
+\paragraph{\texorpdfstring{solverWasCalled}{solverWasCalled}}
+{\footnotesize\ttfamily bool solver\+Was\+Called = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+flag indicating whether the solver was called 
+
+Definition at line 1168 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a5b3b5ca18d3932765358bdf278290861}\label{classamici_1_1_solver_a5b3b5ca18d3932765358bdf278290861}} 
+\index{Solver@{Solver}!ism@{ism}}
+\index{ism@{ism}!Solver@{Solver}}
+\paragraph{\texorpdfstring{ism}{ism}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_aa444c52f0a5638d68702d1ec92f8db87}{Internal\+Sensitivity\+Method}} ism = Internal\+Sensitivity\+Method\+::simultaneous\hspace{0.3cm}{\ttfamily [protected]}}
+
+internal sensitivity method flag used to select the sensitivity solution method. Only applies for Forward Sensitivities. 
+
+Definition at line 1172 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_af71d1353291520f9ba68df79c4b9f053}\label{classamici_1_1_solver_af71d1353291520f9ba68df79c4b9f053}} 
+\index{Solver@{Solver}!lmm@{lmm}}
+\index{lmm@{lmm}!Solver@{Solver}}
+\paragraph{\texorpdfstring{lmm}{lmm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a9ebe272482a8e073efe7078b7e96e8bc}{Linear\+Multistep\+Method}} lmm = Linear\+Multistep\+Method\+::\+B\+DF\hspace{0.3cm}{\ttfamily [protected]}}
+
+specifies the linear multistep method. 
+
+Definition at line 1176 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a0ef59d3f746d2ec0e3f126b7b9989f50}\label{classamici_1_1_solver_a0ef59d3f746d2ec0e3f126b7b9989f50}} 
+\index{Solver@{Solver}!iter@{iter}}
+\index{iter@{iter}!Solver@{Solver}}
+\paragraph{\texorpdfstring{iter}{iter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a13388d34e4c35bb592c3e821c35cc923}{Nonlinear\+Solver\+Iteration}} iter = Nonlinear\+Solver\+Iteration\+::newton\hspace{0.3cm}{\ttfamily [protected]}}
+
+specifies the type of nonlinear solver iteration 
+
+Definition at line 1181 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a5a80193af5ca74a4a4e3da67a7e74a98}\label{classamici_1_1_solver_a5a80193af5ca74a4a4e3da67a7e74a98}} 
+\index{Solver@{Solver}!interpType@{interpType}}
+\index{interpType@{interpType}!Solver@{Solver}}
+\paragraph{\texorpdfstring{interpType}{interpType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a8472f01c511d77bbfb981a46618ea1ea}{Interpolation\+Type}} interp\+Type = Interpolation\+Type\+::hermite\hspace{0.3cm}{\ttfamily [protected]}}
+
+interpolation type for the forward problem solution which is then used for the backwards problem. 
+
+Definition at line 1186 of file solver.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_solver_a029415ebe024ac6281fd9f190aefb2ee}\label{classamici_1_1_solver_a029415ebe024ac6281fd9f190aefb2ee}} 
+\index{Solver@{Solver}!maxsteps@{maxsteps}}
+\index{maxsteps@{maxsteps}!Solver@{Solver}}
+\paragraph{\texorpdfstring{maxsteps}{maxsteps}}
+{\footnotesize\ttfamily int maxsteps = 10000\hspace{0.3cm}{\ttfamily [protected]}}
+
+maximum number of allowed integration steps 
+
+Definition at line 1189 of file solver.\+h.
+

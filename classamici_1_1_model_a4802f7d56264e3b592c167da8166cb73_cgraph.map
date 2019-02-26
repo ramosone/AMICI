@@ -1,0 +1,8 @@
+<map id="setFixedParametersByNameRegex" name="setFixedParametersByNameRegex">
+<area shape="rect" id="node1" title="Set value of all fixed parameters with name matching the specified regex,." alt="" coords="5,74,197,116"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#adfe23b552732bba8d8f54298522abf3c" title="Reports whether the model has fixed parameter names set." alt="" coords="245,31,425,58"/>
+<area shape="rect" id="node5" href="$namespaceamici.html#a0094499812e5edffce2ae9f379b11abb" title="local helper function to set parameters via regex" alt="" coords="247,81,423,109"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model.html#aa9278a175bc86b5b020df35dd2581734" title="Get ids of the fixed model parameters." alt="" coords="259,132,411,159"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a3d4130da64883565a06a86e7d6029da1" title="Number of constants." alt="" coords="542,5,581,33"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#abdfc1bad63f4c3b927aac8c3422d639a" title="Get names of the fixed model parameters." alt="" coords="473,56,650,83"/>
+</map>

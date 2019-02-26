@@ -1,0 +1,15 @@
+<map id="np" name="np">
+<area shape="rect" id="node1" title="Total number of model parameters." alt="" coords="467,107,506,134"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#af1e95f6479d442fcb4c63d16763d4acd" title="Sets the parameter vector." alt="" coords="281,5,389,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a2afe974183e4bccaf746f6409941fe8f" title="Set the list of parameters for which sensitivities are computed, resets initial state sensitivities." alt="" coords="274,56,396,83"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#a7b51ed26a01b793c832fe680d9543763" title="Reports whether the model has parameter names set." alt="" coords="261,107,409,134"/>
+<area shape="rect" id="node8" href="$classamici_1_1_model.html#a2bd3836db435507277d0e5c9fa139cb9" title="Reports whether the model has parameter ids set." alt="" coords="274,180,396,207"/>
+<area shape="rect" id="node12" href="$classamici_1_1_model.html#a9b03cc8dbac85d38ced3f59234ba27d9" title="Require computation of sensitivities for all parameters p [0..np[ in natural order,..." alt="" coords="251,278,419,320"/>
+<area shape="rect" id="node5" href="$classamici_1_1_model.html#a19b349ca9793d45fda7ef8ea7422747a" title="Get value of first model parameter with the specified name,." alt="" coords="28,5,181,33"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model.html#a6c5ceb2ba684cf68a7f21ad865091200" title="Set value of first model parameter with the specified name." alt="" coords="28,56,180,83"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model.html#a1307ed45ccda80e84174d6b495c85d8d" title="Set all values of all model parameters with names matching the specified regex." alt="" coords="5,107,203,134"/>
+<area shape="rect" id="node9" href="$classamici_1_1_model.html#a4436bd89ae2cb032cbf13db478d99e15" title="Get value of first model parameter with the specified id." alt="" coords="40,157,169,185"/>
+<area shape="rect" id="node10" href="$classamici_1_1_model.html#a995357a19663980279249d4b89a88f7a" title="Set value of first model parameter with the specified id." alt="" coords="40,208,168,235"/>
+<area shape="rect" id="node11" href="$classamici_1_1_model.html#ab66d6b754637ed68449af96f5887a0be" title="Set all values of model parameters with ids matching the specified regex." alt="" coords="18,259,191,286"/>
+<area shape="rect" id="node13" href="$classamici_1_1_model.html#abd567a1612a8b947ca43c74df3b83273" title=" " alt="" coords="75,309,133,337"/>
+</map>

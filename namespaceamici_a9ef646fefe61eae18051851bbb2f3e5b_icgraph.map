@@ -1,0 +1,5 @@
+<map id="getScaledParameter" name="getScaledParameter">
+<area shape="rect" id="node1" title="Apply parameter scaling according to scaling" alt="" coords="406,13,549,40"/>
+<area shape="rect" id="node2" href="$namespaceamici.html#a28b22fcad5ed463795858b60952587cd" title="Apply parameter scaling according to scaling" alt="" coords="237,13,358,40"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a7e25febbfd9db80f64a4f73a2718bda7" title="Set ParameterScale for each parameter, resets initial state sensitivities." alt="" coords="5,5,189,48"/>
+</map>

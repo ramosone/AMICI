@@ -1,0 +1,5 @@
+<map id="getNumNonlinSolvConvFails" name="getNumNonlinSolvConvFails">
+<area shape="rect" id="node1" title="reports the number of nonlinear convergence failures" alt="" coords="161,31,352,58"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a07318808fed3463ea8de7f25e3698343" title="Extracts diagnosis information from solver memory block and writes them into the return data object." alt="" coords="10,5,108,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#aa7aec3090326db73739483e141e65cda" title="Extracts diagnosis information from solver memory block and writes them into the return data object f..." alt="" coords="5,56,113,83"/>
+</map>

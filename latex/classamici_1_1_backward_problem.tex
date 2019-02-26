@@ -1,0 +1,236 @@
+\hypertarget{classamici_1_1_backward_problem}{}\subsection{Backward\+Problem Class Reference}
+\label{classamici_1_1_backward_problem}\index{BackwardProblem@{BackwardProblem}}
+
+
+class to solve backwards problems.  
+
+
+
+
+{\ttfamily \#include $<$backwardproblem.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamici_1_1_backward_problem_a173995c3ce3a4c59d815dfbeebb8dc6e}{Backward\+Problem}} (const \mbox{\hyperlink{classamici_1_1_forward_problem}{Forward\+Problem}} $\ast$fwd)
+\begin{DoxyCompactList}\small\item\em Construct backward problem from forward problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classamici_1_1_backward_problem_a4a17093ee76348cce97b06c94bf518bd}{work\+Backward\+Problem}} ()
+\begin{DoxyCompactList}\small\item\em Solve the backward problem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} \mbox{\hyperlink{classamici_1_1_backward_problem_a1582a658df3f51a8c88b6f22b4205b3f}{gett}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for current time t. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classamici_1_1_backward_problem_ac337bf2284c1febeb302019b06c54c3e}{getwhich}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for which. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classamici_1_1_backward_problem_a209a0d59a5a5eebfba1e6db5cb209132}{getwhichptr}} ()
+\begin{DoxyCompactList}\small\item\em Accessor for pointer to which. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$ \mbox{\hyperlink{classamici_1_1_backward_problem_afd910c853cb52a19b17ff8b65832fe2e}{getx\+Bptr}} ()
+\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$ \mbox{\hyperlink{classamici_1_1_backward_problem_a6b43b17396089785a111a5bc1fd27112}{getx\+Q\+Bptr}} ()
+\begin{DoxyCompactList}\small\item\em accessor for pointer to x\+QB \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} $\ast$ \mbox{\hyperlink{classamici_1_1_backward_problem_ab1f652d5ffaf80adab677b0a8393b48a}{getdx\+Bptr}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ const  \& \mbox{\hyperlink{classamici_1_1_backward_problem_aaa2f33176422b55808979bfc7ceb2573}{getd\+Jydx}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for d\+Jydx. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+solves the backwards problem for adjoint sensitivity analysis and handles events and data-\/points 
+
+Definition at line 23 of file backwardproblem.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_a173995c3ce3a4c59d815dfbeebb8dc6e}\label{classamici_1_1_backward_problem_a173995c3ce3a4c59d815dfbeebb8dc6e}} 
+\index{BackwardProblem@{BackwardProblem}!BackwardProblem@{BackwardProblem}}
+\index{BackwardProblem@{BackwardProblem}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{BackwardProblem()}{BackwardProblem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_backward_problem}{Backward\+Problem}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_forward_problem}{Forward\+Problem}} $\ast$}]{fwd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em fwd} & pointer to corresponding forward problem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new \mbox{\hyperlink{classamici_1_1_backward_problem}{Backward\+Problem}} instance 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file backwardproblem.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classamici_1_1_backward_problem_a173995c3ce3a4c59d815dfbeebb8dc6e_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_a4a17093ee76348cce97b06c94bf518bd}\label{classamici_1_1_backward_problem_a4a17093ee76348cce97b06c94bf518bd}} 
+\index{BackwardProblem@{BackwardProblem}!workBackwardProblem@{workBackwardProblem}}
+\index{workBackwardProblem@{workBackwardProblem}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{workBackwardProblem()}{workBackwardProblem()}}
+{\footnotesize\ttfamily void work\+Backward\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+If adjoint sensitivities are enabled this will also compute sensitivities. work\+Forward\+Problem must be called before this is function is called. 
+
+Definition at line 38 of file backwardproblem.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_backward_problem_a4a17093ee76348cce97b06c94bf518bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_a1582a658df3f51a8c88b6f22b4205b3f}\label{classamici_1_1_backward_problem_a1582a658df3f51a8c88b6f22b4205b3f}} 
+\index{BackwardProblem@{BackwardProblem}!gett@{gett}}
+\index{gett@{gett}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{gett()}{gett()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} gett (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+t 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classamici_1_1_backward_problem_a1582a658df3f51a8c88b6f22b4205b3f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_ac337bf2284c1febeb302019b06c54c3e}\label{classamici_1_1_backward_problem_ac337bf2284c1febeb302019b06c54c3e}} 
+\index{BackwardProblem@{BackwardProblem}!getwhich@{getwhich}}
+\index{getwhich@{getwhich}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getwhich()}{getwhich()}}
+{\footnotesize\ttfamily int getwhich (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+which 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classamici_1_1_backward_problem_ac337bf2284c1febeb302019b06c54c3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_a209a0d59a5a5eebfba1e6db5cb209132}\label{classamici_1_1_backward_problem_a209a0d59a5a5eebfba1e6db5cb209132}} 
+\index{BackwardProblem@{BackwardProblem}!getwhichptr@{getwhichptr}}
+\index{getwhichptr@{getwhichptr}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getwhichptr()}{getwhichptr()}}
+{\footnotesize\ttfamily int$\ast$ getwhichptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+which 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classamici_1_1_backward_problem_a209a0d59a5a5eebfba1e6db5cb209132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_afd910c853cb52a19b17ff8b65832fe2e}\label{classamici_1_1_backward_problem_afd910c853cb52a19b17ff8b65832fe2e}} 
+\index{BackwardProblem@{BackwardProblem}!getxBptr@{getxBptr}}
+\index{getxBptr@{getxBptr}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getxBptr()}{getxBptr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}}$\ast$ getx\+Bptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+accessor for pointer to xB \begin{DoxyReturn}{Returns}
+\&xB 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classamici_1_1_backward_problem_afd910c853cb52a19b17ff8b65832fe2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_a6b43b17396089785a111a5bc1fd27112}\label{classamici_1_1_backward_problem_a6b43b17396089785a111a5bc1fd27112}} 
+\index{BackwardProblem@{BackwardProblem}!getxQBptr@{getxQBptr}}
+\index{getxQBptr@{getxQBptr}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getxQBptr()}{getxQBptr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}}$\ast$ getx\+Q\+Bptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\&x\+QB 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classamici_1_1_backward_problem_a6b43b17396089785a111a5bc1fd27112_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_ab1f652d5ffaf80adab677b0a8393b48a}\label{classamici_1_1_backward_problem_ab1f652d5ffaf80adab677b0a8393b48a}} 
+\index{BackwardProblem@{BackwardProblem}!getdxBptr@{getdxBptr}}
+\index{getdxBptr@{getdxBptr}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getdxBptr()}{getdxBptr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}}$\ast$ getdx\+Bptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+accessor for pointer to dxB \begin{DoxyReturn}{Returns}
+\&dxB 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classamici_1_1_backward_problem_ab1f652d5ffaf80adab677b0a8393b48a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_backward_problem_aaa2f33176422b55808979bfc7ceb2573}\label{classamici_1_1_backward_problem_aaa2f33176422b55808979bfc7ceb2573}} 
+\index{BackwardProblem@{BackwardProblem}!getdJydx@{getdJydx}}
+\index{getdJydx@{getdJydx}!BackwardProblem@{BackwardProblem}}
+\paragraph{\texorpdfstring{getdJydx()}{getdJydx()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$>$ const\& getd\+Jydx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+d\+Jydx 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file backwardproblem.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classamici_1_1_backward_problem_aaa2f33176422b55808979bfc7ceb2573_icgraph}
+\end{center}
+\end{figure}

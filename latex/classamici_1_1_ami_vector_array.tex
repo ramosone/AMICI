@@ -1,0 +1,307 @@
+\hypertarget{classamici_1_1_ami_vector_array}{}\subsection{Ami\+Vector\+Array Class Reference}
+\label{classamici_1_1_ami_vector_array}\index{AmiVectorArray@{AmiVectorArray}}
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector_array_a331a7814672b817a7c38328e78eaaedd}{Ami\+Vector\+Array}} (long int length\+\_\+inner, long int length\+\_\+outer)
+\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector_array_a3b40abc4d3e4fc0a097834dd56666f41}{Ami\+Vector\+Array}} (const \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} \&vaold)
+\item 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_ami_vector_array_a5c1b7077b31d3a3be1370ea3e42d13a3}{data}} (int pos)
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_ami_vector_array_a862fe8497e94d2fac86e92a07db04cd7}{data}} (int pos) const
+\item 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} \& \mbox{\hyperlink{classamici_1_1_ami_vector_array_a214f110ad614eb97ec2c6f3b6a9f2c8c}{at}} (int ipos, int jpos)
+\item 
+const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} \& \mbox{\hyperlink{classamici_1_1_ami_vector_array_ab5d671e207475d1f45227a7faaeebfac}{at}} (int ipos, int jpos) const
+\item 
+N\+\_\+\+Vector $\ast$ \mbox{\hyperlink{classamici_1_1_ami_vector_array_a5ccad03e89676a4b404322899579f961}{get\+N\+Vector\+Array}} ()
+\item 
+N\+\_\+\+Vector \mbox{\hyperlink{classamici_1_1_ami_vector_array_a387bfb58f20388d99da7f946a3a27ab8}{get\+N\+Vector}} (int pos)
+\item 
+\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \& \mbox{\hyperlink{classamici_1_1_ami_vector_array_a337287b17e675970226a55ae63ad65a2}{operator\mbox{[}$\,$\mbox{]}}} (int pos)
+\item 
+const \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \& \mbox{\hyperlink{classamici_1_1_ami_vector_array_a45a615cf5e4b550783ee23560c834941}{operator\mbox{[}$\,$\mbox{]}}} (int pos) const
+\item 
+int \mbox{\hyperlink{classamici_1_1_ami_vector_array_a5f00d4dc3e7866d193ce926f35542801}{get\+Length}} () const
+\item 
+void \mbox{\hyperlink{classamici_1_1_ami_vector_array_ad20897c5c8bd47f5d4005989bead0e55}{reset}} ()
+\item 
+void \mbox{\hyperlink{classamici_1_1_ami_vector_array_ab084098fb95a107daadc484ee7b5dd76}{flatten\+\_\+to\+\_\+vector}} (std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&vec) const
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} class. provides a generic interface to arrays of N\+Vector\+\_\+\+Serial structs 
+
+Definition at line 156 of file vector.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a331a7814672b817a7c38328e78eaaedd}\label{classamici_1_1_ami_vector_array_a331a7814672b817a7c38328e78eaaedd}} 
+\index{AmiVectorArray@{AmiVectorArray}!AmiVectorArray@{AmiVectorArray}}
+\index{AmiVectorArray@{AmiVectorArray}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{AmiVectorArray()}{AmiVectorArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} (\begin{DoxyParamCaption}\item[{long int}]{length\+\_\+inner,  }\item[{long int}]{length\+\_\+outer }\end{DoxyParamCaption})}
+
+creates an std\+::vector$<$realype$>$ and attaches the data pointer to a newly created N\+\_\+\+Vector\+Array using Clone\+Vector\+Array\+Empty ensures that the N\+\_\+\+Vector module does not try to deallocate the data vector when calling N\+\_\+\+V\+Destroy\+Vector\+Array\+\_\+\+Serial 
+\begin{DoxyParams}{Parameters}
+{\em length\+\_\+inner} & length of vectors \\
+\hline
+{\em length\+\_\+outer} & number of vectors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} instance 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a3b40abc4d3e4fc0a097834dd56666f41}\label{classamici_1_1_ami_vector_array_a3b40abc4d3e4fc0a097834dd56666f41}} 
+\index{AmiVectorArray@{AmiVectorArray}!AmiVectorArray@{AmiVectorArray}}
+\index{AmiVectorArray@{AmiVectorArray}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{AmiVectorArray()}{AmiVectorArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} \&}]{vaold }\end{DoxyParamCaption})}
+
+copy constructor 
+\begin{DoxyParams}{Parameters}
+{\em vaold} & object to copy from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} instance 
+\end{DoxyReturn}
+
+
+Definition at line 181 of file vector.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classamici_1_1_ami_vector_array_a3b40abc4d3e4fc0a097834dd56666f41_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a5c1b7077b31d3a3be1370ea3e42d13a3}\label{classamici_1_1_ami_vector_array_a5c1b7077b31d3a3be1370ea3e42d13a3}} 
+\index{AmiVectorArray@{AmiVectorArray}!data@{data}}
+\index{data@{data}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$\ast$ data (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+accessor to data of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to data array 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file vector.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamici_1_1_ami_vector_array_a5c1b7077b31d3a3be1370ea3e42d13a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a862fe8497e94d2fac86e92a07db04cd7}\label{classamici_1_1_ami_vector_array_a862fe8497e94d2fac86e92a07db04cd7}} 
+\index{AmiVectorArray@{AmiVectorArray}!data@{data}}
+\index{data@{data}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}$\ast$ data (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+const accessor to data of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const pointer to data array 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a214f110ad614eb97ec2c6f3b6a9f2c8c}\label{classamici_1_1_ami_vector_array_a214f110ad614eb97ec2c6f3b6a9f2c8c}} 
+\index{AmiVectorArray@{AmiVectorArray}!at@{at}}
+\index{at@{at}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}\& at (\begin{DoxyParamCaption}\item[{int}]{ipos,  }\item[{int}]{jpos }\end{DoxyParamCaption})}
+
+accessor to elements of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em ipos} & inner index in \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+{\em jpos} & outer index in \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+element 
+\end{DoxyReturn}
+
+
+Definition at line 209 of file vector.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classamici_1_1_ami_vector_array_a214f110ad614eb97ec2c6f3b6a9f2c8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_ab5d671e207475d1f45227a7faaeebfac}\label{classamici_1_1_ami_vector_array_ab5d671e207475d1f45227a7faaeebfac}} 
+\index{AmiVectorArray@{AmiVectorArray}!at@{at}}
+\index{at@{at}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}}\& at (\begin{DoxyParamCaption}\item[{int}]{ipos,  }\item[{int}]{jpos }\end{DoxyParamCaption}) const}
+
+accessor to elements of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em ipos} & inner index in \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+{\em jpos} & outer index in \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+element 
+\end{DoxyReturn}
+
+
+Definition at line 218 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a5ccad03e89676a4b404322899579f961}\label{classamici_1_1_ami_vector_array_a5ccad03e89676a4b404322899579f961}} 
+\index{AmiVectorArray@{AmiVectorArray}!getNVectorArray@{getNVectorArray}}
+\index{getNVectorArray@{getNVectorArray}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{getNVectorArray()}{getNVectorArray()}}
+{\footnotesize\ttfamily N\+\_\+\+Vector$\ast$ get\+N\+Vector\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+accessor to N\+Vector\+Array \begin{DoxyReturn}{Returns}
+N\+\_\+\+Vector\+Array 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a387bfb58f20388d99da7f946a3a27ab8}\label{classamici_1_1_ami_vector_array_a387bfb58f20388d99da7f946a3a27ab8}} 
+\index{AmiVectorArray@{AmiVectorArray}!getNVector@{getNVector}}
+\index{getNVector@{getNVector}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{getNVector()}{getNVector()}}
+{\footnotesize\ttfamily N\+\_\+\+Vector get\+N\+Vector (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+accessor to N\+Vector element 
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of corresponding \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+\_\+\+Vector 
+\end{DoxyReturn}
+
+
+Definition at line 233 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a337287b17e675970226a55ae63ad65a2}\label{classamici_1_1_ami_vector_array_a337287b17e675970226a55ae63ad65a2}} 
+\index{AmiVectorArray@{AmiVectorArray}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}}\& operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+accessor to \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a45a615cf5e4b550783ee23560c834941}\label{classamici_1_1_ami_vector_array_a45a615cf5e4b550783ee23560c834941}} 
+\index{AmiVectorArray@{AmiVectorArray}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}}\& operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+const accessor to \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} elements 
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_a5f00d4dc3e7866d193ce926f35542801}\label{classamici_1_1_ami_vector_array_a5f00d4dc3e7866d193ce926f35542801}} 
+\index{AmiVectorArray@{AmiVectorArray}!getLength@{getLength}}
+\index{getLength@{getLength}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily int get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+length of \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} \begin{DoxyReturn}{Returns}
+length 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file vector.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classamici_1_1_ami_vector_array_a5f00d4dc3e7866d193ce926f35542801_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_ad20897c5c8bd47f5d4005989bead0e55}\label{classamici_1_1_ami_vector_array_ad20897c5c8bd47f5d4005989bead0e55}} 
+\index{AmiVectorArray@{AmiVectorArray}!reset@{reset}}
+\index{reset@{reset}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+resets every \mbox{\hyperlink{classamici_1_1_ami_vector}{Ami\+Vector}} in \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} 
+
+Definition at line 261 of file vector.\+h.
+
+\mbox{\Hypertarget{classamici_1_1_ami_vector_array_ab084098fb95a107daadc484ee7b5dd76}\label{classamici_1_1_ami_vector_array_ab084098fb95a107daadc484ee7b5dd76}} 
+\index{AmiVectorArray@{AmiVectorArray}!flatten\_to\_vector@{flatten\_to\_vector}}
+\index{flatten\_to\_vector@{flatten\_to\_vector}!AmiVectorArray@{AmiVectorArray}}
+\paragraph{\texorpdfstring{flatten\_to\_vector()}{flatten\_to\_vector()}}
+{\footnotesize\ttfamily void flatten\+\_\+to\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $>$ \&}]{vec }\end{DoxyParamCaption}) const}
+
+flattens the \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} to a vector in row-\/major format 
+\begin{DoxyParams}{Parameters}
+{\em vec} & vector into which the \mbox{\hyperlink{classamici_1_1_ami_vector_array}{Ami\+Vector\+Array}} will be flattened. Must have length equal to number of elements. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 270 of file vector.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classamici_1_1_ami_vector_array_ab084098fb95a107daadc484ee7b5dd76_cgraph}
+\end{center}
+\end{figure}

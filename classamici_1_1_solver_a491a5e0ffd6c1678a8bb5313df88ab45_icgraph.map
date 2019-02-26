@@ -1,0 +1,4 @@
+<map id="getLastOrder" name="getLastOrder">
+<area shape="rect" id="node1" title="Reports the order of the integration method during the last internal step." alt="" coords="152,5,251,33"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a07318808fed3463ea8de7f25e3698343" title="Extracts diagnosis information from solver memory block and writes them into the return data object." alt="" coords="5,5,104,33"/>
+</map>

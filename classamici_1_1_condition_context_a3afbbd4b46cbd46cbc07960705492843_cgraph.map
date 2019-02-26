@@ -1,0 +1,9 @@
+<map id="applyCondition" name="applyCondition">
+<area shape="rect" id="node1" title="Apply condition&#45;specific settings from edata to the constructor&#45;supplied model, not changing the sett..." alt="" coords="5,107,115,134"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#a3d4130da64883565a06a86e7d6029da1" title="Number of constants." alt="" coords="434,5,551,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a14ba63ae81b4e8fa1f46884b703e2c30" title="Sets the fixedParameter member." alt="" coords="163,56,386,83"/>
+<area shape="rect" id="node5" href="$classamici_1_1_exp_data.html#a4c23d300cbe15b0afb1ee3731d47cc93" title=" " alt="" coords="210,107,339,134"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model.html#a50f9642f9bcb883dbd3925c85abc4c24" title="Set the timepoint vector." alt="" coords="181,157,367,185"/>
+<area shape="rect" id="node7" href="$classamici_1_1_exp_data.html#a50ea5198d117f8f4ad1e34bb279975c8" title=" " alt="" coords="173,208,375,235"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#adde50e0d8a99d20354c8403bf93fab6f" title="Fixed parameters." alt="" coords="437,56,548,83"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="getNVector" name="getNVector">
+<area shape="rect" id="node1" title=" " alt="" coords="734,1281,822,1308"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#a0c06c5326bb82ceedba30171c122cb8a" title="Computes nonnegative state vector according to stateIsNonNegative if anyStateNonNegative is set to fa..." alt="" coords="494,901,686,928"/>
+<area shape="rect" id="node8" href="$classamici_1_1_model___d_a_e.html#a58cf5aaa5fbcf6195407e7651f05c218" title=" " alt="" coords="257,1281,433,1308"/>
+<area shape="rect" id="node11" href="$classamici_1_1_model___d_a_e.html#afd60580b84c72713288796453f6da33a" title=" " alt="" coords="6,90,196,117"/>
+<area shape="rect" id="node25" href="$classamici_1_1_model___o_d_e.html#afd60580b84c72713288796453f6da33a" title=" " alt="" coords="5,1559,196,1587"/>
+<area shape="rect" id="node29" href="$classamici_1_1_model___o_d_e.html#a79269ef1a74e1ad9e313dce0e4220291" title=" " alt="" coords="12,647,190,675"/>
+<area shape="rect" id="node33" href="$classamici_1_1_model___d_a_e.html#a99337eaeac6c70528c3464affe13df2e" title=" " alt="" coords="516,375,664,403"/>
+<area shape="rect" id="node34" href="$classamici_1_1_model___d_a_e.html#a3147c7a327fead438efe714f04491c82" title=" " alt="" coords="495,166,686,193"/>
+<area shape="rect" id="node35" href="$classamici_1_1_model___d_a_e.html#a1a0549510cbe20e4d3c28bf77fc722ed" title=" " alt="" coords="512,539,668,567"/>
+<area shape="rect" id="node36" href="$classamici_1_1_model___d_a_e.html#a94a623b51fd0ecd7a9a549eb7da2fc04" title=" " alt="" coords="507,818,673,845"/>
+<area shape="rect" id="node37" href="$classamici_1_1_model___d_a_e.html#a33461bc9bc047e838607d958eb29621a" title=" " alt="" coords="506,1230,674,1257"/>
+<area shape="rect" id="node38" href="$classamici_1_1_model___d_a_e.html#a01f84575fd8df46a04fd472bbbc9d821" title=" " alt="" coords="503,90,677,117"/>
+<area shape="rect" id="node39" href="$classamici_1_1_model___o_d_e.html#a99337eaeac6c70528c3464affe13df2e" title=" " alt="" coords="515,1331,665,1359"/>
+<area shape="rect" id="node40" href="$classamici_1_1_model___o_d_e.html#a3147c7a327fead438efe714f04491c82" title=" " alt="" coords="494,1534,686,1561"/>
+<area shape="rect" id="node41" href="$classamici_1_1_model___o_d_e.html#a1a0549510cbe20e4d3c28bf77fc722ed" title=" " alt="" coords="512,1382,668,1409"/>
+<area shape="rect" id="node42" href="$classamici_1_1_model___o_d_e.html#a94a623b51fd0ecd7a9a549eb7da2fc04" title=" " alt="" coords="507,1433,673,1460"/>
+<area shape="rect" id="node43" href="$classamici_1_1_model___o_d_e.html#a33461bc9bc047e838607d958eb29621a" title=" " alt="" coords="506,1483,674,1511"/>
+<area shape="rect" id="node44" href="$classamici_1_1_model___o_d_e.html#a01f84575fd8df46a04fd472bbbc9d821" title=" " alt="" coords="502,1610,678,1637"/>
+<area shape="rect" id="node45" href="$classamici_1_1_newton_solver_iterative.html#a89a318e506339bc8a0d05aa01920f1ae" title=" " alt="" coords="495,1737,685,1780"/>
+<area shape="rect" id="node47" href="$classamici_1_1_steadystate_problem.html#afd3dce48510d1fce72b18049b40fff5a" title=" " alt="" coords="500,1804,680,1846"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model___d_a_e.html#ae0cdcd849f238e5ca375253f802e497c" title=" " alt="" coords="271,318,419,345"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model___d_a_e.html#acb8703eaab2bd0da229453af1e6f71e3" title=" " alt="" coords="250,166,441,193"/>
+<area shape="rect" id="node5" href="$classamici_1_1_model___d_a_e.html#a7a3565abc7cb0372df38aec43e764275" title=" " alt="" coords="267,369,423,396"/>
+<area shape="rect" id="node6" href="$classamici_1_1_model___d_a_e.html#ae6c3d021c2ba942652b6dbd4355e8968" title=" " alt="" coords="263,419,428,447"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model___d_a_e.html#a5c4a9276e3053be8f0ad12cb91761647" title=" " alt="" coords="261,1230,429,1257"/>
+<area shape="rect" id="node9" href="$classamici_1_1_model___d_a_e.html#a551dfccd2fb1aa618c644a580639f5b8" title=" " alt="" coords="250,217,440,244"/>
+<area shape="rect" id="node10" href="$classamici_1_1_model___d_a_e.html#a26e76f86f173a718466c9cc19d68550a" title=" " alt="" coords="14,217,188,244"/>
+<area shape="rect" id="node12" href="$classamici_1_1_model___d_a_e.html#a82db0639f98056acc376569457c95ca4" title="Mass matrix for DAE systems." alt="" coords="268,571,422,599"/>
+<area shape="rect" id="node13" href="$classamici_1_1_model___d_a_e.html#a35c720b42879b9932ea16948053843cf" title=" " alt="" coords="266,774,424,801"/>
+<area shape="rect" id="node14" href="$classamici_1_1_model___d_a_e.html#a389bccc94cc77a18cc1948d592ca7fca" title=" " alt="" coords="245,825,445,852"/>
+<area shape="rect" id="node15" href="$classamici_1_1_model___d_a_e.html#a837e1b2b4f0e13b64180040a9cb8e6b2" title=" " alt="" coords="263,875,427,903"/>
+<area shape="rect" id="node16" href="$classamici_1_1_model___d_a_e.html#acc0b085abdde1955773d61f3e3bac21b" title=" " alt="" coords="257,926,433,953"/>
+<area shape="rect" id="node17" href="$classamici_1_1_model___d_a_e.html#ae3dc4629c9c56a4af01350b8c49f49a8" title=" " alt="" coords="257,977,434,1004"/>
+<area shape="rect" id="node18" href="$classamici_1_1_model___o_d_e.html#aa2c40d6808a333eee2a96e6737d85161" title=" " alt="" coords="270,1331,420,1359"/>
+<area shape="rect" id="node19" href="$classamici_1_1_model___o_d_e.html#a741ef44fe870908155c0e59bb1a6c059" title=" " alt="" coords="249,1534,441,1561"/>
+<area shape="rect" id="node20" href="$classamici_1_1_model___o_d_e.html#a01252ccb85bec7adbc88d12fce4fde05" title=" " alt="" coords="267,1382,424,1409"/>
+<area shape="rect" id="node21" href="$classamici_1_1_model___o_d_e.html#ab76d051378cedaaeffa04f18c00e79cb" title=" " alt="" coords="262,1433,428,1460"/>
+<area shape="rect" id="node22" href="$classamici_1_1_model___o_d_e.html#aa08f195ec3f1e9ec3d208abfbf27b23a" title=" " alt="" coords="261,1483,429,1511"/>
+<area shape="rect" id="node23" href="$classamici_1_1_model___o_d_e.html#a371aa66b99b1b3b20ed2e533d9b44870" title=" " alt="" coords="250,1179,441,1207"/>
+<area shape="rect" id="node24" href="$classamici_1_1_model___o_d_e.html#a786f028681b0928eb431cd44e9bd254a" title=" " alt="" coords="13,1382,189,1409"/>
+<area shape="rect" id="node26" href="$classamici_1_1_model___o_d_e.html#acab6095aacecc64e1a67e984af2475f8" title=" " alt="" coords="265,1129,425,1156"/>
+<area shape="rect" id="node27" href="$classamici_1_1_model___o_d_e.html#a0e8a82c9c78706dddbe191d2ed6540a3" title=" " alt="" coords="244,521,446,548"/>
+<area shape="rect" id="node28" href="$classamici_1_1_model___o_d_e.html#a894cb7158f20a976348caa9d73520d40" title=" " alt="" coords="256,1027,434,1055"/>
+<area shape="rect" id="node30" href="$classamici_1_1_model___o_d_e.html#af9c1f29040dc3c6c8bca0703676843be" title=" " alt="" coords="262,622,428,649"/>
+<area shape="rect" id="node31" href="$classamici_1_1_model___o_d_e.html#a433a0e1e4330ef433823a61f1fc45a5a" title=" " alt="" coords="256,673,434,700"/>
+<area shape="rect" id="node32" href="$classamici_1_1_model___o_d_e.html#a9d0e4612af8d7b3c418d000b5e9ba84f" title=" " alt="" coords="256,723,434,751"/>
+<area shape="rect" id="node46" href="$classamici_1_1_newton_solver_iterative.html#aa4a6695d71f00ec1b46e94b33e55660f" title=" " alt="" coords="250,1737,440,1780"/>
+<area shape="rect" id="node48" href="$classamici_1_1_steadystate_problem.html#a06f944df556560112e76a23213bf3f51" title=" " alt="" coords="255,1870,435,1913"/>
+<area shape="rect" id="node50" href="$classamici_1_1_steadystate_problem.html#a7b4c27de74a8185d0b454426601a187e" title=" " alt="" coords="255,1804,435,1846"/>
+<area shape="rect" id="node49" href="$classamici_1_1_steadystate_problem.html#a7567ea97f4d840e7df61340b5129f4cd" title=" " alt="" coords="11,1870,191,1913"/>
+</map>

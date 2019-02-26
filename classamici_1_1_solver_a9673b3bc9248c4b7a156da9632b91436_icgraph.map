@@ -1,0 +1,9 @@
+<map id="getAdjMallocDone" name="getAdjMallocDone">
+<area shape="rect" id="node1" title="checks whether memory for the backward problem has been allocated" alt="" coords="711,56,840,83"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#abdf8989d57153fde8988e73a98979297" title="updates ASA solver tolerances according to the currently specified member variables" alt="" coords="502,31,646,58"/>
+<area shape="rect" id="node6" href="$classamici_1_1_solver.html#a09d47957ba70f725efb5e3a385a274a6" title="updates ASA quadrature solver tolerances according to the currently specified member variables" alt="" coords="486,81,663,109"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#ad053924ece01f2958b5bc2332f56a0d6" title="Initialises the AMI memory object for the backwards problem." alt="" coords="295,56,358,83"/>
+<area shape="rect" id="node4" href="$classamici_1_1_solver.html#af425163c5d98c472d17e080da4ee3b78" title="sets the absolute tolerance for the quadrature problem" alt="" coords="215,5,438,33"/>
+<area shape="rect" id="node5" href="$namespaceamici.html#aab6be0027d918715e2ba50828088110b" title="setSolverOptions solver options from the matlab call to a solver object" alt="" coords="5,56,167,83"/>
+<area shape="rect" id="node7" href="$classamici_1_1_solver.html#a086428d30274f2b7e6f94e8e7593dd8b" title="sets the relative tolerance for the quadrature problem" alt="" coords="217,107,436,134"/>
+</map>

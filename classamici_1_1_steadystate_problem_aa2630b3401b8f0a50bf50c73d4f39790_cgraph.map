@@ -1,0 +1,9 @@
+<map id="workSteadyStateProblem" name="workSteadyStateProblem">
+<area shape="rect" id="node1" title=" " alt="" coords="5,180,177,207"/>
+<area shape="rect" id="node2" href="$classamici_1_1_newton_solver.html#a4d1ae8a0dc599423ef6538ca406ab67e" title=" " alt="" coords="241,5,384,48"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#aa5cde2d316aae1d60d6eaf94ce7a854f" title="getLinearSolver" alt="" coords="233,72,393,115"/>
+<area shape="rect" id="node4" href="$classamici_1_1_solver.html#a874c929a78d0e2af11c62ba958e1b3d1" title="Get maximum number of allowed linear steps per Newton step for steady state computation." alt="" coords="228,139,397,181"/>
+<area shape="rect" id="node5" href="$classamici_1_1_solver.html#ad68589cfe3af35633ff5fa1a4e7aaddb" title="Get maximum number of allowed Newton steps for steady state computation." alt="" coords="228,205,397,248"/>
+<area shape="rect" id="node6" href="$classamici_1_1_solver.html#a676df944b6737474dd4ef74fe9212f3e" title="Get the absolute tolerances for the forward problem." alt="" coords="225,272,401,315"/>
+<area shape="rect" id="node7" href="$classamici_1_1_solver.html#a54fe1b062315ed19b2dbf88206415e06" title="Get the relative tolerances for the forward problem." alt="" coords="227,339,399,381"/>
+</map>

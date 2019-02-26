@@ -1,0 +1,7 @@
+<map id="reset" name="reset">
+<area shape="rect" id="node1" title=" " alt="" coords="482,72,533,99"/>
+<area shape="rect" id="node2" href="$classamici_1_1_newton_solver_iterative.html#a89a318e506339bc8a0d05aa01920f1ae" title=" " alt="" coords="244,5,434,48"/>
+<area shape="rect" id="node4" href="$classamici_1_1_solver.html#ad053924ece01f2958b5bc2332f56a0d6" title="Initialises the AMI memory object for the backwards problem." alt="" coords="265,72,412,99"/>
+<area shape="rect" id="node5" href="$classamici_1_1_steadystate_problem.html#a7b4c27de74a8185d0b454426601a187e" title=" " alt="" coords="249,123,429,165"/>
+<area shape="rect" id="node3" href="$classamici_1_1_newton_solver_iterative.html#aa4a6695d71f00ec1b46e94b33e55660f" title=" " alt="" coords="5,5,196,48"/>
+</map>

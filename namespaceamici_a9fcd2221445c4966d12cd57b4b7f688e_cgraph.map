@@ -1,0 +1,11 @@
+<map id="runAmiciSimulations" name="runAmiciSimulations">
+<area shape="rect" id="node1" title="Convenience wrapper for loops of amici.runAmiciSimulation." alt="" coords="5,105,147,132"/>
+<area shape="rect" id="node2" href="$namespaceamici.html#a99419051271016d17c4b743a7869580c" title=" " alt="" coords="195,105,338,132"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#ad40c0e06f5ee35afc1dd60e9f80ac5be" title="Clone this instance." alt="" coords="386,80,522,107"/>
+<area shape="rect" id="node4" href="$namespaceamici.html#a025192a6f53e19eae958cd3b14786f80" title=" " alt="" coords="386,130,522,158"/>
+<area shape="rect" id="node5" href="$classamici_1_1_return_data.html#ab320e46748c17908f0bd4bba240b8e92" title="Set likelihood, state variables, outputs and respective sensitivities to NaN (typically after integra..." alt="" coords="618,5,753,48"/>
+<area shape="rect" id="node6" href="$classamici_1_1_return_data.html#ae0c35d3a9e0f0d4d0903b795bc6e222f" title="Set likelihood sensitivities to NaN (typically after integration failure)" alt="" coords="848,35,984,77"/>
+<area shape="rect" id="node7" href="$classamici_1_1_ami_exception.html#a79009ed133fa02b942ddce8f0b987f3e" title=" " alt="" coords="615,123,756,165"/>
+<area shape="rect" id="node8" href="$classamici_1_1_ami_exception.html#abd4eec3294e3af56ff54130ca3f2dea9" title=" " alt="" coords="615,189,756,232"/>
+<area shape="rect" id="node9" href="$classamici_1_1_return_data.html#adce202dc864a1e65d8453f597de271f5" title="applies the chain rule to account for parameter transformation in the sensitivities of simulation res..." alt="" coords="570,256,800,314"/>
+</map>

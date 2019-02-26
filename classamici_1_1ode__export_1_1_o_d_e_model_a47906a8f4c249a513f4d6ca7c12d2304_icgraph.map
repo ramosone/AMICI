@@ -1,0 +1,15 @@
+<map id="sym" name="sym">
+<area shape="rect" id="node1" title="Returns (and constructs if necessary) the identifiers for a symbolic entity." alt="" coords="586,233,632,261"/>
+<area shape="rect" id="node2" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a3a3ebfdaf0d1f08adf028afb10d5b5c1" title="Imports a model specification from a amici.SBMLImporter instance." alt="" coords="354,5,538,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#ab77e1355e82f8fe321044cc622e4446a" title="Number of states." alt="" coords="409,107,483,134"/>
+<area shape="rect" id="node5" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a5e124f15318e0b6217db8290b3bbe3b4" title="Counts how often a state appears in the time derivative of another state and expressions for a subset..." alt="" coords="5,107,170,134"/>
+<area shape="rect" id="node6" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#ae4c34666f3d1d7f0c7a54a0b2322a1f3" title="Number of states after applying conservation laws." alt="" coords="407,157,485,185"/>
+<area shape="rect" id="node8" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#ac3d9b681827ebea0e5bee18c9d7fc44d" title="Number of Observables." alt="" coords="427,208,465,235"/>
+<area shape="rect" id="node9" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a07767f24c77537a68972e99a79ef93aa" title="Number of Constants." alt="" coords="427,259,465,286"/>
+<area shape="rect" id="node10" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a7278a09e012ba867faf10d809e13fb81" title="Number of Parameters." alt="" coords="427,309,465,337"/>
+<area shape="rect" id="node11" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a4d110acf8e52c4d48044071ea06952c0" title="Returns (and constructs if necessary) the names of a symbolic variable." alt="" coords="419,360,473,387"/>
+<area shape="rect" id="node12" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a2223bbe62f3234b8f40c5a566064a481" title="Returns a list of names of generated symbolic variables." alt="" coords="218,436,306,463"/>
+<area shape="rect" id="node13" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#ae352b13e8ea2f390c5fa146601817173" title="Returns symbols or equations depending on whether a given variable appears in the function signature ..." alt="" coords="402,461,490,489"/>
+<area shape="rect" id="node4" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#a96964f4a635095d20c61f4976fd3070c" title="Number of conservation laws." alt="" coords="242,107,281,134"/>
+<area shape="rect" id="node7" href="$classamici_1_1ode__export_1_1_o_d_e_model.html#ae64f0875afe3067b97ba370b354b9213" title="Create a new ODEModel instance." alt="" coords="228,208,296,235"/>
+</map>

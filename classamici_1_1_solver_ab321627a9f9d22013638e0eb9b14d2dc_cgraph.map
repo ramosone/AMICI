@@ -1,0 +1,4 @@
+<map id="setMaxSteps" name="setMaxSteps">
+<area shape="rect" id="node1" title="sets the maximum number of solver steps for the forward problem" alt="" coords="5,5,104,33"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a29f208ce304b01c8fe294ab9143a98e5" title="specifies the maximum number of steps for the forward problem" alt="" coords="152,5,278,33"/>
+</map>

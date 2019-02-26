@@ -1,0 +1,5 @@
+<map id="setDenseJacFnB" name="setDenseJacFnB">
+<area shape="rect" id="node1" title="sets the dense Jacobian function" alt="" coords="317,5,440,33"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a4f596731d15be6e9e76a2147aa1cce34" title="Sets the linear solver for the backward problem." alt="" coords="116,5,269,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#ad053924ece01f2958b5bc2332f56a0d6" title="Initialises the AMI memory object for the backwards problem." alt="" coords="5,5,68,33"/>
+</map>

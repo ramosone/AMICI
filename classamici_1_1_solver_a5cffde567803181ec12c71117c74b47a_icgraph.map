@@ -1,0 +1,4 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node1" title="Initialises the ami memory object and applies specified options." alt="" coords="212,13,266,40"/>
+<area shape="rect" id="node2" href="$classamici_1_1_forward_problem.html#a4ef001eef23bc48270159d6193036858" title="Solve the forward problem." alt="" coords="5,5,164,48"/>
+</map>

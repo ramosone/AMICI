@@ -1,0 +1,5 @@
+<map id="setRelativeToleranceQuadratures" name="setRelativeToleranceQuadratures">
+<area shape="rect" id="node1" title="sets the relative tolerance for the quadrature problem" alt="" coords="5,5,225,33"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a09d47957ba70f725efb5e3a385a274a6" title="updates ASA quadrature solver tolerances according to the currently specified member variables" alt="" coords="273,5,450,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#a9673b3bc9248c4b7a156da9632b91436" title="checks whether memory for the backward problem has been allocated" alt="" coords="498,5,627,33"/>
+</map>

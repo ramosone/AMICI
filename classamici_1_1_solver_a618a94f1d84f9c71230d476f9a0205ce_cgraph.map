@@ -1,0 +1,5 @@
+<map id="setStabilityLimitFlag" name="setStabilityLimitFlag">
+<area shape="rect" id="node1" title="set stability limit detection mode" alt="" coords="5,31,145,58"/>
+<area shape="rect" id="node2" href="$classamici_1_1_solver.html#a040fb365c47a8e8ccc1f32021b38bfcb" title="activates stability limit detection for the forward problem" alt="" coords="198,5,306,33"/>
+<area shape="rect" id="node3" href="$classamici_1_1_solver.html#acb7f8ad7671faf5fa7e5fa7851e662ec" title="activates stability limit detection for the backward problem" alt="" coords="193,56,311,83"/>
+</map>

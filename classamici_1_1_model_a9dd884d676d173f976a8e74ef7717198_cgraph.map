@@ -1,0 +1,12 @@
+<map id="initializeStateSensitivities" name="initializeStateSensitivities">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,176,159"/>
+<area shape="rect" id="node2" href="$classamici_1_1_model.html#a6f46a63f0524ad25e4125254b78fdee9" title=" " alt="" coords="224,107,269,134"/>
+<area shape="rect" id="node3" href="$classamici_1_1_model.html#a0f8e994055e37954d7746f3c1af27a5c" title="Number of parameters wrt to which sensitivities are computed." alt="" coords="368,5,421,33"/>
+<area shape="rect" id="node4" href="$classamici_1_1_model.html#a158b8a049de50ecddfe5cd120ff549ac" title="Number of conservation laws." alt="" coords="375,56,414,83"/>
+<area shape="rect" id="node5" href="$classamici_1_1_model.html#a6ac0de1b7dfddbb4a480657f62573563" title="entry in parameter list" alt="" coords="372,157,417,185"/>
+<area shape="rect" id="node7" href="$classamici_1_1_model.html#acaa80cbfc886abd3a0f038f5ff9f54e3" title=" " alt="" coords="354,208,435,235"/>
+<area shape="rect" id="node9" href="$classamici_1_1_model.html#a6fe0e8c26a7c1f72e3afd0f1322b3416" title=" " alt="" coords="357,259,431,286"/>
+<area shape="rect" id="node6" href="$classamici_1_1_ami_vector.html#aee17a5447b8e03180f89a2a8acbd572f" title=" " alt="" coords="317,107,471,134"/>
+<area shape="rect" id="node8" href="$classamici_1_1_model.html#ac08ad3aa4016a5a3ff89d601e15971cc" title=" " alt="" coords="519,208,594,235"/>
+<area shape="rect" id="node10" href="$classamici_1_1_model.html#ab7c357d92ab37cfe9728a31e4232cfe9" title=" " alt="" coords="523,259,590,286"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="setupB" name="setupB">
+<area shape="rect" id="node1" title="Initialises the AMI memory object for the backwards problem." alt="" coords="5,520,68,547"/>
+<area shape="rect" id="node2" href="$classamici_1_1_backward_problem.html#aaa2f33176422b55808979bfc7ceb2573" title="Accessor for dJydx." alt="" coords="121,5,289,48"/>
+<area shape="rect" id="node3" href="$classamici_1_1_backward_problem.html#afd910c853cb52a19b17ff8b65832fe2e" title=" " alt="" coords="121,72,289,115"/>
+<area shape="rect" id="node4" href="$classamici_1_1_ami_vector.html#ad20897c5c8bd47f5d4005989bead0e55" title=" " alt="" coords="126,138,284,166"/>
+<area shape="rect" id="node6" href="$classamici_1_1_ami_vector.html#ae62cf934983479ccb255785bdf455a2c" title=" " alt="" coords="135,189,274,216"/>
+<area shape="rect" id="node7" href="$classamici_1_1_backward_problem.html#ab1f652d5ffaf80adab677b0a8393b48a" title=" " alt="" coords="121,240,289,283"/>
+<area shape="rect" id="node8" href="$classamici_1_1_backward_problem.html#a6b43b17396089785a111a5bc1fd27112" title="accessor for pointer to xQB" alt="" coords="121,307,289,349"/>
+<area shape="rect" id="node9" href="$classamici_1_1_solver.html#adb86fe4b29dd9c370bccee609b8deba3" title="Specifies solver method and initializes solver memory for the backward problem." alt="" coords="148,373,262,400"/>
+<area shape="rect" id="node10" href="$classamici_1_1_backward_problem.html#a209a0d59a5a5eebfba1e6db5cb209132" title="Accessor for pointer to which." alt="" coords="121,424,289,467"/>
+<area shape="rect" id="node11" href="$classamici_1_1_solver.html#a14a9fe177339143801b38baeb800317a" title="Initialise the adjoint states at the specified final timepoint." alt="" coords="182,490,228,518"/>
+<area shape="rect" id="node12" href="$classamici_1_1_backward_problem.html#ac337bf2284c1febeb302019b06c54c3e" title="Accessor for which." alt="" coords="121,541,289,584"/>
+<area shape="rect" id="node13" href="$classamici_1_1_backward_problem.html#a1582a658df3f51a8c88b6f22b4205b3f" title="Accessor for current time t." alt="" coords="121,608,289,651"/>
+<area shape="rect" id="node14" href="$classamici_1_1_solver.html#ac5c347a985fa73861a88e76c7b9904f8" title="attaches the user data instance (here this is a Model) to the backward problem" alt="" coords="153,674,257,702"/>
+<area shape="rect" id="node15" href="$classamici_1_1_solver.html#a1163fddb222195354bdcf306fc52a1d0" title="specifies the maximum number of steps for the forward problem" alt="" coords="137,725,272,752"/>
+<area shape="rect" id="node16" href="$classamici_1_1_solver.html#a4f596731d15be6e9e76a2147aa1cce34" title="Sets the linear solver for the backward problem." alt="" coords="128,776,281,803"/>
+<area shape="rect" id="node21" href="$classamici_1_1_solver.html#a57c1900d556ab878f5fad94b4fcd1abd" title="Initialise the quadrature states at the specified final timepoint." alt="" coords="178,826,231,854"/>
+<area shape="rect" id="node22" href="$classamici_1_1_solver.html#abdf8989d57153fde8988e73a98979297" title="updates ASA solver tolerances according to the currently specified member variables" alt="" coords="132,877,277,904"/>
+<area shape="rect" id="node24" href="$classamici_1_1_solver.html#a09d47957ba70f725efb5e3a385a274a6" title="updates ASA quadrature solver tolerances according to the currently specified member variables" alt="" coords="116,928,293,955"/>
+<area shape="rect" id="node25" href="$classamici_1_1_solver.html#acb7f8ad7671faf5fa7e5fa7851e662ec" title="activates stability limit detection for the backward problem" alt="" coords="146,978,264,1006"/>
+<area shape="rect" id="node5" href="$classamici_1_1_ami_vector.html#a11418c829db7c2891d63491cf12d29b4" title=" " alt="" coords="341,138,487,166"/>
+<area shape="rect" id="node17" href="$classamici_1_1_solver.html#aaa1ecd357b3facae2f2d12784563ad25" title="attaches a dense linear solver to the backward problem" alt="" coords="381,700,447,727"/>
+<area shape="rect" id="node18" href="$classamici_1_1_solver.html#a1081b1ac835a2bf9221552a07d04ef4d" title="sets the dense Jacobian function" alt="" coords="353,750,475,778"/>
+<area shape="rect" id="node19" href="$classamici_1_1_solver.html#a635908e6d209f02160e791f3ee9d0660" title="attaches a banded linear solver to the backward problem" alt="" coords="384,801,444,828"/>
+<area shape="rect" id="node20" href="$classamici_1_1_solver.html#a1040308561e87b1e2d24c3ab9581e14d" title="sets the banded Jacobian function" alt="" coords="356,852,472,879"/>
+<area shape="rect" id="node23" href="$classamici_1_1_solver.html#a9673b3bc9248c4b7a156da9632b91436" title="checks whether memory for the backward problem has been allocated" alt="" coords="349,914,479,942"/>
+</map>

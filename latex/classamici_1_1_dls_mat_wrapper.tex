@@ -1,0 +1,175 @@
+\hypertarget{classamici_1_1_dls_mat_wrapper}{}\subsection{Dls\+Mat\+Wrapper Class Reference}
+\label{classamici_1_1_dls_mat_wrapper}\index{DlsMatWrapper@{DlsMatWrapper}}
+
+
+A R\+A\+II wrapper for Sundials Dls\+Mat dense matrices.  
+
+
+
+
+{\ttfamily \#include $<$sundials\+\_\+matrix\+\_\+wrapper.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_aa349fca7529d8cee5def97c93cc057b9}{Dls\+Mat\+Wrapper}} (long int M, long int N)
+\begin{DoxyCompactList}\small\item\em See New\+Dense\+Mat in sundials\+\_\+direct.\+h. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_ad3985d43ebee5728e703e4fbd2ce399b}{Dls\+Mat\+Wrapper}} (Dls\+Mat mat)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_a101a5f6a7eed6a77db1669adc3275f94}{Dls\+Mat\+Wrapper}} (const \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_a2dc462ec3b73f15fabb1c010976b9377}{Dls\+Mat\+Wrapper}} (\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \& \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_a2eb473e18629e3a3890c9d2e65798f8d}{operator=}} (const \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \& \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_acb214b2f2dac5b32edfed3083d2c3e06}{operator=}} (\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_ace31bbb9df6dd42f70286108ecafa01b}{data}} ()
+\begin{DoxyCompactList}\small\item\em Access raw data. \end{DoxyCompactList}\item 
+Dls\+Mat \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper_aa1bd2d019ffbf5e652bc0edef4d01552}{dlsmat}} () const
+\begin{DoxyCompactList}\small\item\em Get the wrapped Dls\+Mat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+
+
+Definition at line 79 of file sundials\+\_\+matrix\+\_\+wrapper.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_aa349fca7529d8cee5def97c93cc057b9}\label{classamici_1_1_dls_mat_wrapper_aa349fca7529d8cee5def97c93cc057b9}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{DlsMatWrapper()}{DlsMatWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} (\begin{DoxyParamCaption}\item[{long int}]{M,  }\item[{long int}]{N }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Number of rows \\
+\hline
+{\em N} & Number of columns \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_ad3985d43ebee5728e703e4fbd2ce399b}\label{classamici_1_1_dls_mat_wrapper_ad3985d43ebee5728e703e4fbd2ce399b}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{DlsMatWrapper()}{DlsMatWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} (\begin{DoxyParamCaption}\item[{Dls\+Mat}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_a101a5f6a7eed6a77db1669adc3275f94}\label{classamici_1_1_dls_mat_wrapper_a101a5f6a7eed6a77db1669adc3275f94}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{DlsMatWrapper()}{DlsMatWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_a2dc462ec3b73f15fabb1c010976b9377}\label{classamici_1_1_dls_mat_wrapper_a2dc462ec3b73f15fabb1c010976b9377}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\index{DlsMatWrapper@{DlsMatWrapper}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{DlsMatWrapper()}{DlsMatWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_a2eb473e18629e3a3890c9d2e65798f8d}\label{classamici_1_1_dls_mat_wrapper_a2eb473e18629e3a3890c9d2e65798f8d}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!operator=@{operator=}}
+\index{operator=@{operator=}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \& operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 106 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_acb214b2f2dac5b32edfed3083d2c3e06}\label{classamici_1_1_dls_mat_wrapper_acb214b2f2dac5b32edfed3083d2c3e06}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!operator=@{operator=}}
+\index{operator=@{operator=}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \& operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamici_1_1_dls_mat_wrapper}{Dls\+Mat\+Wrapper}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 111 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_ace31bbb9df6dd42f70286108ecafa01b}\label{classamici_1_1_dls_mat_wrapper_ace31bbb9df6dd42f70286108ecafa01b}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!data@{data}}
+\index{data@{data}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamici_a1bdce28051d6a53868f7ccbf5f2c14a3}{realtype}} $\ast$ data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+raw data pointer 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+\mbox{\Hypertarget{classamici_1_1_dls_mat_wrapper_aa1bd2d019ffbf5e652bc0edef4d01552}\label{classamici_1_1_dls_mat_wrapper_aa1bd2d019ffbf5e652bc0edef4d01552}} 
+\index{DlsMatWrapper@{DlsMatWrapper}!dlsmat@{dlsmat}}
+\index{dlsmat@{dlsmat}!DlsMatWrapper@{DlsMatWrapper}}
+\paragraph{\texorpdfstring{dlsmat()}{dlsmat()}}
+{\footnotesize\ttfamily Dls\+Mat dlsmat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Dls\+Mat 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file sundials\+\_\+matrix\+\_\+wrapper.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classamici_1_1_dls_mat_wrapper_aa1bd2d019ffbf5e652bc0edef4d01552_icgraph}
+\end{center}
+\end{figure}
